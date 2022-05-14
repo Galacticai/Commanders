@@ -29,18 +29,18 @@ namespace Assets.Objects.Entity.Unit {
         internal protected virtual float update_range() {
             this.range
                 = Default.range
-                + (base.vision * Default.vision_to_range_factor);
+                + (base.vision * Default.vision_to_range_Factor);
             return this.range;
         }
 
         internal Unit(
                 GameObject gameObject,
                 float health, float power,
-                Territory territoryOption,
-                params Territory[] territoryOptionsAllowed)
-                    : base(gameObject, health, territoryOption, territoryOptionsAllowed) {
+                Territory territory,
+                params Territory[] territoryAllowed)
+                    : base(gameObject, health, territory, territoryAllowed) {
             this.power = power;
-            this.power_critical = power * Default.power_criticalMultiplier;
+            this.power_critical = power * Default.power_critical_Multiplier;
             this.update_range();
         }
     }
