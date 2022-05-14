@@ -32,8 +32,8 @@ namespace Assets.Objects.Entity {
 
         protected internal virtual float update_vision() {
             this.vision = Default.vision;
-            if (this.isSwimming) this.vision += Default.TerritoryExtra.Water.vision;
-            else if (this.isFlying) this.vision += Default.TerritoryExtra.Air.vision;
+            if (this.isOnWater) this.vision += Default.TerritoryExtra.Water.vision;
+            else if (this.isOnAir) this.vision += Default.TerritoryExtra.Air.vision;
             return this.vision;
         }
 
