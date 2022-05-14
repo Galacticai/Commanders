@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Assets.Objects.Entity {
 
-    /// <summary> Units or Buildings </summary>
     internal partial class Entity {
         internal struct Default {
             internal const float vision = 5.0f;
@@ -20,19 +19,31 @@ namespace Assets.Objects.Entity {
             }
         }
 
+        /// <summary> Places where the <see cref="Entity"/> can stay alive </summary>
         internal enum Territory {
             Land, Water, Air
         }
 
 
-        internal protected GameObject gameObject { get; private set; }
-        internal protected string name { get; protected set; }
-        internal protected float health { get; protected set; }
-        internal protected float healthTotal { get; protected set; }
-        internal protected Territory territory { get; protected set; }
+        /// <summary> Available <see cref="Territory"/>'s that can be used by this <see cref="Entity"/> </summary>
         internal protected Territory[] territoryAllowed { get; private set; }
+        /// <summary> Maximum health </summary>
+        internal protected float healthTotal { get; private set; }
+
+        /// <summary> Unity's <see cref="GameObject"/> of this <see cref="Entity"/> </summary>
+        internal protected GameObject gameObject { get; private set; }
+
+        /// <summary> Current <see cref="Territory"/> used by this <see cref="Entity"/> </summary>
+        internal protected Territory territory { get; protected set; }
+        /// <summary> Simple <see cref="string"/> alias derived from <see cref="gameObject"/>.name </summary>
+        internal protected string name { get; protected set; }
+        /// <summary> Current health </summary>
+        internal protected float health { get; protected set; }
+
+        /// <summary> Radius of vision area around the <see cref="Entity"/> </summary>
         internal protected float vision { get; protected set; }
 
+        /// <summary> <see cref="GameObject"/> with extra sauce </summary>
         internal Entity(
                 GameObject gameObject,
                 float healthTotal,
@@ -42,11 +53,12 @@ namespace Assets.Objects.Entity {
             this.name = this.gameObject.name;
             this.healthTotal = healthTotal;
             this.health = this.healthTotal;
+
             this.territory = territory;
             this.territoryAllowed = territoryAllowed ?? new Territory[] { this.territory };
-
             if (!this.territoryAllowed.Contains(this.territory))
                 this.territoryAllowed.Concat(new Territory[] { this.territory });
+
             this.vision
                 = Default.vision
                 + this.territory switch {
