@@ -6,19 +6,18 @@ namespace Assets.Objects.Entity {
 
     internal partial class Entity {
 
-        //TODO: Figure out a better term for humans+vehicles
-        internal bool canWalkRoll
+        internal bool canLand
             => this.territoryAllowed.Contains(Territory.Land);
-        internal bool canSwim
+        internal bool canWater
             => this.territoryAllowed.Contains(Territory.Water);
-        internal bool canFly
+        internal bool canAir
             => this.territoryAllowed.Contains(Territory.Air);
 
-        internal bool isWalking
+        internal bool isOnLand
             => this.territory == Territory.Land;
-        internal bool isSwimming
+        internal bool isOnWater
             => this.territory == Territory.Water;
-        internal bool isFlying
+        internal bool isOnAir
             => this.territory == Territory.Air;
 
         internal bool isDamaged
