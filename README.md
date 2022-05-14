@@ -6,7 +6,7 @@
 ---
 
 ##### ﻿<p align="center"><b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b></p>
-##### ﻿<p align="center"><b>UNDER CONSTRUCTION</b></p>
+##### ﻿<p align="center"><b>UNDER CONSTRUCTION</b> <br/> Join the development!</p>
 ##### ﻿<p align="center"><b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b></p>
 
 
