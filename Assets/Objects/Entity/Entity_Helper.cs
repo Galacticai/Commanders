@@ -1,0 +1,77 @@
+
+using System;
+using System.Linq;
+
+namespace Assets.Objects.Entity {
+
+    internal partial class Entity {
+
+        //TODO: Figure out a better term for humans+vehicles
+        internal bool canWalkRoll
+            => this.territoryAllowed.Contains(Territory.Land);
+        internal bool canSwim
+            => this.territoryAllowed.Contains(Territory.Water);
+        internal bool canFly
+            => this.territoryAllowed.Contains(Territory.Air);
+
+        internal bool isWalking
+            => this.territory == Territory.Land;
+        internal bool isSwimming
+            => this.territory == Territory.Water;
+        internal bool isFlying
+            => this.territory == Territory.Air;
+
+        internal bool isDamaged
+            => this.health < this.healthTotal;
+        internal bool isHealed
+            => this.health == this.healthTotal;
+
+        internal float health_percent
+            => (this.health / this.healthTotal) * 100;
+
+
+
+        protected internal virtual float update_vision() {
+            this.vision = Default.vision;
+            if (this.isSwimming) this.vision += Default.TerritoryExtra.Water.vision;
+            else if (this.isFlying) this.vision += Default.TerritoryExtra.Air.vision;
+            return this.vision;
+        }
+
+        internal virtual void kill() {
+            this.health = 0;
+            //TODO: Kill entity... each entity could have a kill script that's added to gameObject at runtime
+        }
+
+        private float health_delta(float delta) {
+            if (delta == 0) return this.health;
+
+            float health_new = this.health + delta;
+
+            //! Never let health be negative or above total
+            // to avoid any unexpected behavior
+            if (health_new > this.healthTotal)
+                this.health = this.healthTotal;
+            else if (health_new <= 0)
+                this.kill();
+
+            this.health += delta;
+            return this.health;
+        }
+
+        internal virtual float heal(float amount) {
+            this.health_delta(Math.Abs(amount));
+            return this.health;
+        }
+        internal virtual float damage(float amount) {
+            this.health_delta(-Math.Abs(amount));
+            return this.health;
+        }
+
+        internal virtual float restore_health() {
+            this.heal(this.healthTotal);
+            return this.health;
+        }
+
+    }
+}
