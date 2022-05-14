@@ -34,7 +34,6 @@ namespace Assets.Objects.Entity.Unit {
                 Territory territoryOption,
                 params Territory[] territoryOptionsAllowed)
                     : base(gameObject, health, territoryOption, territoryOptionsAllowed) {
-            this.name = gameObject.name;
             this.power = power;
             this.power_critical = power * Default.power_criticalMultiplier;
             this.update_range();
