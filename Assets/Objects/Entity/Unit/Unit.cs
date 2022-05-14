@@ -2,8 +2,6 @@ using UnityEngine;
 
 namespace Assets.Objects.Entity.Unit {
 
-    /// <summary> A tank, an airplane, a soldier,
-    /// or any game entity that acts similarly </summary>
     internal class Unit : Entity {
 
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword
@@ -33,6 +31,8 @@ namespace Assets.Objects.Entity.Unit {
             return this.range;
         }
 
+        /// <summary> A tank, an airplane, a soldier,
+        /// or any game entity that acts similarly </summary>
         internal Unit(
                 GameObject gameObject,
                 float health, float power,
