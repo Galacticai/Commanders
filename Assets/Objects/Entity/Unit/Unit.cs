@@ -10,7 +10,7 @@ namespace Assets.Objects.Entity.Unit {
         internal record Default {
             internal const float range = 5;
             internal const float vision_to_range_Factor = 0.2f;
-            internal const float power_critical_Multiplier = 1.5f;
+            internal const float powerCritical_Factor = 1.5f;
         }
 #pragma warning restore CS0108 // Member hides inherited member; missing new keyword
 
@@ -40,9 +40,8 @@ namespace Assets.Objects.Entity.Unit {
                 params Territory[] territoryAllowed)
                     : base(gameObject, health, territory, territoryAllowed) {
             this.power = power;
-            this.power_critical = power * Default.power_critical_Multiplier;
+            this.power_critical = power * Default.powerCritical_Factor;
             this.update_range();
         }
     }
-
 }
