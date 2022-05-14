@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.Objects.Entity {
@@ -34,15 +35,18 @@ namespace Assets.Objects.Entity {
 
         internal Entity(
                 GameObject gameObject,
-                float health_total,
+                float healthTotal,
                 Territory territory,
                 params Territory[] territoryAllowed) {
             this.gameObject = gameObject;
             this.name = this.gameObject.name;
-            this.healthTotal = health_total;
+            this.healthTotal = healthTotal;
             this.health = this.healthTotal;
             this.territory = territory;
-            this.territoryAllowed = territoryAllowed;
+            this.territoryAllowed = territoryAllowed ?? new Territory[] { this.territory };
+
+            if (!this.territoryAllowed.Contains(this.territory))
+                this.territoryAllowed.Concat(new Territory[] { this.territory });
             this.vision
                 = Default.vision
                 + this.territory switch {
