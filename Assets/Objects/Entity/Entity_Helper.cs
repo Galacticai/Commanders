@@ -51,7 +51,7 @@ namespace Assets.Objects.Entity {
             //! Never let health be negative or above total
             // to avoid any unexpected behavior
             if (health_new > this.healthTotal)
-                this.health = this.healthTotal;
+                this.restore_health();
             else if (health_new <= 0)
                 this.kill();
 
@@ -69,7 +69,7 @@ namespace Assets.Objects.Entity {
         }
 
         internal virtual float restore_health() {
-            this.heal(this.healthTotal);
+            this.health = this.healthTotal;
             return this.health;
         }
 
