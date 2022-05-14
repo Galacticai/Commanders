@@ -2,8 +2,7 @@ using UnityEngine;
 
 namespace Assets.Objects.Entity {
 
-    /// <summary> Tanks, airplanes, troops,
-    /// or any game object that acts similarly </summary>
+    /// <summary> Units or Buildings </summary>
     internal partial class Entity {
         internal struct Default {
             internal const float vision = 5.0f;
