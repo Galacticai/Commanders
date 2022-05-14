@@ -25,13 +25,13 @@ namespace Assets.Objects.Entity {
         }
 
 
-        internal GameObject gameObject { get; private set; }
-        internal string name { get; set; }
-        internal float health { get; set; }
-        internal float healthTotal { get; set; }
-        internal Territory territory { get; set; }
-        internal Territory[] territoryAllowed { get; private set; }
-        internal float vision { get; set; }
+        internal protected GameObject gameObject { get; private set; }
+        internal protected string name { get; protected set; }
+        internal protected float health { get; protected set; }
+        internal protected float healthTotal { get; protected set; }
+        internal protected Territory territory { get; protected set; }
+        internal protected Territory[] territoryAllowed { get; private set; }
+        internal protected float vision { get; protected set; }
 
         internal Entity(
                 GameObject gameObject,
