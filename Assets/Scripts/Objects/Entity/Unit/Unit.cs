@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Objects.Entity.Unit {
+namespace Assets.Scripts.Objects.Entity.Unit {
 
     internal class Unit : Entity {
 

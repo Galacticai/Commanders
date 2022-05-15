@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace Assets.Objects.Entity {
+namespace Assets.Scripts.Objects.Entity {
 
     internal partial class Entity {
 
@@ -64,6 +64,10 @@ namespace Assets.Objects.Entity {
         }
         internal virtual float damage(float amount) {
             this.health_delta(-Math.Abs(amount));
+            return this.health;
+        }
+        internal virtual float damageByEntity(Entity entity) {
+            this.damage();
             return this.health;
         }
 

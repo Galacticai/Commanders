@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Assets.Objects.Entity {
+namespace Assets.Scripts.Objects.Entity {
 
     internal partial class Entity {
         internal struct Default {
