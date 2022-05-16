@@ -1,9 +1,10 @@
+using Assets.Scripts.Objects.Entity.Stat;
 using System.Linq;
 using UnityEngine;
 
 namespace Assets.Scripts.Objects.Entity {
 
-    internal partial class Entity {
+    internal abstract partial class Entity {
         internal struct Default {
             internal const float vision = 5.0f;
             internal record TerritoryExtra {
@@ -25,6 +26,7 @@ namespace Assets.Scripts.Objects.Entity {
         }
 
 
+
         /// <summary> Available <see cref="Territory"/>'s that can be used by this <see cref="Entity"/> </summary>
         internal protected Territory[] territoryAllowed { get; private set; }
         /// <summary> Maximum health </summary>
@@ -35,6 +37,10 @@ namespace Assets.Scripts.Objects.Entity {
 
         /// <summary> Current <see cref="Territory"/> used by this <see cref="Entity"/> </summary>
         internal protected Territory territory { get; protected set; }
+
+        internal protected Damage damage { get; set; }
+        internal protected Defence defence { get; set; }
+
         /// <summary> Simple <see cref="string"/> alias derived from <see cref="gameObject"/>.name </summary>
         internal protected string name { get; protected set; }
         /// <summary> Current health </summary>
