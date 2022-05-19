@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Objects.Entity._Types_.Unit {
+namespace Assets.Scripts.Objects.Entity._Types.Unit {
 
     internal abstract class Unit : Entity {
 
@@ -30,11 +31,11 @@ namespace Assets.Scripts.Objects.Entity._Types_.Unit {
         /// <summary> A tank, an airplane, a soldier,
         /// or any game entity that acts similarly </summary>
         internal Unit(
-                GameObject gameObject,
-                float health, float power,
-                Territory territory,
-                params Territory[] territoryAllowed)
-                    : base(gameObject, health, territory, territoryAllowed) {
+                ref GameObject gameObject,
+                float health,
+                List<Territory> territoryAllowed,
+                List<Stat.Stat> stats)
+                    : base(ref gameObject, health, territoryAllowed, stats) {
             this.power = power;
             this.power_critical = power * Default.powerCritical_Factor;
             this.update_range();
