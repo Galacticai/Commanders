@@ -38,11 +38,11 @@ namespace Assets.Scripts.Lib.Math.Space {
         public double volume
             => 4 * sMath.PI * sMath.Pow(this.radius, 2);
 
-        public Sphere(float x, float y, float z, float radius) {
+        public Sphere(double x, double y, double z, double radius) {
             this.center = new Point(x, y, z);
             this.radius = radius;
         }
-        public Sphere(Point center, float radius) {
+        public Sphere(Point center, double radius) {
             this.center = center;
             this.radius = radius;
         }
