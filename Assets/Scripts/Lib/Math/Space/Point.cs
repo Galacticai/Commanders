@@ -2,9 +2,7 @@
 
 namespace Assets.Scripts.Lib.Math.Space {
     public class Point {
-        private static Point _ORIGIN = new(0, 0, 0);
-        public static Point ORIGIN => Point._ORIGIN;
-
+        public readonly static Point ORIGIN = new(0, 0, 0);
 
         public double distance(Point point)
             => sMath.Sqrt(

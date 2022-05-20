@@ -1,9 +1,9 @@
 ﻿namespace Assets.Scripts.Lib.Math {
     public class Range {
 
-        public static Range ZERO_ONE = new(0, 1);
-        public static Range ZERO_TEN = new(0, 10);
-        public static Range ZERO_HUNDRED = new(0, 100);
+        public readonly static Range ZERO_ONE = new(0, 1);
+        public readonly static Range ZERO_TEN = new(0, 10);
+        public readonly static Range ZERO_HUNDRED = new(0, 100);
 
 
         #region Helper 
