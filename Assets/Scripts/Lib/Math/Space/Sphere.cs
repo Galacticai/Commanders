@@ -2,8 +2,7 @@
 
 namespace Assets.Scripts.Lib.Math.Space {
     public class Sphere {
-        private static Sphere _UNIT_SPHERE = new(Point.ORIGIN, 1);
-        public static Sphere UNIT_SPHERE => _UNIT_SPHERE;
+        public readonly static Sphere UNIT_SPHERE = new(Point.ORIGIN, 1);
 
         public bool includesPoint(Point point)
             => this.center.distance(point) <= this.radius;
@@ -26,11 +25,17 @@ namespace Assets.Scripts.Lib.Math.Space {
         public bool intersectsSphere(Sphere sphere)
            => this.distance_Edge(sphere) <= 0;
 
-        //TODO: Make it actually logical and useful: (How much this sphere encapsulates another sphere)
-        /// <returns> Percentage of how close <paramref name="point"/> is to <see cref="center"/>
+        //TODO: TEST
+        /// <returns> Ratio of how close <paramref name="point"/> is to <see cref="center"/>
         /// relative to <see cref="radius"/> </returns>
-        public double nearRadius_Percent(Point point)
-            => (this.center.distance(point) / this.radius) * 100;
+        public double howClose(Point point) {
+            double distance = this.center.distance(point);
+            //? close 0 -- 1 far
+            double ratio_inverse = distance / this.radius;
+            //? close 1 -- 0 far
+            double ratio = sMath.Abs(ratio_inverse - 1);
+            return Range.ZERO_ONE.toRange(ratio);
+        }
 
 
         public Point center { get; set; }
