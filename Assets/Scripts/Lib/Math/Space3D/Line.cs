@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Lib.Math.Space {
+﻿namespace Assets.Scripts.Lib.Math.Space3D {
     public class Line {
         public record AXIS {
             public Line X = new(Point.ORIGIN, new(1, 0, 0));

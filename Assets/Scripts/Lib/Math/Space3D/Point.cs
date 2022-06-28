@@ -1,6 +1,6 @@
 ﻿using sMath = System.Math;
 
-namespace Assets.Scripts.Lib.Math.Space {
+namespace Assets.Scripts.Lib.Math.Space3D {
     public class Point {
         public readonly static Point ORIGIN = new(0, 0, 0);
 

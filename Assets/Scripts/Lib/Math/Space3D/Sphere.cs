@@ -1,6 +1,6 @@
 ﻿using sMath = System.Math;
 
-namespace Assets.Scripts.Lib.Math.Space {
+namespace Assets.Scripts.Lib.Math.Space3D {
     public class Sphere {
         public readonly static Sphere UNIT_SPHERE = new(Point.ORIGIN, 1);
 
@@ -25,7 +25,7 @@ namespace Assets.Scripts.Lib.Math.Space {
         public bool intersectsSphere(Sphere sphere)
            => this.distance_Edge(sphere) <= 0;
 
-        //TODO: TEST
+        //TODO: TEST Sphere.howClose(Point)
         /// <returns> Ratio of how close <paramref name="point"/> is to <see cref="center"/>
         /// relative to <see cref="radius"/> </returns>
         public double howClose(Point point) {
