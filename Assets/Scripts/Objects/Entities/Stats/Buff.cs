@@ -4,13 +4,13 @@ namespace Assets.Scripts.Objects.Entities.Stats {
     internal sealed class Buff : Stat {
         /// <summary>
         /// <list type="bullet">
-        /// <item> (add, subtract, multiply, divide) � Math operation </item>
-        /// <item> custom � Use a custom <see cref="Task"/>&lt;<see cref="bool"/>&gt; </item>
+        /// <item> (add, subtract, multiply, divide) • Math operation </item>
+        /// <item> function • Use a custom <see cref="Task"/>&lt;<see cref="bool"/>&gt; </item>
         /// </list>
         /// </summary>
-        internal enum BuffTask {
+        internal enum BuffFunction {
             add, subtract, multiply, divide,
-            custom
+            function
         }
 
 
@@ -29,19 +29,19 @@ namespace Assets.Scripts.Objects.Entities.Stats {
         internal bool isEnabled { get; set; }
         internal System.Type statType { get; set; }
         internal float amount { get; set; }
-        internal BuffTask buffTask { get; set; }
+        internal BuffFunction buffFunction { get; set; }
 
         internal Buff(
                 System.Type statType,
                 float amount,
-                BuffTask buffTask,
+                BuffFunction buffFunction,
                 bool enableNow = true) {
             if (!statType.IsAssignableFrom(typeof(Stat)))
                 throw new System.ArgumentException("statType must be assignable from the type Stat");
             this.statName = StatName.Buff;
             this.statType = statType;
             this.amount = amount;
-            this.buffTask = buffTask;
+            this.buffFunction = buffFunction;
             this.isEnabled = enableNow;
         }
     }
