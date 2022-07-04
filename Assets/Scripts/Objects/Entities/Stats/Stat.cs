@@ -1,5 +1,3 @@
-using Assets.Scripts.Objects.Entity.Stat._Types;
-
 namespace Assets.Scripts.Objects.Entities.Stats {
     internal abstract partial class Stat {
         internal enum StatName {

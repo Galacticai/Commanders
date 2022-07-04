@@ -1,4 +1,4 @@
-using Assets.Scripts.Objects.Entity.Stat;
+using Assets.Scripts.Objects.Entities.Stats;
 using System.Collections.Generic;
 
 namespace Assets.Scripts.Objects.Entities.Units {
@@ -12,7 +12,6 @@ namespace Assets.Scripts.Objects.Entities.Units {
                 string gameObject_name,
                 List<Territory> territoryAllowed,
                 StatDictionary stats)
-                    : base(commanderID, gameObject_name, territoryAllowed, stats) {
-        }
+                    : base(commanderID, gameObject_name, territoryAllowed, stats) { }
     }
 }

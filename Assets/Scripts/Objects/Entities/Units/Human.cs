@@ -1,4 +1,4 @@
-using Assets.Scripts.Objects.Entity.Stat;
+using Assets.Scripts.Objects.Entities.Stats;
 
 namespace Assets.Scripts.Objects.Entities.Units {
 

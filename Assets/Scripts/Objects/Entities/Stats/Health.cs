@@ -1,5 +1,4 @@
 using System;
-using static Assets.Scripts.Objects.Entity.Stat._Types.Weapon;
 
 namespace Assets.Scripts.Objects.Entities.Stats {
 
