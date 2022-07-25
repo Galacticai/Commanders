@@ -19,7 +19,7 @@ namespace Assets.Scripts.Objects.Commanders {
         internal protected int alliance { get; protected set; }
         internal string cameraID { get; }
 
-        /// <summary> <see cref="Commander"/> will be the master over every <see cref="Entity"/> owned </summary>
+        /// <summary> <see cref="Commander"/> controls <see cref="Entities.Entity"/> and other related stuff </summary>
         protected Commander(
                 string name,
                 Provenance provenance,
