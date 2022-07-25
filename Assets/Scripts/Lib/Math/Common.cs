@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts.Lib.Math {
+﻿using System.Linq;
+
+namespace Assets.Scripts.Lib.Math {
     public class Common {
         /// <summary> Random manipulation </summary>
         public struct Random {
