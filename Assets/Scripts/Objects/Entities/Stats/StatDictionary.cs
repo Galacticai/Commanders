@@ -18,7 +18,7 @@ namespace Assets.Scripts.Objects.Entities.Stats {
         //!? ======================
 
         internal StatDictionary(params Stat[] stats) : base() {
-            foreach (var stat in stats) Add(stat);
+            foreach (var stat in stats) this.Add(stat);
         }
         internal StatDictionary() : base() { }
     }

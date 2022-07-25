@@ -21,7 +21,7 @@
 
         public double atRatio(double ratio) {
             ratio = Range.ZERO_ONE.toRange(ratio);
-            return ratio * (this.max - this.min) + this.min;
+            return (ratio * (this.max - this.min)) + this.min;
         }
         public double atPercent(double percent)
             => this.atRatio(Range.ZERO_HUNDRED.toRange(percent) / 100);

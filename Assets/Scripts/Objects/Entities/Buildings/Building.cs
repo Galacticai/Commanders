@@ -29,7 +29,7 @@ namespace Assets.Scripts.Objects.Entities.Buildings {
                 List<Territory> territoryAllowed,
                 StatDictionary stats)
                     : base(commanderID, gameObject_name, territoryAllowed, stats) {
-            if (territory == Territory.Air)
+            if (this.territory == Territory.Air)
                 throw new ArgumentOutOfRangeException("Building.territory cannot be Territory.Air");
 
             this.constructionRadius = constructionRadius;

@@ -11,7 +11,7 @@ namespace Assets.Scripts.Objects.Entities.Stats {
             => this.health == this.healthTotal;
         /// <returns> Ratio of <see cref="health"/> relative to <see cref="healthTotal"/> (0~1) </returns>
         internal float health_ratio
-            => (this.health / this.healthTotal);
+            => this.health / this.healthTotal;
         /// <returns> Precentage of <see cref="health"/> relative to <see cref="healthTotal"/> (0~100) </returns>
         internal float health_percent
             => this.health_ratio * 100;
@@ -51,8 +51,8 @@ namespace Assets.Scripts.Objects.Entities.Stats {
         /// <summary> Decrease <see cref="health"/> using <see cref="Entity"/>.damage (if present) </summary>
         /// <returns> Final <see cref="health"/> </returns>
         internal float hurtBy(Entity entity) {
-            entity.stats.TryGetValue(typeof(Weapon), out Stat weapon);
-            if (weapon != null)
+            bool hasWeapon = entity.stats.TryGetValue(StatName.Weapon, out Stat weapon);
+            if (hasWeapon)
                 this.hurtBy((Weapon)weapon);
             return this.health;
         }
