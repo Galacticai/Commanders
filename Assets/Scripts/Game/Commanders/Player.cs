@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Scripts.Objects.Commanders {
+namespace Assets.Scripts.Game.Commanders {
     internal class Player : Commander {
 
         internal Player(string name, Provenance provenance, int alliance, string cameraID, bool replace = false)

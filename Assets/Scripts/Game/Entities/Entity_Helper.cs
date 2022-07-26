@@ -1,4 +1,4 @@
-namespace Assets.Scripts.Objects.Entities {
+namespace Assets.Scripts.Game.Entities {
 
     internal abstract partial class Entity {
 

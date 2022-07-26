@@ -1,8 +1,8 @@
-using Assets.Scripts.Objects.Entities.Stats;
+using Assets.Scripts.Game.Entities.Stats;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Objects.Entities {
+namespace Assets.Scripts.Game.Entities {
 
     internal abstract partial class Entity {
 

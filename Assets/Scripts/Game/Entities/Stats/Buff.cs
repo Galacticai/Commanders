@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Objects.Entities.Stats {
+namespace Assets.Scripts.Game.Entities.Stats {
     internal sealed class Buff : Stat {
         /// <summary>
         /// <list type="bullet">

@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Objects.Commanders.Computers {
+﻿namespace Assets.Scripts.Game.Commanders.Computers {
     internal class Computer : Commander {
         /// <summary> The master of all <see cref="Computer"/>s and <see cref="Player"/>s <br/>
         /// Controls everything </summary>

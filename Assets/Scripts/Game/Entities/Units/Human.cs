@@ -1,6 +1,6 @@
-using Assets.Scripts.Objects.Entities.Stats;
+using Assets.Scripts.Game.Entities.Stats;
 
-namespace Assets.Scripts.Objects.Entities.Units {
+namespace Assets.Scripts.Game.Entities.Units {
 
     internal abstract class Human : Unit {
 

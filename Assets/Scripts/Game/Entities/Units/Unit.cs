@@ -1,7 +1,8 @@
-using Assets.Scripts.Objects.Entities.Stats;
+
+using Assets.Scripts.Game.Entities.Stats;
 using System.Collections.Generic;
 
-namespace Assets.Scripts.Objects.Entities.Units {
+namespace Assets.Scripts.Game.Entities.Units {
 
     internal abstract class Unit : Entity {
 

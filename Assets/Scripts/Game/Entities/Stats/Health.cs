@@ -1,6 +1,6 @@
 using System;
 
-namespace Assets.Scripts.Objects.Entities.Stats {
+namespace Assets.Scripts.Game.Entities.Stats {
 
     internal sealed class Health : Stat {
         /// <returns> <see cref="health"/> &lt; <see cref="healthTotal"/> </returns>

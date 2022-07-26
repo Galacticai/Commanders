@@ -1,10 +1,10 @@
-﻿using Assets.Scripts.Lib.Math.Space3D;
-using Assets.Scripts.Objects.Entities.Stats;
+﻿using Assets.Scripts.Game.Entities.Stats;
+using Assets.Scripts.Lib.Math.Space2D;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Objects.Entities.Buildings {
+namespace Assets.Scripts.Game.Entities.Buildings {
     internal abstract class Building : Entity {
 
 

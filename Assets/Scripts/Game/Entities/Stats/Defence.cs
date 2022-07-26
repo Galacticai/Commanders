@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Assets.Scripts.Objects.Entities.Stats {
+namespace Assets.Scripts.Game.Entities.Stats {
     internal sealed class Defence : Stat {
 
         internal float amount(Weapon weapon) {

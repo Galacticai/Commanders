@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Objects.Commanders {
+namespace Assets.Scripts.Game.Commanders {
     internal abstract partial class Commander {
 
         internal protected static readonly Dictionary<string, Commander> activeCommanders = new();

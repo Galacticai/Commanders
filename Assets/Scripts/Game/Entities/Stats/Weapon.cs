@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Objects.Entities.Stats {
+﻿namespace Assets.Scripts.Game.Entities.Stats {
     internal class Weapon : Stat {
 
         internal struct Damage {
@@ -28,7 +28,7 @@
             Nearby, Ranged
         }
 
-        internal override Stat.StatName statName { get; }
+        internal override StatName statName { get; }
         internal WeaponType type { get; set; }
         internal Damage damage { get; set; }
         internal float radius { get; set; }

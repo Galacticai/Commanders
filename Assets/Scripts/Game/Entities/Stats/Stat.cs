@@ -1,4 +1,4 @@
-namespace Assets.Scripts.Objects.Entities.Stats {
+namespace Assets.Scripts.Game.Entities.Stats {
     internal abstract partial class Stat {
         internal enum StatName {
             STAT,

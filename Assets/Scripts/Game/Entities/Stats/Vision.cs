@@ -1,5 +1,6 @@
-namespace Assets.Scripts.Objects.Entities.Stats {
+using static Assets.Scripts.Game.Entities.Entity;
 
+namespace Assets.Scripts.Game.Entities.Stats {
     internal sealed class Vision : Stat {
         internal struct Default {
             internal record TerritoryExtra {
@@ -12,11 +13,11 @@ namespace Assets.Scripts.Objects.Entities.Stats {
 
         #region Helper
 
-        internal float radius_byTerritory(Entity.Territory territory)
+        internal float radius_byTerritory(Territory territory)
             => this.radius_base
             + territory switch {
-                Entity.Territory.Water => Default.TerritoryExtra.Water,
-                Entity.Territory.Air => Default.TerritoryExtra.Air,
+                Territory.Water => Default.TerritoryExtra.Water,
+                Territory.Air => Default.TerritoryExtra.Air,
                 //? Entity.Territory.Land
                 _ => Default.TerritoryExtra.Land
             };

@@ -1,4 +1,4 @@
-namespace Assets.Scripts.Objects.Presets {
+namespace Assets.Scripts.Game.Presets {
 
     /// <summary> Shortcuts for <see cref="Unit"/> </summary>
     internal struct unit {
