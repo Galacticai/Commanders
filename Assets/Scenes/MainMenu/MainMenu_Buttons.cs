@@ -2,13 +2,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scenes.MainMenu {
-    internal class Buttons : MonoBehaviour {
+    public class MainMenu_Buttons : MonoBehaviour {
 
-        internal void Play_Button_Click() {
+        public void SampleScene_Button_Click() {
             SceneManager.LoadScene((int)ScenesIndex.SampleScene);
         }
 
-        internal void Quit_Button_Click() {
+        public void Quit_Button_Click() {
             Application.Quit();
         }
     }
