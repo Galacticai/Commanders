@@ -8,15 +8,16 @@ namespace Assets.Scripts.Lib.Unity {
     public class ProjectInfoText : MonoBehaviour {
 
 
-        public string gameName = "Commanders";
-        public bool showGameName = true,
-                    showVersion = true,
-                    showVersionMinor = true,
-                    showPhase = true,
-                    showCopyrightSymbol = true,
-                    showDeveloperName = true,
-                    showYear = true;
-        public int year = 2022;
+        [SerializeField] private string gameName = "Commanders";
+        [SerializeField]
+        private bool showGameName = true,
+                     showVersion = true,
+                     showVersionMinor = true,
+                     showPhase = true,
+                     showCopyrightSymbol = true,
+                     showDeveloperName = true,
+                     showYear = true;
+        [SerializeField] private int year = 2022;
 
         private TMP_Text _TMPText;
         private void Start() {
