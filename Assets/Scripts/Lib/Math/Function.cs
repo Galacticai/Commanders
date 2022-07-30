@@ -1,195 +1,200 @@
 ﻿using sMath = System.Math;
 
 namespace Assets.Scripts.Lib.Math {
-    /// <summary> Predefined functions </summary>
+    /// <summary> Predefined mapping functions </summary>
     public static class Function {
         public enum FunctionName {
-            //? s     /
+            //? t     /
             //? |   /
             //? | /
-            //? 0一一一s
-            linear_0s,
-            //? s    .-
+            //? f一一一t
+            linear_FT,
+            //? t    .-
             //? |   /
             //? | _-
-            //? 0一一一s
-            smooth_0s,
-            //? s   ,.--
+            //? f一一一t
+            smooth_FT,
+            //? t   ,.--
             //? |  /
             //? |/
-            //? 0一一一s
-            smoothEnd_0s,
-            //? s     /
+            //? f一一一t
+            smoothEnd_FT,
+            //? t     /
             //? |    /
             //? | _.'
-            //? 0一一一s
-            smoothStart_0s,
+            //? f一一一t
+            smoothStart_FT,
 
-            //? s    .--.
+            //? t    .--.
             //? |   /    \
             //? | _'      '_
-            //? 0一一一一一一s
-            smooth_0s0,
-            //? s   ,.--.,
+            //? f一一一一一一t
+            smooth_FTF,
+            //? t   ,.--.,
             //? |  /      \
             //? |/         \
-            //? 0一一一一一一s
-            smoothMiddle_0s0
+            //? f一一一一一一t
+            smoothMiddle_FTF
         }
-        public static double fx(double x, double scale, FunctionName function)
+        public static double fx(FunctionName function, double x, double from, double to)
             => function switch {
-                FunctionName.smooth_0s => smooth_0s(x, scale),
-                FunctionName.smoothEnd_0s => smoothEnd_0s(x, scale),
-                FunctionName.smoothStart_0s => smoothStart_0s(x, scale),
-                FunctionName.smooth_0s0 => smooth_0s0(x, scale),
-                FunctionName.smoothMiddle_0s0 => smoothMiddle_0s0(x, scale),
-                _ => linear_0s(x, scale)
+                FunctionName.smooth_FT => smooth_FT(x, from, to),
+                FunctionName.smoothEnd_FT => smoothEnd_FT(x, from, to),
+                FunctionName.smoothStart_FT => smoothStart_FT(x, from, to),
+                FunctionName.smooth_FTF => smooth_FTF(x, from, to),
+                FunctionName.smoothMiddle_FTF => smoothMiddle_FTF(x, from, to),
+                _ => linear_0s(x, from, to)
             };
 
 
         #region Functions
 
-        //? s     /
+        //? t     /
         //? |   /
         //? | /
-        //? 0一一一s
+        //? f一一一t
 
         /// <summary>
         /// <list>
         /// <c>
-        /// <item>⠀⠀⠀s⠀⠀⠀⠀⠀/  </item>
+        /// <item>⠀⠀⠀t⠀⠀⠀⠀⠀/  </item>
         /// <item>⠀⠀⠀:⠀⠀⠀/     </item>
         /// <item>⠀⠀⠀:⠀/       </item>
-        /// <item>⠀⠀⠀0 . . . s </item>
+        /// <item>⠀⠀⠀f 一一一 t </item>
         /// </c>
         /// </list>
         /// </summary>
         /// <param name="x">input</param>
-        /// <param name="scale">Size of the wave (Half wave)</param>
         /// <returns> <c> ƒ(𝑥) = 𝑥 </c> </returns> 
-        private static double linear_0s(double x, double scale) {
-            x = Common.ForcedInRange(x, 0, scale); // force x between 0一一一s
+        public static double linear_0s(double x, double from, double to) {
+            x = Common.ForcedInRange(x, from, to); // force x between f一一一t
             return x;
         }
 
 
-        //? s    .-
+        //? t    .-
         //? |   /
         //? | _'
-        //? 0一一一s
+        //? f一一一t
 
         /// <summary>
         /// <list>
         /// <c>
-        /// <item>‏‏‎s‏‏‎ ‎‏‏‎ ‎‏‏‎‏‏‎ ‎ ‏‏‎ ‎‎‏‏‎ ‎.-  </item>
-        /// <item>‏‏‎:‏‏‎ ‎‏‏‎ ‎‏‏‎‏‏‎ ‎ ‎/    </item>
-        /// <item>‏‏‎: ‎_'     </item>
-        /// <item>‏‏‎‎0 . . . . s </item>
+        /// <item>⠀⠀t⠀⠀⠀⠀.-         </item>
+        /// <item>⠀⠀:⠀⠀⠀/           </item>
+        /// <item>⠀⠀: _'            </item>
+        /// <item>⠀⠀f 一一一 t     </item>
         /// </c>
         /// </list>
+        /// <br/> Note: <c> d = t - f </c>
         /// </summary>
         /// <param name="x">input</param>
-        /// <param name="scale">Size of the wave (Half wave)</param>
-        /// <returns> <c> ƒ(𝑥) = ((-scale • 𝒄𝒐𝒔(π𝑥 / scale)) + scale) / 2 </c> </returns>
-        public static double smooth_0s(double x, double scale) {
-            x = Common.ForcedInRange(x, 0, scale); // force x between 0一一一s
-            return ((-scale * sMath.Cos(x * sMath.PI / scale)) + scale) / 2;
+        /// <returns> <c> ƒ(𝑥) = ((-d•𝒄𝒐𝒔(π(𝑥 - f)/d)) + t + f) / 2 </c> </returns> 
+        public static double smooth_FT(double x, double from, double to) {
+            x = Common.ForcedInRange(x, from, to); // force x between f一一一t
+            double delta = to - from;
+            return ((-delta * sMath.Cos(sMath.PI * (x - from) / delta)) + to + from) / 2;
         }
 
 
-        //? s   ,.--
-        //? |  /
-        //? |/
-        //? 0一一一s
-
-        /// <summary>
-        /// <list>
-        /// <c>
-        /// <item>⠀⠀⠀s⠀⠀,.--  </item>
-        /// <item>⠀⠀⠀|⠀/      </item>
-        /// <item>⠀⠀⠀|/        </item>
-        /// <item>⠀⠀⠀0一一一s  </item>
-        /// </c>
-        /// </list>
-        /// </summary>
-        /// <param name="x">input</param>
-        /// <param name="scale">Size of the wave (Half wave)</param>
-        /// <returns> <c> ƒ(𝑥) = scale • 𝒔𝒊𝒏(π𝑥 / (2•scale)) </c> </returns> 
-        public static double smoothEnd_0s(double x, double scale) {
-            x = Common.ForcedInRange(x, 0, scale); // force x between 0一一一s
-            return scale * sMath.Sin(sMath.PI * x / (2 * scale));
-        }
-
-
-        //? s     /
+        //? t     /
         //? |    /
         //? | _.'
-        //? 0一一一s
+        //? f一一一t
 
         /// <summary>
         /// <list>
         /// <c>
-        /// <item>⠀⠀⠀s⠀⠀⠀⠀⠀/     </item>
+        /// <item>⠀⠀⠀t⠀⠀⠀⠀⠀/     </item>
         /// <item>⠀⠀⠀|⠀⠀⠀⠀/      </item>
         /// <item>⠀⠀⠀|⠀_.'       </item>
-        /// <item>⠀⠀⠀0一一一s       </item>
+        /// <item>⠀⠀⠀f 一一一 t       </item>
         /// </c>
         /// </list>
+        /// <br/> Note: <c> d = t - f </c>
         /// </summary>
         /// <param name="x">input</param>
-        /// <param name="scale">Size of the wave (Half wave)</param>
-        /// <returns> <c> ƒ(𝑥) = (-scale • 𝒄𝒐𝒔(π𝑥 / (2•scale))) + scale </c> </returns> 
-        public static double smoothStart_0s(double x, double scale) {
-            x = Common.ForcedInRange(x, 0, scale); // force x between 0一一一s
-            return (-scale * sMath.Cos(sMath.PI * x / (2 * scale))) + scale;
+        /// <returns> <c> ƒ(𝑥) = -d•𝒄𝒐𝒔(π(x - f) / 2d) + t </c> </returns>
+        public static double smoothStart_FT(double x, double from, double to) {
+            x = Common.ForcedInRange(x, from, to); // force x between f一一一t
+            double delta = to - from;
+            return (-delta * sMath.Cos(sMath.PI * (x - from) / (2 * delta))) + to;
         }
 
 
-        //? s    .--.
+        //? t   ,.--
+        //? |  /
+        //? |/
+        //? f一一一t
+
+        /// <summary>
+        /// <list>
+        /// <c>
+        /// <item>⠀⠀⠀t⠀⠀,.--  </item>
+        /// <item>⠀⠀⠀|⠀/      </item>
+        /// <item>⠀⠀⠀|/        </item>
+        /// <item>⠀⠀⠀f一一一t  </item>
+        /// </c>
+        /// </list>
+        /// <br/> Note: <c> d = t - f </c>
+        /// </summary>
+        /// <param name="x">input</param>
+        /// <returns> <c> ƒ(𝑥) = d•𝒔𝒊𝒏(π(𝑥 - f)/2d) + f </c> </returns>
+        public static double smoothEnd_FT(double x, double from, double to) {
+            x = Common.ForcedInRange(x, from, to); // force x between f一一一t
+            double delta = to - from;
+            return (delta * sMath.Sin(sMath.PI * (x - from) / (2 * delta))) + from;
+        }
+
+
+        //? t    .--.
         //? |   /    \
         //? | _'      '_
-        //? 0一一一一一一s
+        //? f一一一一一一t
 
         /// <summary>
         /// <list>
         /// <c>
-        /// <item>⠀⠀⠀ s⠀⠀⠀.--.    </item>
-        /// <item>⠀⠀⠀ |⠀⠀/⠀⠀⠀⠀\    </item>
-        /// <item>⠀⠀⠀ | _'⠀⠀⠀⠀⠀'_   </item>
-        /// <item>⠀⠀⠀ 0一一一一一一s      </item>
+        /// <item>⠀⠀⠀ t⠀⠀⠀  .--.    </item>
+        /// <item>⠀⠀⠀ |⠀⠀ /⠀⠀⠀⠀\    </item>
+        /// <item>⠀⠀⠀ | _'⠀⠀⠀⠀ ⠀'_   </item>
+        /// <item>⠀⠀⠀ f 一一一一一一 t      </item>
         /// </c>
         /// </list>
+        /// <br/> Note: <c> d = t - f </c>
         /// </summary>
         /// <param name="x">input</param>
-        /// <param name="scale">Size of the wave (Half wave)</param>
-        /// <returns> <c> ƒ(𝑥) = ((-scale • 𝒄𝒐𝒔(2π𝑥 / scale)) + scale) / 2 </c> </returns> 
+        /// <returns> <c> ƒ(𝑥) = ( -d•𝒄𝒐𝒔(2π(𝑥 - f)/d) + t + f )/2 </c></returns> 
 
-        public static double smooth_0s0(double x, double scale) {
-            x = Common.ForcedInRange(x, 0, scale); // force x between 0一一一s
-            return ((-scale * sMath.Cos(2 * sMath.PI * x / scale)) + scale) / 2;
+        public static double smooth_FTF(double x, double from, double to) {
+            x = Common.ForcedInRange(x, from, to); // force x between f一一一t
+            double delta = to - from;
+            return ((-delta * sMath.Cos(2 * sMath.PI * (x - from) / delta)) + to + from) / 2;
         }
 
-        //? s   ,.--.,
+
+        //? t   ,.--.,
         //? |  /      \
         //? |/         \
-        //? 0一一一一一一s
+        //? f一一一一一一t
 
         /// <summary>
         /// <list>
         /// <c>
-        /// <item>⠀⠀⠀ s⠀⠀,.--., </item>
+        /// <item>⠀⠀⠀ t⠀⠀,.--., </item>
         /// <item>⠀⠀⠀ |⠀/⠀⠀⠀⠀⠀\ </item>
         /// <item>⠀⠀⠀ |/⠀⠀⠀⠀⠀⠀⠀\  </item>
-        /// <item>⠀⠀⠀ 0一一一一一一s      </item>
+        /// <item>⠀⠀⠀ f一一一一一一t      </item>
         /// </c>
         /// </list>
+        /// <br/> Note: <c> d = t - f </c>
         /// </summary>
         /// <param name="x">input</param>
-        /// <param name="scale">Size of the wave (Half wave)</param>
-        /// <returns> <c> ƒ(𝑥) = scale • 𝒔𝒊𝒏(π𝑥/scale) </c> </returns> 
-        public static double smoothMiddle_0s0(double x, double scale) {
-            x = Common.ForcedInRange(x, 0, scale); // force x between 0一一一s
-            return scale * sMath.Sin(sMath.PI * x / scale);
+        /// <returns> <c> ƒ(𝑥) = ( -d•𝒄𝒐𝒔(2π(𝑥 - f)/d) + t + f )/2 </c></returns> 
+        public static double smoothMiddle_FTF(double x, double from, double to) {
+            x = Common.ForcedInRange(x, from, to); // force x between f一一一t
+            double delta = to - from;
+            return -sMath.Abs(delta * sMath.Cos(sMath.PI * (x - from) / delta)) + to;
         }
 
         #endregion
