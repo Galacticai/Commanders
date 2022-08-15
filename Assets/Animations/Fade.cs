@@ -21,9 +21,11 @@ namespace Assets.Animations {
             => this._shown = false;
 
         public void show() {
+            this._canvasGroup.interactable = true;
             this._fadeIn = true;
         }
         public void hide() {
+            this._canvasGroup.interactable = false;
             this._fadeOut = true;
         }
 
@@ -33,13 +35,13 @@ namespace Assets.Animations {
         private void Update() {
             if (this._fadeIn && this._currentAnimationStep < 1) {
                 this._currentAnimationStep += Time.deltaTime * this._fadeIn_Multiplier;
-                this._canvasGroup.alpha = (float)Function.fx(this._currentAnimationStep, 1, this.function);
+                this._canvasGroup.alpha = (float)Function.fx(this.function, this._currentAnimationStep, 0, 1);
                 if (this._currentAnimationStep >= 1)
                     this._fadeIn = false;
             }
             if (this._fadeOut && this._currentAnimationStep >= 0) {
                 this._currentAnimationStep -= Time.deltaTime * this._fadeIn_Multiplier;
-                this._canvasGroup.alpha = (float)Function.fx(this._currentAnimationStep, 1, this.function);
+                this._canvasGroup.alpha = (float)Function.fx(this.function, this._currentAnimationStep, 0, 1);
                 if (this._currentAnimationStep <= 0)
                     this._fadeOut = false;
             }
