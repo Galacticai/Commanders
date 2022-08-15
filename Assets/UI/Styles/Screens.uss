@@ -1,0 +1,125 @@
+.ScreenBorder {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.Screen {
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-left-color: rgba(254, 200, 143, 0.4);
+    border-right-color: rgba(254, 200, 143, 0.4);
+    border-top-color: rgba(254, 200, 143, 0.4);
+    border-bottom-color: rgba(254, 200, 143, 0.4);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url('project://database/Assets/UI/Wallpapers/Number%20matrix.png?fileID=2800000&guid=22233a48f8e84ca4ea3c328e0d0a1c61&type=3#Number matrix');
+    -unity-background-image-tint-color: rgba(18, 3, 17, 0.85);
+    transition-property: top, opacity;
+    transition-timing-function: ease-out-cubic, ease-out;
+    transition-duration: 0.5s, 0.2s;
+    transition-delay: 0.1s, 0s;
+    flex-grow: 1;
+}
+
+.ScreenHeader {
+    flex-direction: row;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgba(254, 200, 143, 0.4);
+    border-right-color: rgba(254, 200, 143, 0.4);
+    border-top-color: rgba(254, 200, 143, 0.4);
+    border-bottom-color: rgba(254, 200, 143, 0.4);
+}
+
+.ScreenBody {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgba(254, 200, 143, 0.2);
+    border-right-color: rgba(254, 200, 143, 0.2);
+    border-top-color: rgba(254, 200, 143, 0.2);
+    border-bottom-color: rgba(254, 200, 143, 0.2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ScreenFooter {
+}
+
+.ScreenButton {
+    min-width: 256px;
+    min-height: 48px;
+    font-size: 32px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    transition-timing-function: ease-out;
+}
+
+.ScreenButtons_Box {
+    flex-direction: row;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    flex-grow: 0;
+}
+
+.ScreenConfirm_Button {
+    width: 420px;
+}
+
+.ScreenCancel_Button {
+    background-color: rgba(0, 0, 0, 0);
+    -unity-text-outline-width: 0;
+}
+
+.ScreenCancel_Button:hover {
+    background-color: rgba(18, 3, 17, 0.85);
+    color: rgb(204, 71, 80);
+    border-left-color: rgb(204, 72, 80);
+    border-right-color: rgb(204, 72, 80);
+    border-top-color: rgb(204, 72, 80);
+    border-bottom-color: rgb(204, 72, 80);
+}
+
+.ScreenCancel_Button:active {
+    border-left-color: rgb(254, 200, 143);
+    border-right-color: rgb(254, 200, 143);
+    border-top-color: rgb(254, 200, 143);
+    border-bottom-color: rgb(254, 200, 143);
+    color: rgb(254, 200, 143);
+    background-color: rgba(38, 14, 15, 0.85);
+}
