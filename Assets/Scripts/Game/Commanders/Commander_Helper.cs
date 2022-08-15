@@ -6,7 +6,7 @@
         internal bool isMe => this.cameraID != null;
 
         /// <summary> This <see cref="Commander"/> is the MASTER </summary>
-        internal bool isMASTER => this.name == "MASTER";
+        internal bool isMASTER => this.name == "MASTER" || this.provenance == Provenance.MASTER;
         /// <summary> This <see cref="Commander"/> is controlled by AI </summary>
         internal bool isComputer => this.name[.."Computer".Length] == "Computer";
         /// <summary> This <see cref="Commander"/> is controlled by humen </summary>
