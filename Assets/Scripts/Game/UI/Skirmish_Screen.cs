@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Assets.UI.Scripts {
+namespace Assets.Scripts.Game.UI {
     public class Skirmish_Screen : MonoBehaviour {
         internal static UIDocument _uiDocument = null;
         private VisualElement _screen = null;
