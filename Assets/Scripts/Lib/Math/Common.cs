@@ -2,6 +2,16 @@
 
 namespace Assets.Scripts.Lib.Math {
     public class Common {
+
+        public struct Space {
+            public enum Dimension {
+                x, y, z, w, time
+            }
+            public enum Plane {
+                xy, yz, xz
+            }
+        }
+
         /// <summary> Random manipulation </summary>
         public struct Random {
             /// <summary> Generate a random integer between <c>min</c> and <c>max</c> paremeters </summary>
