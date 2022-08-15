@@ -1,0 +1,53 @@
+.Title {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Kanit/Kanit-SemiBold.ttf?fileID=12800000&guid=58463c4e44cc8a640b8e7f0273558318&type=3#Kanit-SemiBold');
+    color: rgba(254, 200, 143, 255);
+    letter-spacing: 5px;
+}
+
+.Subtitle {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Kanit/Kanit-Regular.ttf?fileID=12800000&guid=91bc5c06da65acc4b821bdaf7ef3c04a&type=3#Kanit-Regular');
+    -unity-font-style: normal;
+    color: rgb(254, 200, 143);
+    letter-spacing: 5px;
+}
+
+.ScreenTitle {
+    font-size: 72px;
+    flex-grow: 1;
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/MavenPro/MavenPro-ExtraBold.ttf?fileID=12800000&guid=d3ebb59998952a845b8e30c5fd132f33&type=3#MavenPro-ExtraBold');
+}
+
+.BoxTitle_Box {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgba(254, 200, 143, 0.2);
+    border-right-color: rgba(254, 200, 143, 0.2);
+    border-top-color: rgba(254, 200, 143, 0.2);
+    border-bottom-color: rgba(254, 200, 143, 0.2);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.BoxTitle {
+    font-size: 32px;
+    margin-bottom: -12px;
+}
+
+.BoxSubtitle {
+    font-size: 24px;
+}
