@@ -1,0 +1,50 @@
+Button {
+    transition-property: background-color, color, border-color, font-size, letter-spacing, word-spacing, border-color;
+    transition-timing-function: ease-out, ease-out, ease-out, ease-out, ease-out, ease-out, ease-out;
+    transition-duration: 0.5s, 0.2s, 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
+    background-color: rgba(18, 3, 17, 0.85);
+    background-image: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-left-color: rgba(254, 200, 143, 0.75);
+    border-right-color: rgba(254, 200, 143, 0.75);
+    border-top-color: rgba(254, 200, 143, 0.75);
+    border-bottom-color: rgba(254, 200, 143, 0.75);
+    color: rgba(254, 200, 143, 255);
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Kanit/Kanit-SemiBold.ttf?fileID=12800000&guid=58463c4e44cc8a640b8e7f0273558318&type=3#Kanit-SemiBold');
+    font-size: 24px;
+    letter-spacing: 5px;
+    word-spacing: 2px;
+}
+
+Button:hover {
+    background-color: rgb(254, 200, 143);
+    border-left-color: rgb(254, 200, 143);
+    border-right-color: rgb(254, 200, 143);
+    border-top-color: rgb(254, 200, 143);
+    border-bottom-color: rgb(254, 200, 143);
+    color: rgba(18, 3, 17, 255);
+    letter-spacing: 10px;
+    word-spacing: 4px;
+}
+
+Button:active {
+    background-color: rgba(178, 131, 80, 0.8);
+    letter-spacing: 7px;
+    word-spacing: 1px;
+}
