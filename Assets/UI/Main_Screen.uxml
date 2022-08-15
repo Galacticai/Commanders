@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/Base%20Elements/Button.uss?fileID=7433441132597879392&amp;guid=2c3c0b848083ce640a899c9bdd9fc2b6&amp;type=3#Button" />
+    <Style src="project://database/Assets/UI/Styles/Texts.uss?fileID=7433441132597879392&amp;guid=0a91bc6dcaccd554da97a1ddc91000aa&amp;type=3#Texts" />
+    <Style src="project://database/Assets/UI/Styles/Misc.uss?fileID=7433441132597879392&amp;guid=de072a2e6d881a64da9e5216646063cf&amp;type=3#Misc" />
+    <Style src="project://database/Assets/UI/Styles/Menu.uss?fileID=7433441132597879392&amp;guid=7d659baa5fc3eb7408b954c77ebe25bf&amp;type=3#Menu" />
+    <Style src="project://database/Assets/UI/Styles/Screens.uss?fileID=7433441132597879392&amp;guid=7277d8d99b5e25d45b765a77d76ae597&amp;type=3#Screens" />
+    <ui:GroupBox name="MainMenu_Box" class="Floating Screen" style="-unity-font: none; height: 450px; top: 50%; position: absolute; align-items: stretch; justify-content: space-between; translate: 0 -50%; flex-shrink: 1; width: 640px; right: 10%; opacity: 1;">
+        <ui:GroupBox class="ScreenHeader" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:Label text="COMMANDERS" display-tooltip-when-elided="true" class="Title ScreenTitle" style="font-size: 64px; -unity-text-align: upper-center; height: auto; width: auto; flex-direction: column; flex-basis: initial;" />
+        </ui:GroupBox>
+        <ui:Button text="SKIRMISH" display-tooltip-when-elided="true" name="Skirmish_Button" class="MenuButton" />
+        <ui:Button text="SAMPLE SCENE" display-tooltip-when-elided="true" name="SampleScene_Button" tabindex="1" class="MenuButton" />
+        <ui:Button text="QIUT" display-tooltip-when-elided="true" name="Quit_Button" tabindex="999" class="MenuButton ScreenCancel_Button" />
+    </ui:GroupBox>
+</ui:UXML>
