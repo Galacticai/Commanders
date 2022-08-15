@@ -1,0 +1,15 @@
+.Commanders_Box {
+    flex-grow: 1;
+    font-size: 24px;
+}
+
+.Commander_Box {
+    flex-direction: row;
+}
+
+.Commander_Box > * {
+    flex-grow: 1;
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Kanit/Kanit-SemiBold.ttf?fileID=12800000&guid=58463c4e44cc8a640b8e7f0273558318&type=3#Kanit-SemiBold');
+    color: rgba(254, 200, 143, 255);
+}
