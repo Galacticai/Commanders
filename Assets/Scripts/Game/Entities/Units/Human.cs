@@ -8,11 +8,9 @@ namespace Assets.Scripts.Game.Entities.Units {
             internal const bool something = false;
         }
 
-
-        internal Human(string commanderID, string gameObject_name, StatDictionary stats)
-                : base(commanderID, gameObject_name, new() { Territory.Land }, stats) {
+        protected Human(Command command, StatDictionary stats = null)
+                : base(command, stats) {
 
         }
     }
-
 }
