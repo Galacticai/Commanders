@@ -3,20 +3,29 @@
 #### ﻿<p align="center"><b>Open-Source Real-Time Strategy Game</b></p>
 <br/>
 
----
 
-##### ﻿<p align="center"><b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b></p>
-##### ﻿<p align="center"><b>UNDER CONSTRUCTION</b></p>
-##### ﻿<p align="center"><b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b></p>
 
+<h5 align="center">
+    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b> 
+    <br/>
+    <br/>
+    <b>UNDER CONSTRUCTION</b> <br/>
+    <img style="opacity:0.5" src="https://img.shields.io/badge/In%20progress-Even%20if%20no%20commits-inactive" /> 
+    <br/>
+    <br/>
+    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b>
+</h5>
 
 <br/>
-<p align="center">
-    <img src="https://img.shields.io/badge/-%20Commanders%20-blue" /> 
-    <img src="https://img.shields.io/badge/%C2%A92022-XEROling-blue" /> <br/>
-    <img src="https://img.shields.io/badge/Made%20with-.NET%20C%23%20%7C%20Unity%20Engine-darkgreen"/> 
-</p> 
 
+<p style="opacity:0.8" align="center">
+    <img src="https://img.shields.io/badge/-%20Commanders%20-blue" /> 
+    <img src="https://img.shields.io/badge/%C2%A92022-XEROling-blue" /> 
+    <br/>
+    <img src="https://img.shields.io/badge/Made%20with-.NET%20C%23%20%7C%20Unity%20Engine-darkgreen"/> 
+    <br/>
+    <img src="https://img.shields.io/badge/Targets-Windows%20%7C%20Linux%20-purple" /> 
+</p> 
 
 <br/>
 <br/>
