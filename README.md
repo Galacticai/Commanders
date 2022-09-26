@@ -10,6 +10,13 @@
 ##### ﻿<p align="center"><b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b></p>
 
 
+<br/>
+<p align="center">
+    <img src="https://img.shields.io/badge/-%20Commanders%20-blue" /> 
+    <img src="https://img.shields.io/badge/%C2%A92022-XEROling-blue" /> <br/>
+    <img src="https://img.shields.io/badge/Made%20with-.NET%20C%23%20%7C%20Unity%20Engine-darkgreen"/> 
+</p> 
+
 
 <br/>
 <br/>
@@ -83,11 +90,3 @@ Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an u
 
 <br/>
 <br/>
-
----
-
-<p align="center">
-    Commanders <br/>
-    <code>Made with .NET C# & Unity</code> <br/>
-    <code>©️2022 XEROling</code>
-</p>
