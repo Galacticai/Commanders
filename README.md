@@ -9,7 +9,7 @@
     <br/><br/>
     <img src="https://img.shields.io/badge/-UNDER%20CONSTRUCTION-important?style=for-the-badge" />
     <br/>
-    <img src="https://img.shields.io/badge/-Yes, working on it, even if no commits-2d241d" /> 
+    <img src="https://img.shields.io/badge/-Yes,%20working%20on%20it,%20even%20if%20no%20commits-2d241d?style=flat-square" /> 
     <br/><br/>
     <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b>
 </h5>
@@ -17,16 +17,16 @@
 <br/>
 
 <p align="center">
+    <img src="https://img.shields.io/badge/-Targeting-informational" />
+    <img src="https://img.shields.io/badge/-Windows-white?logo=windows-11&logoColor=gray" />
+    <img src="https://img.shields.io/badge/-Linux-white?logo=linux&logoColor=gray" />
+    <br/>
     <img src="https://img.shields.io/badge/-Made%20with-darkgreen" />
     <img src="https://img.shields.io/badge/-Unity%20Engine-white?logo=unity&logoColor=gray" />
     <img src="https://img.shields.io/badge/-C%23-white?logo=dotnet&logoColor=gray" />
     <br/>
-    <img src="https://img.shields.io/badge/-Targets-informational" />
-    <img src="https://img.shields.io/badge/-Windows-white?logo=windows-11&logoColor=gray" />
-    <img src="https://img.shields.io/badge/-Linux-white?logo=linux&logoColor=gray" />
-    <br/>
     <img src="https://img.shields.io/badge/%C2%A92022-XEROling-blue?link=https://github.com/XEROling" /> 
-    <img src="https://img.shields.io/github/license/XEROling/Commanders?logo=balance&label">
+    <img src="https://img.shields.io/github/license/XEROling/Commanders?logo=gnu&label=">
 </p> 
 
 <br/>
