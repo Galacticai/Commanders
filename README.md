@@ -5,13 +5,13 @@
 <br/>
 
 <h5 align="center">
-    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b> 
+    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b> 
     <br/><br/>
     <img src="https://img.shields.io/badge/-UNDER%20CONSTRUCTION-important?style=for-the-badge" />
     <br/>
     <img src="https://img.shields.io/badge/-Yes,%20working%20on%20it,%20even%20if%20no%20commits-2d241d?style=flat-square" /> 
     <br/><br/>
-    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b>
+    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b>
 </h5>
 
 <br/>
