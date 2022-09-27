@@ -1,34 +1,56 @@
 ﻿# <p align="center">Commanders</p>
 
 #### ﻿<p align="center"><b>Open-Source Real-Time Strategy Game</b></p>
+
 <br/>
 
-
-
 <h5 align="center">
-    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b> 
+    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b> 
+    <br/><br/>
+    <img src="https://img.shields.io/badge/-UNDER%20CONSTRUCTION-important?style=for-the-badge" />
     <br/>
-    <br/>
-    <b>UNDER CONSTRUCTION</b> <br/>
-    <img style="opacity:0.5" src="https://img.shields.io/badge/In%20progress-Even%20if%20no%20commits-inactive" /> 
-    <br/>
-    <br/>
-    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b>
+    <img src="https://img.shields.io/badge/-Yes, working on it, even if no commits-2d241d" /> 
+    <br/><br/>
+    <b>🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨⬛🟨</b>
 </h5>
 
 <br/>
 
-<p style="opacity:0.8" align="center">
-    <img src="https://img.shields.io/badge/-%20Commanders%20-blue" /> 
-    <img src="https://img.shields.io/badge/%C2%A92022-XEROling-blue" /> 
+<p align="center">
+    <img src="https://img.shields.io/badge/-Made%20with-darkgreen" />
+    <img src="https://img.shields.io/badge/-Unity%20Engine-white?logo=unity&logoColor=gray" />
+    <img src="https://img.shields.io/badge/-C%23-white?logo=dotnet&logoColor=gray" />
     <br/>
-    <img src="https://img.shields.io/badge/Made%20with-.NET%20C%23%20%7C%20Unity%20Engine-darkgreen"/> 
+    <img src="https://img.shields.io/badge/-Targets-informational" />
+    <img src="https://img.shields.io/badge/-Windows-white?logo=windows-11&logoColor=gray" />
+    <img src="https://img.shields.io/badge/-Linux-white?logo=linux&logoColor=gray" />
     <br/>
-    <img src="https://img.shields.io/badge/Targets-Windows%20%7C%20Linux%20-purple" /> 
+    <img src="https://img.shields.io/badge/%C2%A92022-XEROling-blue?link=https://github.com/XEROling" /> 
+    <img src="https://img.shields.io/github/license/XEROling/Commanders?logo=balance&label">
 </p> 
 
 <br/>
-<br/>
+
+<p align="center">
+    <a href="https://github.com/XEROling/Commanders/contributors"  style="text-decoration:none;">
+        <img src="https://img.shields.io/github/contributors/XEROling/Commanders?label=Contributors&logo=github&style=social" /> </a>
+    <br/>
+    <a href="https://github.com/XEROling/Commanders/issues" style="text-decoration:none;">
+        <img src="https://img.shields.io/badge/-Issues-4F4F4F?logo=github" /> 
+        <img src="https://img.shields.io/github/issues/XEROling/Commanders?label=" />
+        <img src="https://img.shields.io/github/issues-closed/XEROling/Commanders?label=" />
+    </a>
+    <br/>
+    <a href="https://github.com/XEROling/Commanders/commits" style="text-decoration:none;">
+        <img src="https://img.shields.io/badge/-Commits-4F4F4F?logo=github" />
+        <img src="https://img.shields.io/github/last-commit/XEROling/Commanders?label=" />
+        <img src="https://img.shields.io/github/commit-activity/m/XEROling/Commanders?label=" />
+    </a>
+</p> 
+
+<br/><br/>
+
+---
 
 ## 🌟 Highlights
 
