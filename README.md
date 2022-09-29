@@ -1,7 +1,8 @@
-﻿# <p align="center">Commanders</p>
+﻿<h1><p align="center">Commanders</p></h1>
 
-#### ﻿<p align="center"><b>Open-Source Real-Time Strategy Game</b></p>
+<h4><p align="center"><b>Open-Source Real-Time Strategy Game</b></p></h4>
 
+<hr/>
 <br/>
 
 <h5 align="center">
@@ -48,9 +49,9 @@
     </a>
 </p> 
 
-<br/><br/>
+<br/>
+<hr/>
 
----
 
 ## 🌟 Highlights
 
