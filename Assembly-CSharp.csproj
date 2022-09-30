@@ -56,62 +56,41 @@
     <Analyzer Include="D:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
+    <Compile Include="*.cs" />
+    <Compile Include="Assets\**\*.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="**\*.md" />
-    <None Include="**\LICENSE" />
+    <None Include="Assets\**\*.md" />
+    <None Include="*.md" />
+    <None Include="Assets\**\LICENSE" />
+    <None Include="LICENSE" />
     <None Include="**\.gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="**\*.config" />
+    <None Include="*.config" />
+    <None Include="Assets\**\*.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="**\*.asset" />
+    <None Include="Assets\**\*.asset" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="**\*.uxml" />
-    <None Include="**\*.uss" />
+    <None Include="Assets\**\*.uxml" />
+    <None Include="Assets\**\*.uss" />
   </ItemGroup>
   <ItemGroup>
     <None Include="**\*.shader" />
     <None Include="**\*.cginc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" /> 
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\UI\Styles\Base Elements\Toggle.uss" />
-    <None Include="Assets\UI\Skirmish_Screen.uxml" />
-    <None Include="Assets\UI\Styles\Skirmish.uss" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\UI\Styles\Texts.uss" />
-    <None Include="Assets\Models\tank-ogamakm2035s-IS4\Additional.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\UI\Styles\Base Elements\Button.uss" />
-    <None Include="Assets\UI\Main_Screen.uxml" />
-    <None Include="Assets\UI\Styles\Commander_Box.uss" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\UI\Styles\Menu.uss" />
-    <None Include="Assets\UI\Background_Screen.uxml" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\UI\Styles\Misc.uss" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\UI\Styles\Base Elements\DropdownField.uss" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="*.txt" />
+    <None Include="Assets\**\*.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Library\**" />
+    <None Remove="Temp\**" />
+    <None Remove="Build*\**" />
+    <None Remove="Logs\**" />
+    <None Remove="UserSettings\**" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
