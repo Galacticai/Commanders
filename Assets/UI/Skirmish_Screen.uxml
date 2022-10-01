@@ -8,7 +8,8 @@
     <Style src="project://database/Assets/UI/Styles/Menu.uss?fileID=7433441132597879392&amp;guid=7d659baa5fc3eb7408b954c77ebe25bf&amp;type=3#Menu" />
     <Style src="project://database/Assets/UI/Styles/Base%20Elements/DropdownField.uss?fileID=7433441132597879392&amp;guid=5f512c9bf52fb574c93903b0264a74eb&amp;type=3#DropdownField" />
     <Style src="project://database/Assets/UI/Styles/Base%20Elements/TextField.uss?fileID=7433441132597879392&amp;guid=80443136ef830d848988da6d38a3dbe5&amp;type=3#TextField" />
-    <ui:GroupBox name="Skirmish_Screen" class="ScreenContent Screen" style="opacity: 1;">
+    <Style src="project://database/Assets/UI/Styles/Base%20Elements/Toggle.uss?fileID=7433441132597879392&amp;guid=66ac80b0a9bdb2b4cb4b2638dfd4c944&amp;type=3#Toggle" />
+    <ui:GroupBox name="Skirmish_Screen" class="ScreenContent Screen">
         <ui:GroupBox name="Skirmish_Header" class="header ScreenHeader">
             <ui:Label text="SKIRMISH" display-tooltip-when-elided="true" name="Title" class="Title ScreenTitle" />
         </ui:GroupBox>
@@ -18,7 +19,7 @@
                     <ui:Label text="War zone" display-tooltip-when-elided="true" class="Title BoxTitle" />
                     <ui:Label text="Map name" display-tooltip-when-elided="true" name="MapTitle_TextField" class="Subtitle BoxSubtitle" style="font-size: 20px;" />
                 </ui:GroupBox>
-                <ui:IMGUIContainer name="Map_IMGUIContainer" style="border-left-color: rgba(254, 200, 143, 0.2); border-right-color: rgba(254, 200, 143, 0.2); border-top-color: rgba(254, 200, 143, 0.2); border-bottom-color: rgba(254, 200, 143, 0.2); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; width: 360px; height: 360px; margin-top: 4px; margin-bottom: 4px;" />
+                <ui:IMGUIContainer name="Map_IMGUIContainer" style="border-left-color: rgba(254, 200, 143, 0.2); border-right-color: rgba(254, 200, 143, 0.2); border-top-color: rgba(254, 200, 143, 0.2); border-bottom-color: rgba(254, 200, 143, 0.2); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; width: 360px; height: 360px; margin-top: 4px; margin-bottom: 4px; background-color: rgba(18, 3, 17, 0.85);" />
                 <ui:Button text="SELECT MAP" display-tooltip-when-elided="true" name="SelectMap_Button" style="margin-left: 0; margin-right: 0;" />
             </ui:GroupBox>
             <ui:GroupBox name="Commanders_Box" class="Commanders_Box">
@@ -73,10 +74,11 @@
             </ui:GroupBox>
         </ui:GroupBox>
         <ui:GroupBox name="Skirmish_Footer" class="ScreenButtons_Box ScreenFooter">
-            <ui:Button text="DEMAND" display-tooltip-when-elided="true" name="Demand_Button" class="ScreenButton ScreenConfirm_Button" />
-            <ui:Button text="BACK" display-tooltip-when-elided="true" name="Back_Button" class="ScreenButton ScreenCancel_Button" />
+            <ui:Button text="JOIN NETWORK" display-tooltip-when-elided="true" name="LAN_Button" class="ScreenButton ScreenConfirm_Button" />
+            <ui:Toggle label="Allow Network" value="true" style="width: 320px;" />
             <ui:VisualElement class="AlignRight">
-                <ui:Button text="JOIN NETWORK" display-tooltip-when-elided="true" name="LAN_Button" class="ScreenButton ScreenConfirm_Button" />
+                <ui:Button text="DEMAND" display-tooltip-when-elided="true" name="Demand_Button" class="ScreenButton ScreenConfirm_Button" />
+                <ui:Button text="BACK" display-tooltip-when-elided="true" name="Back_Button" class="ScreenButton ScreenCancel_Button" />
             </ui:VisualElement>
         </ui:GroupBox>
     </ui:GroupBox>

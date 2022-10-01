@@ -32,11 +32,14 @@
     border-bottom-right-radius: 5px;
     background-image: url('project://database/Assets/UI/Wallpapers/Number%20matrix.png?fileID=2800000&guid=22233a48f8e84ca4ea3c328e0d0a1c61&type=3#Number matrix');
     -unity-background-image-tint-color: rgba(18, 3, 17, 0.85);
-    transition-property: top, opacity;
-    transition-timing-function: ease-out-cubic, ease-out;
-    transition-duration: 0.5s, 0.2s;
-    transition-delay: 0.1s, 0s;
+    transition-property: translate, scale, opacity;
+    transition-timing-function: ease-in-out-cubic, ease-out-cubic, ease-out;
+    transition-duration: 0.75s, 0.5s, 0.2s;
+    transition-delay: 0.1s, 0s, 0s;
     flex-grow: 1;
+    translate: 0 0;
+    scale: 1 1;
+    opacity: 1;
 }
 
 .ScreenHeader {
@@ -64,10 +67,10 @@
     border-right-width: 1px;
     border-top-width: 1px;
     border-bottom-width: 1px;
-    border-left-color: rgba(254, 200, 143, 0.2);
-    border-right-color: rgba(254, 200, 143, 0.2);
-    border-top-color: rgba(254, 200, 143, 0.2);
-    border-bottom-color: rgba(254, 200, 143, 0.2);
+    border-left-color: rgba(254, 200, 143, 0.15);
+    border-right-color: rgba(254, 200, 143, 0.15);
+    border-top-color: rgba(254, 200, 143, 0.15);
+    border-bottom-color: rgba(254, 200, 143, 0.15);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -75,16 +78,24 @@
 }
 
 .ScreenFooter {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgba(254, 200, 143, 0.15);
+    border-right-color: rgba(254, 200, 143, 0.15);
+    border-top-color: rgba(254, 200, 143, 0.15);
+    border-bottom-color: rgba(254, 200, 143, 0.15);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
 }
 
 .ScreenButton {
     min-width: 256px;
     min-height: 48px;
     font-size: 32px;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 8px;
-    margin-bottom: 8px;
     transition-timing-function: ease-out;
 }
 
@@ -102,7 +113,7 @@
 }
 
 .ScreenCancel_Button {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(18, 3, 17, 0.25);
     -unity-text-outline-width: 0;
 }
 

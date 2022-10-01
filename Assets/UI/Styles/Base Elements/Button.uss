@@ -12,10 +12,10 @@ Button {
     border-right-width: 2px;
     border-top-width: 2px;
     border-bottom-width: 2px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 12px;
@@ -24,7 +24,7 @@ Button {
     border-right-color: rgba(254, 200, 143, 0.75);
     border-top-color: rgba(254, 200, 143, 0.75);
     border-bottom-color: rgba(254, 200, 143, 0.75);
-    color: rgba(254, 200, 143, 255);
+    color: rgb(254, 200, 143);
     -unity-font-definition: none;
     -unity-font: url('project://database/Assets/Fonts/Kanit/Kanit-SemiBold.ttf?fileID=12800000&guid=58463c4e44cc8a640b8e7f0273558318&type=3#Kanit-SemiBold');
     font-size: 24px;
@@ -38,7 +38,7 @@ Button:hover {
     border-right-color: rgb(254, 200, 143);
     border-top-color: rgb(254, 200, 143);
     border-bottom-color: rgb(254, 200, 143);
-    color: rgba(18, 3, 17, 255);
+    color: rgb(18, 3, 17);
     letter-spacing: 10px;
     word-spacing: 4px;
 }

@@ -15,19 +15,19 @@ DropdownField {
     transition-duration: 0.2s;
     transition-timing-function: ease-out;
     transition-delay: 0s;
-    background-color: rgba(26, 4, 24, 0.75);
+    background-color: rgba(18, 3, 17, 0.85);
 }
 
 DropdownField:hover {
-    border-left-color: rgba(254, 200, 143, 255);
-    border-right-color: rgba(254, 200, 143, 255);
-    border-top-color: rgba(254, 200, 143, 255);
-    border-bottom-color: rgba(254, 200, 143, 255);
+    border-left-color: rgb(254, 200, 143);
+    border-right-color: rgb(254, 200, 143);
+    border-top-color: rgb(254, 200, 143);
+    border-bottom-color: rgb(254, 200, 143);
 }
 
 DropdownField > VisualElement {
-    color: rgba(254, 200, 143, 255);
-    background-color: rgba(26, 4, 24, 0.75);
+    color: rgb(254, 200, 143);
+    background-color: rgba(18, 3, 17, 0.85);
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
@@ -46,8 +46,8 @@ DropdownField > VisualElement > PopupTextElement {
     padding-right: 12px;
 }
 
-DropdownMenu {
-    background-color: rgba(26, 4, 24, 0.85);
+.unity-base-dropdown__label {
+    background-color: rgba(18, 3, 17, 0.85);
     border-left-color: rgba(49, 2, 70, 0.85);
     border-right-color: rgba(49, 2, 70, 0.85);
     border-top-color: rgba(49, 2, 70, 0.85);
@@ -64,11 +64,12 @@ DropdownMenu {
     padding-right: 12px;
     padding-top: 12px;
     padding-bottom: 12px;
+    font-size: 35px;
 }
 
-DropdownMenu:hover {
-    border-left-color: rgba(254, 200, 143, 255);
-    border-right-color: rgba(254, 200, 143, 255);
-    border-top-color: rgba(254, 200, 143, 255);
-    border-bottom-color: rgba(254, 200, 143, 255);
+.unity-base-dropdown__labelhover {
+    border-left-color: rgb(254, 200, 143);
+    border-right-color: rgb(254, 200, 143);
+    border-top-color: rgb(254, 200, 143);
+    border-bottom-color: rgb(254, 200, 143);
 }

@@ -1,7 +1,7 @@
 .Title {
     -unity-font-definition: none;
     -unity-font: url('project://database/Assets/Fonts/Kanit/Kanit-SemiBold.ttf?fileID=12800000&guid=58463c4e44cc8a640b8e7f0273558318&type=3#Kanit-SemiBold');
-    color: rgba(254, 200, 143, 255);
+    color: rgb(254, 200, 143);
     letter-spacing: 5px;
 }
 
@@ -37,15 +37,16 @@
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
     padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
+    background-color: rgba(18, 3, 17, 0.85);
 }
 
 .BoxTitle {
     font-size: 32px;
-    margin-bottom: -12px;
+    margin-bottom: -8px;
 }
 
 .BoxSubtitle {
