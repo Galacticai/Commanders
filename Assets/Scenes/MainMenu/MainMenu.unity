@@ -512,7 +512,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1456436773}
   - component: {fileID: 1456436772}
-  - component: {fileID: 1456436774}
   - component: {fileID: 1456436775}
   m_Layer: 5
   m_Name: Skirmish_Screen
@@ -552,22 +551,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1456436774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456436771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a4051e71ac8204490f44a3c827cbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  function: 4
-  _from: 550
-  _to: 850
-  _step_Multiplier: 10
 --- !u!114 &1456436775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,7 +657,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2059679239}
   - component: {fileID: 2059679240}
-  - component: {fileID: 2059679242}
   - component: {fileID: 2059679241}
   m_Layer: 5
   m_Name: Main_Screen
@@ -726,22 +708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabc995ac19cc984ebeab2c760a07fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2059679242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059679238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a4051e71ac8204490f44a3c827cbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  function: 4
-  _from: 0
-  _to: 200
-  _step_Multiplier: 20
 --- !u!1 &2124444418
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
