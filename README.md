@@ -26,26 +26,26 @@
     <img src="https://img.shields.io/badge/-Unity%20Engine-white?logo=unity&logoColor=black" />
     <img src="https://img.shields.io/badge/-C%23-white?logo=dotnet&logoColor=512BD4" />
     <br/>
-    <img src="https://img.shields.io/badge/%C2%A92022-XEROling-white?link=https://github.com/XEROling" /> 
-    <img src="https://img.shields.io/github/license/XEROling/Commanders?label=&color=white&logo=gnu&logoColor=A42E2B">
+    <img src="https://img.shields.io/badge/%C2%A92022-Galacticai-white?link=https://github.com/Galacticai" /> 
+    <img src="https://img.shields.io/github/license/Galacticai/Commanders?label=&color=white&logo=gnu&logoColor=A42E2B">
 </p> 
 
 <br/>
 
 <p align="center">
-    <a href="https://github.com/XEROling/Commanders/contributors"  style="text-decoration:none;">
-        <img src="https://img.shields.io/github/contributors/XEROling/Commanders?label=Contributors&logo=github&style=social" /> </a>
+    <a href="https://github.com/Galacticai/Commanders/contributors"  style="text-decoration:none;">
+        <img src="https://img.shields.io/github/contributors/Galacticai/Commanders?label=Contributors&logo=github&style=social" /> </a>
     <br/>
-    <a href="https://github.com/XEROling/Commanders/issues" style="text-decoration:none;">
+    <a href="https://github.com/Galacticai/Commanders/issues" style="text-decoration:none;">
         <img src="https://img.shields.io/badge/-Issues-4F4F4F?logo=github" /> 
-        <img src="https://img.shields.io/github/issues/XEROling/Commanders?label=&color=white" />
-        <img src="https://img.shields.io/github/issues-closed/XEROling/Commanders?label=&color=white" />
+        <img src="https://img.shields.io/github/issues/Galacticai/Commanders?label=&color=white" />
+        <img src="https://img.shields.io/github/issues-closed/Galacticai/Commanders?label=&color=white" />
     </a>
     <br/>
-    <a href="https://github.com/XEROling/Commanders/commits" style="text-decoration:none;">
+    <a href="https://github.com/Galacticai/Commanders/commits" style="text-decoration:none;">
         <img src="https://img.shields.io/badge/-Commits-4F4F4F?logo=github" />
-        <img src="https://img.shields.io/github/last-commit/XEROling/Commanders?label=&color=white" />
-        <img src="https://img.shields.io/github/commit-activity/m/XEROling/Commanders?label=&color=white" />
+        <img src="https://img.shields.io/github/last-commit/Galacticai/Commanders?label=&color=white" />
+        <img src="https://img.shields.io/github/commit-activity/m/Galacticai/Commanders?label=&color=white" />
     </a>
 </p> 
 
