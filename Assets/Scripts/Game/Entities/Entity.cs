@@ -27,6 +27,7 @@ namespace Assets.Scripts.Game.Entities {
 
         internal Entity(Command command, StatDictionary stats = null) {
             Stats = stats ?? new(command);
+            ActiveEntities[Command.GameObject.name] = this;
         }
     }
 }
