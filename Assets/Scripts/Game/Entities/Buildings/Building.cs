@@ -1,38 +1,29 @@
 ﻿using Assets.Scripts.Game.Entities.Stats;
 using Assets.Scripts.Lib.Math.Space2D;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Assets.Scripts.Game.Entities.Buildings {
-    internal abstract class Building : Entity {
-
-
+    internal class Building : Entity {
         #region Helper
-
-        private static bool _buildMode = false;
-        public static bool buildMode { get => _buildMode; private set => _buildMode = value; }
+        protected internal static bool BuildMode { get; protected set; }
 
         internal Task<bool> hoverBuild(Point center) {
-            buildMode = true;
-            buildMode = false;
+            BuildMode = true;
+
+            BuildMode = false;
             return null;
         }
-
         #endregion
 
-        internal protected double constructionRadius { get; protected set; }
-        internal Building(
-                string commanderID,
-                string gameObject_name,
-                float constructionRadius,
-                List<Territory> territoryAllowed,
-                StatDictionary stats)
-                    : base(commanderID, gameObject_name, territoryAllowed, stats) {
-            if (this.territory == Territory.Air)
-                throw new ArgumentOutOfRangeException("Building.territory cannot be Territory.Air");
+        protected internal double ConstructionRadius { get; protected set; }
+        internal Building(Command command, float constructionRadius, StatDictionary stats)
+                    : base(command, stats) {
+            foreach (var territoryType in Territory.Allowed)
+                if (territoryType == Territory.TerritoryType.Air)
+                    throw new ArgumentOutOfRangeException("Building.Territory must not allow TerritoryType.Air");
 
-            this.constructionRadius = constructionRadius;
+            ConstructionRadius = constructionRadius;
 
         }
     }
