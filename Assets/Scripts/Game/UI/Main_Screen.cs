@@ -52,9 +52,9 @@ namespace Assets.Scripts.Game.UI {
 
 
         private void Start() {
-            if (_UIDocument != null)
+            if (_UIDocument == null)
                 _UIDocument = GetComponent<UIDocument>();
-            if (_Screen != null)
+            if (_Screen == null)
                 _Screen = _UIDocument.rootVisualElement[0];
             initEvents(_Screen);
         }
