@@ -16,14 +16,15 @@ namespace Assets.Scripts.Game.Entities {
         #region Shortcuts
         //!? Always present in StatDictionary
         internal Command Command => Stats.Get<Command>();
-        internal GameObject Target => Command.Target;
+        internal GameObject GameObject => Command.GameObject;
         internal bool Exists => Command.GameObject_Exists;
         internal Commander Commander => Command.Commander;
         internal Territory Territory => Stats.Get<Territory>();
         internal Health Health => Stats.Get<Health>();
         #endregion
 
-        /// <summary> This <see cref="Entity"/>'s properties </summary>
+
+        /// <summary> Properties of this <see cref="Entity"/> </summary>
         protected internal StatDictionary Stats { get; protected set; }
 
         internal Entity(Command command, StatDictionary stats = null) {
