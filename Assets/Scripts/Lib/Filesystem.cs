@@ -8,6 +8,9 @@ namespace Assets.Scripts.Lib {
         public enum PathType {
             None, File, Directory
         }
+        public enum PathOS {
+            None, Windows, Unix
+        }
 
         public static string AppData
             => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
