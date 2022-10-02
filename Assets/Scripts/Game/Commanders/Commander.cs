@@ -37,6 +37,7 @@ namespace Assets.Scripts.Game.Commanders {
             this.provenance = provenance;
             this.alliance = alliance;
 
+            if (cameraID != default) {
             GameObject camera = GameObject.Find(cameraID);
             if (camera != null) this.cameraID = cameraID;
 
