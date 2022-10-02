@@ -1,48 +1,51 @@
+using Assets.Scripts.Lib.Math.Numerics;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Game.Commanders {
+    /// <summary> The origin of a <see cref="Commander"/> </summary>
+    internal enum Provenance {
+        MASTER, //!? Controls everything!
+                //TODO: Figure out good names
+        Provenance1, Provenance2, Provenance3
+    }
     internal abstract partial class Commander {
+        internal static readonly Dictionary<string, Commander> Current = new();
 
-        internal protected static readonly Dictionary<string, Commander> activeCommanders = new();
-
-        /// <summary> The origin of this <see cref="Commander"/> </summary>
-        internal enum Provenance {
-            MASTER, //!? Controls everything!
-            //TODO: Figure out good names
-            Provenance1, Provenance2, Provenance3
+        internal string Name { get; }
+        internal Provenance Provenance { get; }
+        private int _Alliance;
+        protected internal int Alliance {
+            get => _Alliance;
+            protected set
+                => _Alliance = Provenance == Provenance.MASTER ? -1 : value.Positive();
         }
-
-
-        internal string name { get; }
-        internal Provenance provenance { get; }
-        internal protected int alliance { get; protected set; }
-        internal string cameraID { get; }
+        internal string CameraID { get; }
 
         /// <summary> <see cref="Commander"/> controls <see cref="Entities.Entity"/> and other related stuff </summary>
-        protected Commander(
+        internal Commander(
                 string name,
                 Provenance provenance,
                 int alliance,
                 string cameraID = default,
                 bool replace = false) {
 
-            if (activeCommanders.ContainsKey(name) && !replace)
+            if (Current.ContainsKey(name) && !replace)
                 throw new System.NotSupportedException(
                     $"Commander \"{name}\" already exists."
                     + " Replacing commander is not permitted."
                     + " Use the replace parameter to confirm replacing current commander with the same name.");
 
-            this.name = name;
-            this.provenance = provenance;
-            this.alliance = alliance;
+            Name = name;
+            Provenance = provenance;
+            Alliance = alliance;
 
             if (cameraID != default) {
-            GameObject camera = GameObject.Find(cameraID);
-            if (camera != null) this.cameraID = cameraID;
+                GameObject camera = GameObject.Find(cameraID);
+                if (camera != null) CameraID = cameraID;
+            }
 
-
-            activeCommanders[this.name] = this;
+            Current[Name] = this;
         }
     }
 }
