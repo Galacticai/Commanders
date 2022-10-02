@@ -1,28 +1,12 @@
 namespace Assets.Scripts.Game.Entities.Stats {
-    internal abstract partial class Stat {
-        internal enum StatName {
-            STAT,
-
-            Buff,
-            Defence,
-            Health,
-            Vision,
-            Weapon
-        }
-
-        internal System.Type toStatType()
-            => this.statName switch {
-                StatName.Buff => typeof(Buff),
-                StatName.Defence => typeof(Defence),
-                StatName.Health => typeof(Health),
-                StatName.Vision => typeof(Vision),
-                StatName.Weapon => typeof(Weapon),
-                _ => typeof(Stat)
-            };
-
-        internal virtual StatName statName { get; }
-        internal Stat() {
-            this.statName = StatName.STAT;
-        }
+    internal abstract class Stat {
+        //TODO: Make Entity and Stats as Components inside GameObject prefab
+        //? Prefab content:
+        //  GameObject : MonoBehavior
+        //  |--- Entity
+        //  |--- Stats
+        //!? Get Entity from Stat?
+        //      gameObject.GetComponent<Entity>()
+        //      // figure out the rest bruh
     }
 }
