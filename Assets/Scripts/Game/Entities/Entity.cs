@@ -5,6 +5,8 @@ using UnityEngine;
 namespace Assets.Scripts.Game.Entities {
     /// <summary> Behavior and properties of a <see cref="GameObject"/> that's manipulated by a <see cref="Commanders.Commander"/> </summary>
     internal abstract class Entity {
+        internal static readonly Dictionary<string, Entity> ActiveEntities = new();
+
         #region Shortcuts
         //!? Always present in StatDictionary
         internal Command Command => Stats.Get<Command>();
