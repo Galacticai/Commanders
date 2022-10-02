@@ -3,8 +3,8 @@ using System;
 namespace Assets.Scripts.Game.Entities.Stats {
 
     internal sealed class Health : Stat {
-        /// <returns> <see cref="health"/> &lt; <see cref="healthTotal"/> </returns>
-        internal bool isDamaged
+        internal float Total
+            => Convert.ToSingle(Amount.Range.Max);
             => this.health < this.healthTotal;
         /// <returns> <see cref="health"/> == <see cref="healthTotal"/> </returns>
         internal bool isHealed
@@ -69,7 +69,7 @@ namespace Assets.Scripts.Game.Entities.Stats {
 
         internal override StatName statName { get; }
         /// <summary> Maximum value for <see cref="health"/> </summary>
-        internal float healthTotal { get; set; }
+            get => _Defence;
         internal float health { get; set; }
 
         internal Health(float healthTotal) {
