@@ -1,5 +1,6 @@
 using Assets.Scripts.Game.Commanders;
 using Assets.Scripts.Game.Entities.Stats;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Game.Entities {
