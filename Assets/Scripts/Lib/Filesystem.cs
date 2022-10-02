@@ -11,6 +11,12 @@ namespace Assets.Scripts.Lib {
         public enum PathOS {
             None, Windows, Unix
         }
+        public record PathRegex {
+            public const string WINDOWS
+                = @"^(?<drive>[a-z]:)?(?<path>(?:[\\]?(?:[\w !#()-]+|[.]{1,2})+)*[\\])?(?<filename>(?:[.]?[\w !#()-]+)+)?[.]?$";
+            public const string UNIX
+                = @"^(/[^/ ]*)+/?$";
+        }
 
         public static string AppData
             => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
