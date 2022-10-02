@@ -18,12 +18,62 @@ namespace Assets.Scripts.Lib {
                 = @"^(/[^/ ]*)+/?$";
         }
 
-        public static string AppData
+
+        #region Shortcuts
+
+        /// <returns> (ApplicationData) </returns>
+        public static string ApplicationData
             => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        public static string this_AppData()
-            => Path.Combine(AppData, Assembly.GetExecutingAssembly().GetName().Name);
-        public static string prepare_this_AppData()
-            => prepareDir(this_AppData());
+        /// <returns> (ApplicationData)/(AppName) </returns>
+        public static string ThisApplicationData
+            => Path.Combine(ApplicationData, Assembly.GetExecutingAssembly().GetName().Name);
+        public static string Prepare_ThisApplicationData()
+            => CreateTree(ThisApplicationData);
+
+        /// <summary> Path slash ('/' or '\') character that's valid for the current OS </summary>
+        /// <returns> <list type="bullet">
+        /// <item> Windows: '\' </item>
+        /// <item> Linux: '/' </item>
+        /// </list> </returns>
+        public static char PathSlash
+            => Platform.RunningWindows ? '\\' : '/';
+
+#pragma warning disable IDE1006 // Naming Styles
+        /// <summary> Just a shortcut for <see cref="Environment.NewLine"/> </summary>
+        /// <returns> Line break
+        /// <br/> <list type="bullet">
+        /// <item> Windows: "\r\n" </item>
+        /// <item> Linux: "\n" </item>
+        /// </list> </returns>
+        public static string n => Environment.NewLine;
+#pragma warning restore IDE1006 // Naming Styles
+
+        #endregion
+
+
+        /// <summary> Check whether <paramref name="input"/> contains a line break for any OS ('\n') </summary>
+        public static bool Contains_LineBreak(this string input)
+            => input.Contains('\n');
+        /// <summary> Check whether <paramref name="input"/> contains a line break that's valid on the current OS (<see cref="n"/>) </summary>
+        public static bool Contains_LineBreak_currentOS(this string input)
+            => input.Contains(n);
+
+
+        public static PathOS GetPathOS(string path) {
+            //? Should not contain a line break 
+            if (path.Contains_LineBreak())
+                return PathOS.None;
+
+            //? Matches an OS path regex
+            if (Regex.IsMatch(path, PathRegex.WINDOWS))
+                return PathOS.Windows;
+            else if (Regex.IsMatch(path, PathRegex.UNIX))
+                return PathOS.Unix;
+
+            //? Doesn't match an OS path regex
+            return PathOS.None;
+        }
+
 
         public static PathType getPathType(this string path) {
             if (File.Exists(path)) return PathType.File;
