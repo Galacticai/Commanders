@@ -3,6 +3,11 @@ using Assets.Scripts.Game.Entities.Stats;
 using UnityEngine;
 
 namespace Assets.Scripts.Game.Entities {
+    /// <summary> Bridge between the <see cref="Entities.Entity"/> backend and Unity's <see cref="MonoBehaviour"/> </summary>
+    internal class UnityEntity : MonoBehaviour {
+        internal Entity Entity = null;
+    }
+
     /// <summary> Behavior and properties of a <see cref="GameObject"/> that's manipulated by a <see cref="Commanders.Commander"/> </summary>
     internal abstract class Entity {
         internal static readonly Dictionary<string, Entity> ActiveEntities = new();
