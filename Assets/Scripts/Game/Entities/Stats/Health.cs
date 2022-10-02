@@ -74,14 +74,17 @@ namespace Assets.Scripts.Game.Entities.Stats {
 
         /// <summary> Set <see cref="Amount"/> to the the maximum <see cref="Total"/> </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
-        internal float Restore()
-            => Convert.ToSingle(Amount.Value = Total);
+        internal float Restore() {
+            Amount.Value = Total;
+            return Convert.ToSingle(Amount);
+        }
 
         /// <summary> Set <see cref="Amount"/> to 0 </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
-        internal float Kill()
-            => Convert.ToSingle(Amount.Value = 0);
-
+        internal float Kill() {
+            Amount.Value = 0;
+            return Convert.ToSingle(Amount);
+        }
         internal void MakeImmortal()
             => Defence = 1;
         internal void MakeImmortal_Period(int timeMS) {
