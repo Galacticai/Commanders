@@ -3,17 +3,23 @@
         //? cameraID is null when not found by GameObject.Find(string ID)
         /// <summary> This <see cref="Commander"/> was created on this client
         /// <br/> ✅ Can access <see cref="UnityEngine.Camera"/> using <see cref="cameraID"/> </summary>
-        internal bool isMe => this.cameraID != null;
+        internal bool IsMe
+            => CameraID != null;
 
         /// <summary> This <see cref="Commander"/> is the MASTER </summary>
-        internal bool isMASTER => this.name == "MASTER" || this.provenance == Provenance.MASTER;
+        internal bool IsMASTER
+            => Name == "MASTER" || Provenance == Provenance.MASTER;
         /// <summary> This <see cref="Commander"/> is controlled by AI </summary>
-        internal bool isComputer => this.name[.."Computer".Length] == "Computer";
+        internal bool IsComputer
+            => Name.Contains("Computer");
         /// <summary> This <see cref="Commander"/> is controlled by humen </summary>
-        internal bool isPlayer => this.name[.."Player".Length] == "Player";
+        internal bool IsPlayer
+            => Name.Contains("Player");
 
-        internal bool isAlliesWith(Commander commander) => this.alliance == commander.alliance;
-        internal bool isAlliesWith(int alliance) => this.alliance == alliance;
+        internal bool IsAlliesWith(Commander commander)
+            => Alliance == commander.Alliance;
+        internal bool IsAlliesWith(int alliance)
+            => Alliance == alliance;
 
     }
 }
