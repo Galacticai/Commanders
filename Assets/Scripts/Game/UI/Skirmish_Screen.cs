@@ -1,13 +1,14 @@
 using Assets.Scripts.Game.Commanders;
-using Assets.Scripts.Lib.Unity;
 using System;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 namespace Assets.Scripts.Game.UI {
     public class Skirmish_Screen : MonoBehaviour {
-        internal static UIDocument _uiDocument = null;
-        private VisualElement _screen = null;
+        internal static UIDocument _UIDocument = null;
+        private VisualElement _Screen = null;
 
         public enum ButtonName {
             Demand_Button,
@@ -15,14 +16,14 @@ namespace Assets.Scripts.Game.UI {
         }
 
 
-        internal VisualElement getCommanders_Box()
-            => this._screen.Q("Skirmish_Body").Q("Commanders_Box");
-        internal Commander[] getCommanders() {
+        internal VisualElement GetCommanders_Box()
+            => _Screen.Q("Skirmish_Body").Q("Commanders_Box");
+        internal Commander[] GetCommanders() {
             Commander[] commanders = Array.Empty<Commander>();
-            VisualElement Commanders_Box_Element = this.getCommanders_Box();
+            VisualElement Commanders_Box_Element = GetCommanders_Box();
 
             //!? Keep as IEnumerable, skip converting to array for performance
-            //!? 2D loop is ok because there is 8x4 iterations only
+            //!? 2D loop is ok because there is 8x4 lightweight iterations only
             foreach (var Commander_Box_Element in Commanders_Box_Element.Children()) {
                 foreach (var commanderAttribute_Element in Commander_Box_Element.Children()) {
 
@@ -30,10 +31,10 @@ namespace Assets.Scripts.Game.UI {
             }
             return commanders;
         }
-        internal bool addCommander(Commander commander) {
+        internal bool AddCommander(Commander commander) {
             return true;
         }
-        internal bool addCommanders(Commander[] commanders) {
+        internal bool AddCommanders(Commander[] commanders) {
             if (commanders.Length > 8)
                 throw new ArgumentOutOfRangeException();
             for (int i = 0; i < 8; i++) {
@@ -44,39 +45,43 @@ namespace Assets.Scripts.Game.UI {
 
         private Action Demand_Button_Click()
             => new(() => {
-                Debug.Log("Demand_Button_Click");
+                Debug.Log("==( Demand_Button_Click )==");
+                Scene game = SceneManager.CreateScene("game");
+                GameObject MainBuilding = new("MainBuilding");
+                GameObject mainBuild = Instantiate(MainBuilding);
+                SceneManager.LoadScene(game.buildIndex);
             });
         private Action Back_Button_Click()
-            => new(() => {
-                Debug.Log("Back_Button_Click");
-
-                Assets.Scripts.Lib.Unity.UI.Screen.navigate(
-                    this.gameObject,
-                    GameScreens.getScreen(GameScreens.ScreenName.Main_Screen),
-                    default, Length.Percent(50));
+            => new(async () => {
+                Debug.Log("==( Back_Button_Click )==");
+                await Lib.Unity.UI.Screen.Navigate(
+                    gameObject, GameScreens.GetScreen(GameScreens.ScreenName.Main_Screen),
+                    default, new Translate(0, Length.Percent(-50), 0));
             });
 
-        private Action buttonAction(ButtonName buttonName)
+        private Action _ButtonAction(ButtonName buttonName)
             => buttonName switch {
-                ButtonName.Demand_Button => this.Demand_Button_Click(),
-                ButtonName.Back_Button => this.Back_Button_Click(),
+                ButtonName.Demand_Button => Demand_Button_Click(),
+                ButtonName.Back_Button => Back_Button_Click(),
                 _ => null
             };
-        private bool initEvents(VisualElement container) {
-            Debug.Log(container.name);
-            var children = container.Children();
-            foreach (var child in children) {
-                if (Enum.TryParse(child.name, out ButtonName buttonName))
-                    ((Button)child).clicked += this.buttonAction(buttonName);
+        private bool _InitEvents() {
+            VisualElement footer = _Screen.Q("Skirmish_Footer");
+            VisualElement buttons_Container = footer.Children().Last();
+            foreach (var child in buttons_Container.Children()) {
+                if (Enum.TryParse(child.name, out ButtonName buttonName)) {
+                    ((Button)child).clicked += _ButtonAction(buttonName);
+                }
             }
             return true;
         }
 
         private void Start() {
-            _uiDocument = this.GetComponent<UIDocument>();
-            this._screen = _uiDocument.rootVisualElement.getFirstChild();
-            this.initEvents(this._screen.Q("Skirmish_Footer"));
-            this._screen.style.top = UnityEngine.Screen.height;
+            _UIDocument = GetComponent<UIDocument>();
+            _Screen = _UIDocument.rootVisualElement[0];
+            _InitEvents();
+            Lib.Unity.UI.Screen.Hide(gameObject);
+            _Screen.style.transitionProperty = StyleKeyword.Undefined;
         }
     }
 }

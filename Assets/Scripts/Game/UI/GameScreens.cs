@@ -7,7 +7,7 @@ namespace Assets.Scripts.Game.UI {
             Skirmish_Screen,
             Background_Screen
         }
-        internal static GameObject getScreen(ScreenName screenName)
+        internal static GameObject GetScreen(ScreenName screenName)
             => GameObject.Find(screenName.ToString());
 
     }
