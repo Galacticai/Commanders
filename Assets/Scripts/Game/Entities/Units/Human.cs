@@ -1,16 +1,24 @@
+using Assets.Scripts.Game.Commanders;
 using Assets.Scripts.Game.Entities.Stats;
+using UnityEngine;
 
 namespace Assets.Scripts.Game.Entities.Units {
+    internal class Human : Unit {
 
-    internal abstract class Human : Unit {
+        internal static GameObject TestHuman(Commander commander, Vector3 location) {
+            var target = new GameObject($"TestHuman_c{commander.Name}");
+            var command = new Command(target.name, commander);
+            var mesh = (Mesh)Object.Instantiate(Resources.Load("modelName", typeof(Mesh)));
+            var human = new Human(command);
 
-        internal record Defaults {
-            internal const bool something = false;
+            target.AddComponent<Transform>().localPosition = location;
+            target.AddComponent<MeshFilter>().sharedMesh = mesh;
+            target.AddComponent<UnityEntity>().Entity = human;
+            return target;
         }
 
         private protected Human(Command command, StatDictionary stats = null)
                 : base(command, stats) { }
 
-        }
     }
 }
