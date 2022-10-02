@@ -17,6 +17,7 @@ namespace Assets.Scripts.Game.Entities {
         //!? Always present in StatDictionary
         internal Command Command => Stats.Get<Command>();
         internal GameObject Target => Command.Target;
+        internal bool Exists => Command.GameObject_Exists;
         internal Commander Commander => Command.Commander;
         internal Territory Territory => Stats.Get<Territory>();
         internal Health Health => Stats.Get<Health>();
