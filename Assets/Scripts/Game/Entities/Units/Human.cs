@@ -8,8 +8,8 @@ namespace Assets.Scripts.Game.Entities.Units {
             internal const bool something = false;
         }
 
-        protected Human(Command command, StatDictionary stats = null)
-                : base(command, stats) {
+        private protected Human(Command command, StatDictionary stats = null)
+                : base(command, stats) { }
 
         }
     }

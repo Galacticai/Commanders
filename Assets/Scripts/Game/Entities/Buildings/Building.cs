@@ -17,7 +17,7 @@ namespace Assets.Scripts.Game.Entities.Buildings {
         #endregion
 
         protected internal double ConstructionRadius { get; protected set; }
-        internal Building(Command command, float constructionRadius, StatDictionary stats)
+        private protected Building(Command command, float constructionRadius, StatDictionary stats)
                     : base(command, stats) {
             foreach (var territoryType in Territory.Allowed)
                 if (territoryType == Territory.TerritoryType.Air)

@@ -27,7 +27,7 @@ namespace Assets.Scripts.Game.Entities {
         /// <summary> Properties of this <see cref="Entity"/> </summary>
         protected internal StatDictionary Stats { get; protected set; }
 
-        internal Entity(Command command, StatDictionary stats = null) {
+        private protected Entity(Command command, StatDictionary stats = null) {
             Stats = stats ?? new(command);
             ActiveEntities[Command.GameObject.name] = this;
         }
