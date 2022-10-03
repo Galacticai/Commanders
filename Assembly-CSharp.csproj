@@ -71,15 +71,21 @@
     <None Include="Assets\**\*.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\**\*.asset" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Assets\**\*.uxml" />
     <None Include="Assets\**\*.uss" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="**\*.shader" />
-    <None Include="**\*.cginc" />
+    <None Include="Assets\**\*.raw" />
+    <None Include="Assets\**\*.png" />
+    <None Include="Assets\**\*.jpg" />
+    <None Include="Assets\**\*.jpeg" />
+    <None Include="Assets\**\*.svg" />
+    <None Include="Assets\**\*.asset" />
+    <None Include="Assets\**\*.mat" />
+    <None Include="Assets\**\*.physicMaterial" />
+    <None Include="Assets\**\*.lighting" />
+    <None Include="Assets\**\*.shader" />
+    <None Include="Assets\**\*.cginc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="*.txt" />
