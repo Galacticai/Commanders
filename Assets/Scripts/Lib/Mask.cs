@@ -36,14 +36,11 @@ namespace Commanders.Assets.Scripts.Lib {
 
         public Dictionary<TMaskKey, Func<TValue, TValue>> MaskFunctions { get; set; }
 
-        public TValue Value {
-            get {
-                var maskValue = OriginalValue;
-                foreach (var maskFunction in MaskFunctions.Values)
-                    maskValue = maskFunction(maskValue);
-                return maskValue;
-            }
-        }
+        public TValue Value
+            => MaskFunctions.Values.Aggregate(
+                OriginalValue,
+                (current, maskFunction) => maskFunction(current)
+            );
 
         public Mask(TValue originalValue, Dictionary<TMaskKey, Func<TValue, TValue>> maskFunctions) {
             this.OriginalValue = originalValue;
