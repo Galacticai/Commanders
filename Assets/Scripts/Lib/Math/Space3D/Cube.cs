@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Lib.Math.Space3D {
+﻿namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class Cube : Box {
 
         private new readonly double xLength, yLength, zLength;

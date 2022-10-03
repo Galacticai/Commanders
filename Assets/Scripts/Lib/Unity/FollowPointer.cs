@@ -1,6 +1,7 @@
-using Assets.Scripts.Lib.Math;
+using Commanders.Assets.Scripts.Lib.Math;
 using UnityEngine;
 
+namespace Commanders.Assets.Scripts.Lib.Unity {
 public class FollowPointer : MonoBehaviour {
     [SerializeField] private Common.Space.Plane _targetPlane;
     [SerializeField] private Canvas _alignToCanvas;

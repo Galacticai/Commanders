@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Assets.Scripts.Lib {
+namespace Commanders.Assets.Scripts.Lib {
     /// <summary> Dictionary of <typeparamref name="TargetType"/> with the <see cref="System.Type"/> of <typeparamref name="TargetType"/> as the key </summary>
     internal class TypeDictionary<TargetType> : Dictionary<System.Type, TargetType> {
 

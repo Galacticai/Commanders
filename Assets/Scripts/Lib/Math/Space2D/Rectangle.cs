@@ -1,6 +1,6 @@
 ﻿using sMath = System.Math;
 
-namespace Assets.Scripts.Lib.Math.Space2D {
+namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     //TODO: TEST Rectangle.{xyz}Length calculation 
     public class Rectangle {
         public double x { get; set; }

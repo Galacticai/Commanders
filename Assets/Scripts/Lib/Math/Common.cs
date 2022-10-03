@@ -3,6 +3,7 @@
 namespace Assets.Scripts.Lib.Math {
     public class Common {
 
+namespace Commanders.Assets.Scripts.Lib.Math {
         public struct Space {
             public enum Dimension {
                 x, y, z, w, time

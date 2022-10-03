@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Lib.Math.Space3D {
+﻿namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class BoxPoints {
         public Point o { get; }
         public Point ox { get; }

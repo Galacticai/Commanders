@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Assets.Scripts.Lib {
+namespace Commanders.Assets.Scripts.Lib {
     /// <summary> Masks the original value with a different one,
     /// <br/> while keeping the original value safely as <see cref="OriginalValue"/> 
     /// <br/><br/>

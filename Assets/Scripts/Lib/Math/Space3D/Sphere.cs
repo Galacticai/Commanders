@@ -1,6 +1,7 @@
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 ﻿using sMath = System.Math;
 
-namespace Assets.Scripts.Lib.Math.Space3D {
+namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class Sphere {
         public readonly static Sphere UNIT_SPHERE = new(Point.ORIGIN, 1);
 

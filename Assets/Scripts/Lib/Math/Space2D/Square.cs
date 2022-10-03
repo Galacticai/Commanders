@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Lib.Math.Space2D {
+﻿namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     internal class Square : Rectangle {
         private new readonly double xLength, yLength;
 

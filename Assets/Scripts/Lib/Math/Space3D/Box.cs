@@ -1,7 +1,8 @@
+﻿using Commanders.Assets.Scripts.Lib.Math.Numerics;
 ﻿using sMath = System.Math;
 
-namespace Assets.Scripts.Lib.Math.Space3D {
-    //TODO: TEST Box.{xyz}Length calculation
+namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
+    //TODO: TEST Box.{XYZ}Length calculation
     public class Box {
         public double x { get; set; }
         public double y { get; set; }

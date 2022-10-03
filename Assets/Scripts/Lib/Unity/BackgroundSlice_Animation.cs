@@ -1,9 +1,10 @@
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static Assets.Scripts.Lib.Math.Function;
 
-namespace Assets.Scripts.Lib.Unity {
+namespace Commanders.Assets.Scripts.Lib.Unity {
     public class BackgroundSlice_Animation : MonoBehaviour {
         [SerializeField] private FunctionName function = FunctionName.smooth_FTF;
         [SerializeField] private int _from = 0;

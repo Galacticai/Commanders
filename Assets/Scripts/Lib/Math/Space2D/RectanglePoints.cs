@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Lib.Math.Space2D {
+﻿namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     public class RectanglePoints {
         public Point o { get; }
         public Point ox { get; }

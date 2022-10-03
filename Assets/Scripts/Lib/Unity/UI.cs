@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Assets.Scripts.Lib.Unity {
+namespace Commanders.Assets.Scripts.Lib.Unity {
     public static class UI {
         public static VisualElement getFirstChild(this VisualElement visualElement) {
             if (visualElement == null) return null;

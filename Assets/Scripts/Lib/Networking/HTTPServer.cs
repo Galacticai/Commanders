@@ -13,7 +13,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 
-namespace Assets.Scripts.Lib.Network {
+namespace Commanders.Assets.Scripts.Lib.Networking {
     /// <summary> Listen to a URI prefix and respond with a string by running <see cref="ResponseMethod"/> </summary>
     public class HTTPServer {
         #region Shortcuts
