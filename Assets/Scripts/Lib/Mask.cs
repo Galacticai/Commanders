@@ -43,8 +43,8 @@ namespace Commanders.Assets.Scripts.Lib {
             );
 
         public Mask(TValue originalValue, Dictionary<TMaskKey, Func<TValue, TValue>> maskFunctions) {
-            this.OriginalValue = originalValue;
-            this.MaskFunctions = maskFunctions;
+            OriginalValue = originalValue;
+            MaskFunctions = maskFunctions;
         }
         public Mask(TValue originalValue)
                     : this(originalValue, new()) { }
