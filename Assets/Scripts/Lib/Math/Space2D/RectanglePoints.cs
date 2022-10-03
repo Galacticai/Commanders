@@ -1,3 +1,15 @@
+﻿/// —————————————————————————————————————————————
+//? 
+//!? 📜 RectanglePoints.cs
+//!? 🖋️ XEROling 📅 2022
+//!  ⚖️ GPL-3.0-or-later
+//?  🔗 Dependencies:
+//      + (XEROling) Math/Space2D/Point.cs
+//      + (XEROling) Math/Space2D/Rectangle.cs
+//? 
+/// —————————————————————————————————————————————
+
+
 ﻿namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     public class RectanglePoints {
         public Point o { get; }

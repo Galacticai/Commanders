@@ -1,3 +1,4 @@
+﻿/// —————————————————————————————————————————————
 ﻿using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
