@@ -16,7 +16,7 @@ namespace Commanders.Assets.Scripts.Lib.Math {
         /// <returns> Random <see cref="int"/> such as:
         /// <br/> <paramref name="max"/> &lt;= <see cref="int"/> &lt;= <paramref name="max"/></returns>
         public static int GetRandom(int min, int max)
-            => new System.Random().Next(min, max);
+            => new System.Random().Next(min, max + 1); //? +1 to match the max
 
         /// <summary> Chooses a random object from input array </summary> 
         /// <returns>Random object from input array</returns>
