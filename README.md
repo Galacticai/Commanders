@@ -34,7 +34,7 @@
 
 <p align="center">
     <a href="https://www.codacy.com/gh/Galacticai/Commanders/dashboard" >
-        <img src="https://img.shields.io/codacy/grade/f37ee80e899d4b609e5c99a1566bb2b7?logo=codacy&label=Codacity%20rating"> 
+        <img src="https://img.shields.io/codacy/grade/5c46c2f9d1aa42118fd39fca9a3ce381?logo=codacy&label=Codacity%20rating"> 
     </a>
     <br/>
     <a href="https://github.com/Galacticai/Commanders/contributors">
