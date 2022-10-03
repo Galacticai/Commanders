@@ -60,29 +60,25 @@
 
 ## 🌟 Highlights
 
-- #### 🎨 Highlight 1
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+<img src="https://picsum.photos/1024/248"/>
 
-###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
+> ### 🎨 Highlight 1
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
+<img src="https://picsum.photos/1024/248"/>
 
-- #### 🖼 Highlight 2
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+> ### 🖼 Highlight 2
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
-###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
+<img src="https://picsum.photos/1024/248"/>
 
+> ### 👑 Highlight 3
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
-- #### 👑 Highlight 3
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+<img src="https://picsum.photos/1024/248"/>
 
-###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
-
-
-- #### 🌏 Highlight 4
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
-
-###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
-
+> ### 🌏 Highlight 4
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 <br/>
 
@@ -90,42 +86,51 @@ Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 ## 🚀 Install
 
-- #### 🛡 Official installer
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+> ### 🛡 <u>Official installer</u>
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
-- #### 🏗 Build from sources
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
-
+> ### 🏗 Build from sources
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 <br/>
+
 <br/>
 
 ## 🦾 How to play
 
-- #### Highlight 1
-###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
+<img src="https://picsum.photos/1024/128"/>
 
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+> ### Interesting title 1
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
+<br/>
 
-- #### Highlight 2
-###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
+<img src="https://picsum.photos/1024/128"/>
 
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+> ### Interesting title 2
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
+<img src="https://picsum.photos/1024/128"/>
 
-- #### Highlight 3
-###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
-
-Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
-
+> ### Interesting title 3
+> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 <br/>
 
 <br/>
 
 ## ❌ Uninstall
+
+<img height=96 src="https://i.pinimg.com/236x/7d/02/c4/7d02c4d3f92755c0e0ebcc75edbb252a--sad-kitty-sad-cat.jpg"/>
+<img height=96 src="https://i.pinimg.com/originals/5f/96/2f/5f962fb5b03c7bea7ab526199b983d60.jpg"/>
+<img height=96 src="https://i.pinimg.com/originals/be/54/62/be5462eb289bdd698c9fc328406eed07.jpg"/>
+
+> WAIT Look at these cats... They are probably sad because you are reading this section...
+
+<br/>
+
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 <br/>
+
 <br/>
