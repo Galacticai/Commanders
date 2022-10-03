@@ -2,7 +2,7 @@
 //using System;
 //using System.Text.RegularExpressions;
 
-//namespace Assets.Scripts.Lib.OS {
+//namespace Commanders.Assets.Scripts.Lib.Platforms {
 
 //    public class LinuxDistro {
 //        public enum LinuxDistroName {

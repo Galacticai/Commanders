@@ -11,7 +11,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Assets.Scripts.Lib.OS {
+namespace Commanders.Assets.Scripts.Lib.Platforms {
 
     /// <summary> Determine current platform information </summary>
     public static class Platform {

@@ -9,7 +9,7 @@
 
 using System;
 
-namespace Assets.Scripts.Lib.OS {
+namespace Commanders.Assets.Scripts.Lib.Platforms {
     /// <summary> Windows versions </summary>
     public record WindowsVersion {
         //?                            Windows           Version                    // PLATFORM ID
