@@ -55,44 +55,45 @@
 </p> 
 
 <br/>
-<hr/>
 
+<hr/>
 
 ## 🌟 Highlights
 
-  - #### 🎨 Highlight 1
+- #### 🎨 Highlight 1
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 ###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
 
 
-  - #### 🖼 Highlight 2
+- #### 🖼 Highlight 2
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 ###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
 
 
-  - #### 👑 Highlight 3
+- #### 👑 Highlight 3
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 ###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
 
 
-  - #### 🌏 Highlight 4
+- #### 🌏 Highlight 4
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 ###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
 
 
 <br/>
+
 <br/>
 
 ## 🚀 Install
 
-  - #### 🛡 Official installer
+- #### 🛡 Official installer
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
-  - #### 🏗 Build from sources
+- #### 🏗 Build from sources
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 
@@ -101,25 +102,26 @@ Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an u
 
 ## 🦾 How to play
 
-  - #### Highlight 1
+- #### Highlight 1
 ###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
 
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 
-  - #### Highlight 2
+- #### Highlight 2
 ###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
 
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 
-  - #### Highlight 3
+- #### Highlight 3
 ###### <p align="center">WIDE-CROPPED IMAGE</p><br/>
 
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 
 <br/>
+
 <br/>
 
 ## ❌ Uninstall
