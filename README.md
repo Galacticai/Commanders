@@ -58,45 +58,53 @@
 
 <hr/>
 
-## 🌟 Highlights
+<h2 align=center>🌟 Highlights </h2>
 
 <img src="https://picsum.photos/1024/248"/>
 
-> ### 🎨 Highlight 1
-> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+### 🎨 Highlight 1
+Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+
+<br/>
 
 <img src="https://picsum.photos/1024/248"/>
 
-> ### 🖼 Highlight 2
-> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+### 🖼 Highlight 2
+Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+
+<br/>
 
 <img src="https://picsum.photos/1024/248"/>
 
-> ### 👑 Highlight 3
-> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+### 👑 Highlight 3
+Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+
+<br/>
 
 <img src="https://picsum.photos/1024/248"/>
 
-> ### 🌏 Highlight 4
-> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
+### 🌏 Highlight 4
+Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 <br/>
 
-<br/>
+<hr/>
 
-## 🚀 Install
+<h2 align=center> 🚀 Install </h2>
 
-> ### 🛡 <u>Official installer</u>
-> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
-
-> ### 🏗 Build from sources
-> Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+### 🛡 <u>Official installer</u>
+Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 <br/>
 
+### 🏗 Build from sources
+Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+
 <br/>
 
-## 🦾 How to play
+<hr/>
+
+<h2 align=center> 🦾 How to play </h2>
 
 <img src="https://picsum.photos/1024/128"/>
 
@@ -117,9 +125,9 @@
 
 <br/>
 
-<br/>
+<hr/>
 
-## ❌ Uninstall
+<h2 align=center> ❌ Uninstall </h2>
 
 <p>
     <img height=96 src="https://i.pinimg.com/236x/7d/02/c4/7d02c4d3f92755c0e0ebcc75edbb252a--sad-kitty-sad-cat.jpg"/>
