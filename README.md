@@ -1,4 +1,4 @@
-﻿<h1><p align="center">Commanders</p></h1>
+﻿﻿<h1><p align="center">Commanders</p></h1>
 
 <h4><p align="center"><b>Open-Source Real-Time Strategy Game</b></p></h4>
 
@@ -60,28 +60,28 @@
 
 <h2 align=center>🌟 Highlights </h2>
 
-<img src="https://picsum.photos/1024/248"/>
+<img src="https://picsum.photos/1024/128"/>
 
 ### 🎨 Highlight 1
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 <br/>
 
-<img src="https://picsum.photos/1024/248"/>
+<img src="https://picsum.photos/1024/128"/>
 
 ### 🖼 Highlight 2
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 <br/>
 
-<img src="https://picsum.photos/1024/248"/>
+<img src="https://picsum.photos/1024/128"/>
 
 ### 👑 Highlight 3
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
 
 <br/>
 
-<img src="https://picsum.photos/1024/248"/>
+<img src="https://picsum.photos/1024/128"/>
 
 ### 🌏 Highlight 4
 Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry.
@@ -106,19 +106,21 @@ Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an u
 
 <h2 align=center> 🦾 How to play </h2>
 
-<img src="https://picsum.photos/1024/128"/>
+<img src="https://picsum.photos/1024/256"/>
 
 > ### Interesting title 1
 > Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
 <br/>
 
-<img src="https://picsum.photos/1024/128"/>
+<img src="https://picsum.photos/1024/256"/>
 
 > ### Interesting title 2
 > Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
 
-<img src="https://picsum.photos/1024/128"/>
+<br/>
+
+<img src="https://picsum.photos/1024/256"/>
 
 > ### Interesting title 3
 > Lorem Ipsum is simply dummy text  Lorem Ipsum has been the industry's, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
