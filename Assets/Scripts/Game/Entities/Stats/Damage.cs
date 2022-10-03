@@ -1,6 +1,6 @@
-﻿using Assets.Scripts.Lib.Math.Numerics;
+﻿using Commanders.Assets.Scripts.Lib.Math.Numerics;
 
-namespace Assets.Scripts.Game.Entities.Stats {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     internal sealed class Damage {
 
         internal enum DamageType {

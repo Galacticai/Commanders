@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Game.UI {
+namespace Commanders.Assets.Scripts.Game.UI {
     internal static class GameScreens {
         internal enum ScreenName {
             Main_Screen,

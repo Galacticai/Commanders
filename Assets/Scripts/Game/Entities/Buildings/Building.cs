@@ -1,9 +1,9 @@
-﻿using Assets.Scripts.Game.Entities.Stats;
-using Assets.Scripts.Lib.Math.Space2D;
+﻿using Commanders.Assets.Scripts.Game.Entities.Stats;
+using Commanders.Assets.Scripts.Lib.Math.Space2D;
 using System;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Game.Entities.Buildings {
+namespace Commanders.Assets.Scripts.Game.Entities.Buildings {
     internal class Building : Entity {
         #region Helper
         protected internal static bool BuildMode { get; protected set; }

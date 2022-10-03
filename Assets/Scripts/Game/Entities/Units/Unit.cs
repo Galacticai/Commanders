@@ -1,6 +1,6 @@
-using Assets.Scripts.Game.Entities.Stats;
+using Commanders.Assets.Scripts.Game.Entities.Stats;
 
-namespace Assets.Scripts.Game.Entities.Units {
+namespace Commanders.Assets.Scripts.Game.Entities.Units {
     internal abstract class Unit : Entity {
 
         /// <summary> A tank, an airplane, a soldier,

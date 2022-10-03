@@ -1,7 +1,7 @@
-﻿using Assets.Scripts.Game.Commanders;
+﻿using Commanders.Assets.Scripts.Game.Commanders;
 using UnityEngine;
 
-namespace Assets.Scripts.Game.Entities.Stats {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     internal class Command : Stat {
         #region Shortcuts
         internal GameObject GameObject => GameObject.Find(GameObjectName);

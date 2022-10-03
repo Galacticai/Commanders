@@ -1,9 +1,9 @@
-using Assets.Scripts.Game.Commanders;
-using Assets.Scripts.Game.Entities.Stats;
+using Commanders.Assets.Scripts.Game.Commanders;
+using Commanders.Assets.Scripts.Game.Entities.Stats;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Game.Entities {
+namespace Commanders.Assets.Scripts.Game.Entities {
     /// <summary> Bridge between the <see cref="Entities.Entity"/> backend and Unity's <see cref="MonoBehaviour"/> </summary>
     internal class UnityEntity : MonoBehaviour {
         internal Entity Entity = null;

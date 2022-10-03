@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security;
 
-namespace Assets.Scripts.Game.Commanders.Computers {
+namespace Commanders.Assets.Scripts.Game.Commanders.Computers {
 
     internal class Computer : Commander {
         /// <summary> The master of all <see cref="Player"/>s and <see cref="Computer"/>s <br/>

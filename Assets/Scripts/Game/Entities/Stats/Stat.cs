@@ -1,4 +1,4 @@
-namespace Assets.Scripts.Game.Entities.Stats {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     internal abstract class Stat {
         //TODO: Make Entity and Stats as Components inside GameObject prefab
         //? Prefab content:

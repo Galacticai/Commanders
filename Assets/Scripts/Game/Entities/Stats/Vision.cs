@@ -1,4 +1,4 @@
-namespace Assets.Scripts.Game.Entities.Stats {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     /// <summary> How an <see cref="Entity"/> sees... </summary>
     internal sealed class Vision : Stat {
         internal float Radius { get; set; }

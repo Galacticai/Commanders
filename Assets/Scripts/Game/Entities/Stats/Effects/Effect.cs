@@ -1,7 +1,7 @@
 ﻿
-using Assets.Scripts.Lib.Math.Numerics;
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 
-namespace Assets.Scripts.Game.Entities.Stats.Effects {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats.Effects {
     internal abstract class Effect {
 
 

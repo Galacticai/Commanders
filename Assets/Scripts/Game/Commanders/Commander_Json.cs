@@ -1,9 +1,8 @@
-﻿using Assets.Scripts.Lib;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.IO;
 
-namespace Assets.Scripts.Game.Commanders {
+namespace Commanders.Assets.Scripts.Game.Commanders {
 
     internal class Commander_Json {
         internal record Default {

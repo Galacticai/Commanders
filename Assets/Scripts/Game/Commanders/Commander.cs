@@ -1,8 +1,8 @@
-using Assets.Scripts.Lib.Math.Numerics;
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Game.Commanders {
+namespace Commanders.Assets.Scripts.Game.Commanders {
     /// <summary> The origin of a <see cref="Commander"/> </summary>
     internal enum Provenance {
         MASTER, //!? Controls everything!

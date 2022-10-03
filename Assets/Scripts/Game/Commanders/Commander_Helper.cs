@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Game.Commanders {
+﻿namespace Commanders.Assets.Scripts.Game.Commanders {
     internal abstract partial class Commander {
         //? cameraID is null when not found by GameObject.Find(string ID)
         /// <summary> This <see cref="Commander"/> was created on this client

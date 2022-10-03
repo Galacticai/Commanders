@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Game.Entities.Stats {
+﻿namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     internal class Weapon : Stat {
 
         internal enum WeaponType {

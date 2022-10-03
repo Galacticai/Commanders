@@ -1,6 +1,6 @@
 ﻿//using Assets.Scripts.Game.Entities.Stats;
 
-//namespace Assets.Scripts.Game.Entities.Stats.Effects.Buffs {
+//namespace Commanders.Assets.Scripts.Game.Entities.Stats.Effects.Buffs {
 //    /// <summary> Resist <see cref="Assets.Scripts.Game.Entities.Stats.Damage"/> </summary>
 //    internal class Resistance : Buff {
 //        internal struct Modified {

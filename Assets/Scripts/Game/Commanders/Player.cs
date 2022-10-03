@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Scripts.Game.Commanders {
+namespace Commanders.Assets.Scripts.Game.Commanders {
     internal class Player : Commander {
         internal bool IsOnNetwork { get; }
         internal Player(string name, Provenance provenance, int alliance, string cameraID, bool replace = false)

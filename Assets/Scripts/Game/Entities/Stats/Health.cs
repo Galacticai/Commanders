@@ -1,8 +1,8 @@
-using Assets.Scripts.Lib.Math.Numerics;
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 using System;
 using System.Threading;
 
-namespace Assets.Scripts.Game.Entities.Stats {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     internal class Health : Stat {
         #region Shortcuts
 
@@ -44,7 +44,7 @@ namespace Assets.Scripts.Game.Entities.Stats {
         /// <summary> Decrease <see cref="Amount"/> directly using the <paramref name="amount"/> specified </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
         internal Amount Hurt(float amount, float piercing = 0) {
-            //? piercing 0—1
+            //? piercing 0ï¿½1
             float piercing01 = piercing.AtOrBetween(0, 1);
             //? pierced defence
             float piercedDefence = (Defence - piercing01).Positive();

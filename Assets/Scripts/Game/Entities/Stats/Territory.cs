@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Assets.Scripts.Game.Entities.Stats {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     /// <summary> Place(s) where an <see cref="Entity"/> can stand </summary>
     internal class Territory : Stat {
         internal enum TerritoryType {

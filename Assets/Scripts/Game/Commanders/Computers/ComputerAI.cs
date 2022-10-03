@@ -1,4 +1,4 @@
-﻿namespace Assets.Scripts.Game.Commanders.Computers {
+﻿namespace Commanders.Assets.Scripts.Game.Commanders.Computers {
     internal class ComputerAI {
 
         internal enum Power {

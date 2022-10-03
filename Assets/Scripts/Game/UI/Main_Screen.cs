@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Assets.Scripts.Game.UI {
+namespace Commanders.Assets.Scripts.Game.UI {
     public class Main_Screen : MonoBehaviour {
         internal static UIDocument _UIDocument = null;
         private VisualElement _Screen = null;

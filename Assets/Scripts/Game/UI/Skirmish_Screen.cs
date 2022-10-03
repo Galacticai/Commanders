@@ -1,11 +1,11 @@
-using Assets.Scripts.Game.Commanders;
+using Commanders.Assets.Scripts.Game.Commanders;
 using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace Assets.Scripts.Game.UI {
+namespace Commanders.Assets.Scripts.Game.UI {
     public class Skirmish_Screen : MonoBehaviour {
         internal static UIDocument _UIDocument = null;
         private VisualElement _Screen = null;

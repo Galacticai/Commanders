@@ -1,8 +1,8 @@
-using Assets.Scripts.Game.Commanders;
-using Assets.Scripts.Game.Entities.Stats;
+using Commanders.Assets.Scripts.Game.Commanders;
+using Commanders.Assets.Scripts.Game.Entities.Stats;
 using UnityEngine;
 
-namespace Assets.Scripts.Game.Entities.Units {
+namespace Commanders.Assets.Scripts.Game.Entities.Units {
     internal class Human : Unit {
 
         internal static GameObject TestHuman(Commander commander, Vector3 location) {

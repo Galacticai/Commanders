@@ -1,10 +1,10 @@
-﻿using Assets.Scripts.Game.Commanders.Computers;
-using Assets.Scripts.Lib;
+﻿using Commanders.Assets.Scripts.Game.Commanders.Computers;
+using Commanders.Assets.Scripts.Lib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Assets.Scripts.Game.Entities.Stats {
+namespace Commanders.Assets.Scripts.Game.Entities.Stats {
     /// <summary> Special type of <see cref="TypeDictionary{TValue}"/> that's specialized for <see cref="Stat"/>s </summary>
     internal class StatDictionary : TypeDictionary<Stat> {
 
