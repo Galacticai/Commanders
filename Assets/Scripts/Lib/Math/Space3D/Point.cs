@@ -1,7 +1,7 @@
 ﻿/// —————————————————————————————————————————————
 //? 
 //!? 📜 Point.cs
-//!? 🖋️ XEROling 📅 2022
+//!? 🖋️ Galacticai 📅 2022
 //!  ⚖️ GPL-3.0-or-later
 //?  🔗 Dependencies: No special dependencies
 //? 
@@ -11,22 +11,22 @@ using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class Point {
-        public readonly static Point ORIGIN = new(0, 0, 0);
+        public static readonly Point ORIGIN = new(0, 0, 0);
 
         public double Distance(Point point)
             => sMath.Sqrt(
-                sMath.Pow(this.X - point.X, 2)
-                + sMath.Pow(this.Y - point.Y, 2)
-                + sMath.Pow(this.Z - point.Z, 2));
+                sMath.Pow(X - point.X, 2)
+                + sMath.Pow(Y - point.Y, 2)
+                + sMath.Pow(Z - point.Z, 2));
 
         public double DistanceToOrigin
-            => this.Distance(Point.ORIGIN);
+            => Distance(Point.ORIGIN);
 
         public double X { get; set; }
         public double Y { get; set; }
         public double Z { get; set; }
         public Point(double x, double y, double z) {
-            this.X = x; this.Y = y; this.Z = z;
+            X = x; Y = y; Z = z;
         }
     }
 }

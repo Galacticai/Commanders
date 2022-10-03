@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 namespace Commanders.Assets.Scripts.Lib.Unity {
-    /// <summary> Commanders vX.x (Phase) - � XEROling 2022 </summary>
+    /// <summary> Commanders vX.x (Phase) - � Galacticai 2022 </summary>
     public class ProjectInfoText : MonoBehaviour {
 
 
