@@ -33,16 +33,21 @@
 <br/>
 
 <p align="center">
-    <a href="https://github.com/Galacticai/Commanders/contributors"  style="text-decoration:none;">
-        <img src="https://img.shields.io/github/contributors/Galacticai/Commanders?label=Contributors&logo=github&style=social" /> </a>
+    <a href="https://www.codacy.com/gh/Galacticai/Commanders/dashboard" >
+        <img src="https://img.shields.io/codacy/grade/f37ee80e899d4b609e5c99a1566bb2b7?logo=codacy&label=Codacity%20rating"> 
+    </a>
     <br/>
-    <a href="https://github.com/Galacticai/Commanders/issues" style="text-decoration:none;">
+    <a href="https://github.com/Galacticai/Commanders/contributors">
+        <img src="https://img.shields.io/github/contributors/Galacticai/Commanders?label=Contributors&logo=github" /> 
+    </a>
+    <br/>
+    <a href="https://github.com/Galacticai/Commanders/issues">
         <img src="https://img.shields.io/badge/-Issues-4F4F4F?logo=github" /> 
         <img src="https://img.shields.io/github/issues/Galacticai/Commanders?label=&color=white" />
         <img src="https://img.shields.io/github/issues-closed/Galacticai/Commanders?label=&color=white" />
     </a>
     <br/>
-    <a href="https://github.com/Galacticai/Commanders/commits" style="text-decoration:none;">
+    <a href="https://github.com/Galacticai/Commanders/commits">
         <img src="https://img.shields.io/badge/-Commits-4F4F4F?logo=github" />
         <img src="https://img.shields.io/github/last-commit/Galacticai/Commanders?label=&color=white" />
         <img src="https://img.shields.io/github/commit-activity/m/Galacticai/Commanders?label=&color=white" />
