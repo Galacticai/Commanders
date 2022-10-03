@@ -49,9 +49,10 @@ namespace Commanders.Assets.Scripts.Lib {
         public Mask(TValue originalValue)
                     : this(originalValue, new()) { }
 
-        public static implicit operator Mask<TMaskKey, TValue>(TValue value)
-            => value;
-        public static implicit operator TValue(Mask<TMaskKey, TValue> value)
-            => (Mask<TMaskKey, TValue>)value.Value;
+        //!? ! Data loss warning: Don't convert from TValue to Mask implicitly
+        // public static implicit operator Mask<TMaskKey, TValue>(TValue value)
+        //     => value;
+        public static implicit operator TValue(Mask<TMaskKey, TValue> mask)
+            => mask.Value;
     }
 }
