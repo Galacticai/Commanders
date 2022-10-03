@@ -10,6 +10,7 @@
 using System.Linq;
 
 namespace Commanders.Assets.Scripts.Lib {
+    /// <summary> Various tools for arrays </summary>
     public static class Arrays {
 
         /// <summary> Add an <paramref name="element"/> item to the end of <paramref name="array"/></summary>
