@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 namespace Commanders.Assets.Scripts.Game.UI {
     public class Skirmish_Screen : MonoBehaviour {
-        internal static UIDocument _UIDocument = null;
+        private UIDocument _UIDocument = null;
         private VisualElement _Screen = null;
 
         public enum ButtonName {
