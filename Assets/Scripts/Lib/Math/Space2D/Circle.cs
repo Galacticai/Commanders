@@ -9,20 +9,20 @@
 /// —————————————————————————————————————————————
 
 
-﻿using Commanders.Assets.Scripts.Lib.Math.Numerics;
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     internal class Circle {
         public static readonly Circle UNIT_SPHERE = new(Point.ORIGIN, 1);
 
-        public bool includesPoint(Point point)
-            => Center.distance(point) <= Radius;
-        public bool onPoint(Point point)
-            => Center.distance(point) == Radius;
+        public bool IncludesPoint(Point point)
+            => Center.Distance(point) <= Radius;
+        public bool OnPoint(Point point)
+            => Center.Distance(point) == Radius;
 
-        public double distance_Center(Circle sphere)
-            => Center.distance(sphere.Center);
+        public double Distance_Center(Circle sphere)
+            => Center.Distance(sphere.Center);
 
         /// <returns>
         ///     <list type="bullet">
@@ -32,7 +32,7 @@ namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
         ///     </list>
         /// </returns>
         public double Distance_Edge(Circle sphere)
-            => distance_Center(sphere) - (Radius + sphere.Radius);
+            => Distance_Center(sphere) - (Radius + sphere.Radius);
 
         public bool IntersectsSphere(Circle sphere)
            => Distance_Edge(sphere) <= 0;
@@ -40,8 +40,8 @@ namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
         //TODO: TEST Circle.howClose(Point)
         /// <returns> Ratio of how close <paramref name="point"/> is to <see cref="Center"/>
         /// relative to <see cref="Radius"/> </returns>
-        public double howClose(Point point) {
-            double distance = Center.distance(point);
+        public double HowClose(Point point) {
+            double distance = Center.Distance(point);
             //? close 0 -- 1 far
             double ratio_inverse = distance / Radius;
             //? close 1 -- 0 far

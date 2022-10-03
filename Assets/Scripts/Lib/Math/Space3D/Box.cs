@@ -9,7 +9,7 @@
 /// —————————————————————————————————————————————
 
 
-﻿using Commanders.Assets.Scripts.Lib.Math.Numerics;
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space3D {

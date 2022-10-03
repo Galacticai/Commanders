@@ -9,7 +9,7 @@
 /// —————————————————————————————————————————————
 
 
-﻿namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
+namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class BoxPoints {
         public Point O { get; }
         public Point OX { get; }
@@ -21,21 +21,21 @@
         public Point OXYZ { get; }
         public BoxPoints(Box box) {
             //? (x, y, z)
-            this.O = new(box.X, box.Y, box.Z);
+            O = new(box.X, box.Y, box.Z);
             //? (x+w, y, z)
-            this.OX = new(box.X + box.XLength, box.Y, box.Z);
+            OX = new(box.X + box.XLength, box.Y, box.Z);
             //? (x, y+h, z)
-            this.OY = new(box.X, box.Y + box.YLength, box.Z);
+            OY = new(box.X, box.Y + box.YLength, box.Z);
             //? (x, y, z+d)
-            this.OZ = new(box.X, box.Y, box.Z + box.ZLength);
+            OZ = new(box.X, box.Y, box.Z + box.ZLength);
             //? (x+w, y+h, z)
-            this.OXY = new(box.X + box.XLength, box.Y + box.YLength, box.Z);
+            OXY = new(box.X + box.XLength, box.Y + box.YLength, box.Z);
             //? (x+w, y, z+d)
-            this.OXZ = new(box.X + box.XLength, box.Y, box.Z + box.ZLength);
+            OXZ = new(box.X + box.XLength, box.Y, box.Z + box.ZLength);
             //? (x, y+h, z+d)
-            this.OYZ = new(box.X, box.Y + box.YLength, box.Z + box.ZLength);
+            OYZ = new(box.X, box.Y + box.YLength, box.Z + box.ZLength);
             //? (x+w, y+h, z+d)
-            this.OXYZ = new(box.X + box.XLength, box.Y + box.YLength, box.Z + box.ZLength);
+            OXYZ = new(box.X + box.XLength, box.Y + box.YLength, box.Z + box.ZLength);
         }
     }
 }

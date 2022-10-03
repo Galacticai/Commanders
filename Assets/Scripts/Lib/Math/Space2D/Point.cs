@@ -1,17 +1,20 @@
 ﻿/// —————————————————————————————————————————————
 ﻿using sMath = System.Math;
 
+
+using sMath = System.Math;
+
 namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     public class Point {
         public readonly static Point ORIGIN = new(0, 0);
 
-        public double distance(Point point)
+        public double Distance(Point point)
             => sMath.Sqrt(
-                sMath.Pow(this.x - point.x, 2)
-                + sMath.Pow(this.y - point.y, 2));
+                sMath.Pow(x - point.x, 2)
+                + sMath.Pow(y - point.y, 2));
 
-        public double distanceToOrigin
-            => this.distance(Point.ORIGIN);
+        public double DistanceToOrigin
+            => Distance(ORIGIN);
 
         public double x { get; set; }
         public double y { get; set; }

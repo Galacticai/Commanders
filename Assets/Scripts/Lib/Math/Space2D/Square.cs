@@ -10,20 +10,20 @@
 /// —————————————————————————————————————————————
 
 
-﻿namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
+namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     internal class Square : Rectangle {
-        private new readonly double xLength, yLength;
+        private new readonly double XLength, YLength;
 
-        public double length {
-            get => base.xLength;
+        public double Length {
+            get => base.XLength;
             set {
-                base.xLength = value;
-                base.yLength = value;
+                base.XLength = value;
+                base.YLength = value;
             }
         }
 
-        public Point center
-            => new(base.x + (this.length / 2), base.y + (this.length / 2));
+        public Point Center
+            => new(X + (Length / 2), Y + (Length / 2));
 
         public Square(double x, double y, double length)
                     : base(x, y, length, length) { }

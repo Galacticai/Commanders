@@ -9,7 +9,7 @@
 /// —————————————————————————————————————————————
 
 
-﻿namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
+namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class Cube : Box {
         private new double XLength { get; set; }
         private new double YLength { get; set; }
@@ -25,9 +25,9 @@
 
         public Point Center
             => new(
-                base.X + (this.Length / 2),
-                base.Y + (this.Length / 2),
-                base.Z + (this.Length / 2)
+                base.X + (Length / 2),
+                base.Y + (Length / 2),
+                base.Z + (Length / 2)
             );
 
         public Cube(double x, double y, double z, double length)
