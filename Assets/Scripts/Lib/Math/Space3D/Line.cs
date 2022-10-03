@@ -11,9 +11,9 @@
 namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class Line {
         public record AXIS {
-            public Line X = new(Point.ORIGIN, new(1, 0, 0));
-            public Line Y = new(Point.ORIGIN, new(0, 1, 0));
-            public Line Z = new(Point.ORIGIN, new(0, 0, 1));
+            public static readonly Line X = new(Point.ORIGIN, new(1, 0, 0));
+            public static readonly Line Y = new(Point.ORIGIN, new(0, 1, 0));
+            public static readonly Line Z = new(Point.ORIGIN, new(0, 0, 1));
         }
 
         public Point Point1 { get; set; }
