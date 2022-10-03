@@ -1,12 +1,18 @@
 ﻿/// —————————————————————————————————————————————
-﻿using sMath = System.Math;
+//? 
+//!? 📜 Point.cs
+//!? 🖋️ XEROling 📅 2022
+//!  ⚖️ GPL-3.0-or-later
+//?  🔗 Dependencies: No special dependencies
+//? 
+/// —————————————————————————————————————————————
 
 
 using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     public class Point {
-        public readonly static Point ORIGIN = new(0, 0);
+        public static readonly Point ORIGIN = new(0, 0);
 
         public double Distance(Point point)
             => sMath.Sqrt(
