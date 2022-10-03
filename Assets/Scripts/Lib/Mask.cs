@@ -9,6 +9,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Commanders.Assets.Scripts.Lib {
     /// <summary> Masks the original value with a different one,
