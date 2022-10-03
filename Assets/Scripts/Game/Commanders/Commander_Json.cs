@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Commanders.Assets.Scripts.Lib;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 
@@ -6,7 +7,7 @@ namespace Commanders.Assets.Scripts.Game.Commanders {
 
     internal class Commander_Json {
         internal record Default {
-            internal static string directory = System.IO.Path.Combine(Filesystem.ThisApplicationData, "Skirmish");
+            internal static string directory = System.IO.Path.Combine(Paths.ThisApplicationData, "Skirmish");
             internal const string FILENAME = "Commanders.json";
             internal static string path = System.IO.Path.Combine(directory, FILENAME);
         }
