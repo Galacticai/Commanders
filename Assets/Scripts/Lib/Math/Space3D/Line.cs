@@ -9,6 +9,7 @@
 /// —————————————————————————————————————————————
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
+    /// <summary> A 3D line defined by 2 <see cref="Point"/>s </summary>
     public class Line {
         public record AXIS {
             public static readonly Line X = new(Point.ORIGIN, new(1, 0, 0));
