@@ -53,7 +53,9 @@ namespace Commanders.Assets.Scripts.Lib.Networking {
                                 var responseBuffer = Encoding.UTF8.GetBytes(response);
                                 context.Response.ContentLength64 = responseBuffer.Length;
                                 context.Response.OutputStream.Write(responseBuffer, 0, responseBuffer.Length);
-                            } catch { } finally {
+                            } catch (Exception ex) {
+                                Console.WriteLine($"(!) An error has occured while responding to {context.Request.RemoteEndPoint}: {ex.Message}");
+                            } finally {
                                 //? Close the stream
                                 if (context != null) context.Response.OutputStream.Close();
                             }
