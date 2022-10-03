@@ -1,18 +1,23 @@
 ﻿namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class Cube : Box {
-
-        private new readonly double xLength, yLength, zLength;
-        public double length {
-            get => base.xLength;
+        private new double XLength { get; set; }
+        private new double YLength { get; set; }
+        private new double ZLength { get; set; }
+        public double Length {
+            get => base.XLength;
             set {
-                base.xLength = value;
-                base.yLength = value;
-                base.zLength = value;
+                base.XLength = value;
+                base.YLength = value;
+                base.ZLength = value;
             }
         }
 
-        public Point center
-            => new(base.x + (this.length / 2), base.y + (this.length / 2), base.z + (this.length / 2));
+        public Point Center
+            => new(
+                base.X + (this.Length / 2),
+                base.Y + (this.Length / 2),
+                base.Z + (this.Length / 2)
+            );
 
         public Cube(double x, double y, double z, double length)
                     : base(x, y, z, length, length, length) { }

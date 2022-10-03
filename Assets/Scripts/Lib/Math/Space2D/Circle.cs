@@ -1,17 +1,17 @@
 ﻿using Commanders.Assets.Scripts.Lib.Math.Numerics;
-﻿using sMath = System.Math;
+using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     internal class Circle {
-        public readonly static Circle UNIT_SPHERE = new(Point.ORIGIN, 1);
+        public static readonly Circle UNIT_SPHERE = new(Point.ORIGIN, 1);
 
         public bool includesPoint(Point point)
-            => this.center.distance(point) <= this.radius;
+            => Center.distance(point) <= Radius;
         public bool onPoint(Point point)
-            => this.center.distance(point) == this.radius;
+            => Center.distance(point) == Radius;
 
         public double distance_Center(Circle sphere)
-            => this.center.distance(sphere.center);
+            => Center.distance(sphere.Center);
 
         /// <returns>
         ///     <list type="bullet">
@@ -20,37 +20,37 @@ namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
         ///     <item> &lt;0 • Intersecting </item>
         ///     </list>
         /// </returns>
-        public double distance_Edge(Circle sphere)
-            => this.distance_Center(sphere) - (this.radius + sphere.radius);
+        public double Distance_Edge(Circle sphere)
+            => distance_Center(sphere) - (Radius + sphere.Radius);
 
-        public bool intersectsSphere(Circle sphere)
-           => this.distance_Edge(sphere) <= 0;
+        public bool IntersectsSphere(Circle sphere)
+           => Distance_Edge(sphere) <= 0;
 
         //TODO: TEST Circle.howClose(Point)
-        /// <returns> Ratio of how close <paramref name="point"/> is to <see cref="center"/>
-        /// relative to <see cref="radius"/> </returns>
+        /// <returns> Ratio of how close <paramref name="point"/> is to <see cref="Center"/>
+        /// relative to <see cref="Radius"/> </returns>
         public double howClose(Point point) {
-            double distance = this.center.distance(point);
+            double distance = Center.distance(point);
             //? close 0 -- 1 far
-            double ratio_inverse = distance / this.radius;
+            double ratio_inverse = distance / Radius;
             //? close 1 -- 0 far
             double ratio = sMath.Abs(ratio_inverse - 1);
-            return Range.ZERO_ONE.toRange(ratio);
+            return ratio.AtOrBetween(0, 1);
         }
 
 
-        public Point center { get; set; }
-        public double radius { get; set; }
-        public double volume
-            => 4 * sMath.PI * sMath.Pow(this.radius, 2);
+        public Point Center { get; set; }
+        public double Radius { get; set; }
+        public double Volume
+            => 4 * sMath.PI * sMath.Pow(Radius, 2);
 
         public Circle(double x, double y, double radius) {
-            this.center = new Point(x, y);
-            this.radius = radius;
+            Center = new Point(x, y);
+            Radius = radius;
         }
         public Circle(Point center, double radius) {
-            this.center = center;
-            this.radius = radius;
+            Center = center;
+            Radius = radius;
         }
     }
 }

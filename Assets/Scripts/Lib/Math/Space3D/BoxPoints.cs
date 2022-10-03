@@ -1,30 +1,30 @@
 ﻿namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     public class BoxPoints {
-        public Point o { get; }
-        public Point ox { get; }
-        public Point oy { get; }
-        public Point oz { get; }
-        public Point oxy { get; }
-        public Point oxz { get; }
-        public Point oyz { get; }
-        public Point oxyz { get; }
+        public Point O { get; }
+        public Point OX { get; }
+        public Point OY { get; }
+        public Point OZ { get; }
+        public Point OXY { get; }
+        public Point OXZ { get; }
+        public Point OYZ { get; }
+        public Point OXYZ { get; }
         public BoxPoints(Box box) {
             //? (x, y, z)
-            this.o = new(box.x, box.y, box.z);
+            this.O = new(box.X, box.Y, box.Z);
             //? (x+w, y, z)
-            this.ox = new(box.x + box.xLength, box.y, box.z);
+            this.OX = new(box.X + box.XLength, box.Y, box.Z);
             //? (x, y+h, z)
-            this.oy = new(box.x, box.y + box.yLength, box.z);
+            this.OY = new(box.X, box.Y + box.YLength, box.Z);
             //? (x, y, z+d)
-            this.oz = new(box.x, box.y, box.z + box.zLength);
+            this.OZ = new(box.X, box.Y, box.Z + box.ZLength);
             //? (x+w, y+h, z)
-            this.oxy = new(box.x + box.xLength, box.y + box.yLength, box.z);
+            this.OXY = new(box.X + box.XLength, box.Y + box.YLength, box.Z);
             //? (x+w, y, z+d)
-            this.oxz = new(box.x + box.xLength, box.y, box.z + box.zLength);
+            this.OXZ = new(box.X + box.XLength, box.Y, box.Z + box.ZLength);
             //? (x, y+h, z+d)
-            this.oyz = new(box.x, box.y + box.yLength, box.z + box.zLength);
+            this.OYZ = new(box.X, box.Y + box.YLength, box.Z + box.ZLength);
             //? (x+w, y+h, z+d)
-            this.oxyz = new(box.x + box.xLength, box.y + box.yLength, box.z + box.zLength);
+            this.OXYZ = new(box.X + box.XLength, box.Y + box.YLength, box.Z + box.ZLength);
         }
     }
 }

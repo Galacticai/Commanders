@@ -1,36 +1,36 @@
 ﻿using Commanders.Assets.Scripts.Lib.Math.Numerics;
-﻿using sMath = System.Math;
+using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
     //TODO: TEST Box.{XYZ}Length calculation
     public class Box {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double z { get; set; }
-        public double xLength { get; set; }
-        public double yLength { get; set; }
-        public double zLength { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Z { get; set; }
+        public virtual double XLength { get; set; }
+        public virtual double YLength { get; set; }
+        public virtual double ZLength { get; set; }
 
-        public double volume
-            => this.xLength * this.yLength * this.zLength;
-        public BoxPoints points
+        public virtual double Volume
+            => XLength * YLength * ZLength;
+        public BoxPoints Points
             => new(this);
 
         public Box(double x, double y, double z, double xLength, double yLength, double zLength) {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            this.xLength = sMath.Abs(xLength);
-            this.yLength = sMath.Abs(yLength);
-            this.zLength = sMath.Abs(zLength);
+            X = x;
+            Y = y;
+            Z = z;
+            XLength = xLength.Positive();
+            YLength = yLength.Positive();
+            ZLength = zLength.Positive();
         }
         public Box(Point point, double xLength, double yLength, double zLength)
-                    : this(point.x, point.y, point.z,
+                    : this(point.X, point.Y, point.Z,
                           xLength, yLength, zLength) { }
         public Box(Point point1, Point point2)
-                    : this(point1.x, point1.y, point1.z,
-                          sMath.Max(point1.x, point2.x) - sMath.Min(point1.x, point2.x),
-                          sMath.Max(point1.y, point2.y) - sMath.Min(point1.y, point2.y),
-                          sMath.Max(point1.z, point2.z) - sMath.Min(point1.z, point2.z)) { }
+                    : this(point1.X, point1.Y, point1.Z,
+                          sMath.Max(point1.X, point2.X) - sMath.Min(point1.X, point2.X),
+                          sMath.Max(point1.Y, point2.Y) - sMath.Min(point1.Y, point2.Y),
+                          sMath.Max(point1.Z, point2.Z) - sMath.Min(point1.Z, point2.Z)) { }
     }
 }
