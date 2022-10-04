@@ -68,7 +68,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
         /// <summary> Information about the currently running Linux OS </summary>
         public record Current {
 
-            private static Bash _Bash = null;
+            private static Bash _Bash;
             private static Bash Bash => _Bash ??= new();
 
 
