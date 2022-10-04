@@ -19,9 +19,8 @@ namespace Commanders.Assets.Scripts.Lib.Unity {
                      showYear = true;
         [SerializeField] private int year = 2022;
 
-        private TMP_Text _TMPText;
         private void Start() {
-            _TMPText = GetComponent<TMP_Text>();
+            TMP_Text _TMPText = GetComponent<TMP_Text>();
             if (_TMPText == null) return;
 
 
