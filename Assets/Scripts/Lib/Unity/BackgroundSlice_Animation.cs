@@ -11,22 +11,19 @@ namespace Commanders.Assets.Scripts.Lib.Unity {
         [SerializeField] private int _step_Multiplier = 10;
         private float _currentStep;
         private int _currentValue;
-
         private VisualElement _parent0;
-        // Start is called before the first frame update
+        
         private void Start() {
             UIDocument _doc = GetComponent<UIDocument>();
             VisualElement _root = _doc.rootVisualElement;
             IEnumerable _parents = _root.Children();
             foreach (var parent in _parents) {
                 _parent0 = (VisualElement)parent;
-                //Debug.Log("Will animate unitySlice{Left,Right,Top,Bottom} for: " + this._parent0.name);
                 break;
             }
             _currentStep = _from;
         }
 
-        // Update is called once per frame
         private void Update() {
             if (_parent0 == null) return;
             if (_currentStep >= _to) _currentStep = _from;
@@ -37,7 +34,6 @@ namespace Commanders.Assets.Scripts.Lib.Unity {
             _parent0.style.unitySliceRight = currentValue;
             _parent0.style.unitySliceTop = currentValue;
             _parent0.style.unitySliceBottom = currentValue;
-            //Debug.Log(currentValue);
         }
     }
 }
