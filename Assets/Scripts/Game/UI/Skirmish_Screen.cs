@@ -38,7 +38,8 @@ namespace Commanders.Assets.Scripts.Game.UI {
             if (commanders.Length > 8)
                 throw new ArgumentOutOfRangeException();
             for (int i = 0; i < 8; i++) {
-
+                //!? Not implimented
+                Debug.Log("Skirmish_Screen.AddCommanders is not implimented yet");
             }
             return true;
         }
