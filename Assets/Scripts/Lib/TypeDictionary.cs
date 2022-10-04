@@ -37,7 +37,7 @@ namespace Commanders.Assets.Scripts.Lib {
         public virtual bool Set<ITValue>(ITValue value) where ITValue : TValue
             => Set(value, false);
         public virtual bool Set<ITValue>(ITValue value, bool force) where ITValue : TValue {
-            if (value == null) return false;
+            if (value == default) return false;
             if (Contains<ITValue>() && !force) return false;
             Dictionary[value.GetType()] = value;
             return true;
@@ -51,7 +51,7 @@ namespace Commanders.Assets.Scripts.Lib {
             //?     + Check if type exists
             //?     + Compare value of that key to the provided value
             ITValue value_FromDictionary = Get<ITValue>();
-            if (value_FromDictionary is null) return false;
+            if (value_FromDictionary == null) return false;
             return Comparer<ITValue>.Default.Compare(value, value_FromDictionary) >= 0;
         }
 
