@@ -91,7 +91,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
                     //"  ~~>12.34.56.78.etc.etc<~~ Abcd Abcd   "
                     string kernelString = _KernelString.Trim()[..' ']; //? Get once
 
-                    string versionString = string.Empty;
+                    StringBuilder versionStringBuilder = new();
                     int dotCount = 0;
                     for (int i = 0; i < kernelString.Length; i++) {
 
@@ -112,13 +112,13 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
                             if (dotCount >= 5)
                                 break;
 
-                            versionString += kernelString[i];
+                            versionStringBuilder.Append(kernelString[i]);
                         }
 
                         //? Accept digits
                         // "~~>12<~~.~~>34<~~.~~>56<~~.~~>78<~~.etc.etc"
                         else if (char.IsDigit(kernelString[i]))
-                            versionString += kernelString[i];
+                            versionStringBuilder.Append(kernelString[i]);
 
                         //? Reject otherwise
                         // "12.34.56.78~~> Abcd whatever"
@@ -128,7 +128,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
 
                     //? Done
                     //"12.34.56.78"
-                    return new Version(versionString);
+                    return new Version(versionStringBuilder.ToString());
 
                 } catch {
                     //! Something went wrong
