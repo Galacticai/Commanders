@@ -52,7 +52,7 @@ namespace Commanders.Assets.Scripts.Lib.Math.Space3D {
         public Point Center { get; set; }
         public double Radius { get; set; }
         public double Volume
-            => 4 * sMath.PI * sMath.Pow(Radius, 2);
+            => (4 / 3) * sMath.PI * sMath.Pow(Radius, 3);
 
         public Sphere(double x, double y, double z, double radius) {
             Center = new Point(x, y, z);
