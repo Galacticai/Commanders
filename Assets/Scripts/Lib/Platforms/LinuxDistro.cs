@@ -94,7 +94,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
 
                         //? Skip double dots
                         // "12.34.56~~>..~~>.78.etc.etc"
-                        if (i > 0 & kernelString[i] == '.')
+                        if (i > 0 && kernelString[i] == '.')
                             //!? INFO: Step into only if in range
                             if (kernelString[i - 1] == '.')
                                 continue;
