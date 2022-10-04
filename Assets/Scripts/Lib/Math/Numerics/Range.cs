@@ -60,10 +60,12 @@ namespace Commanders.Assets.Scripts.Lib.Math.Numerics {
         }
         public bool FromEnd { get; set; }
         /// <param name="fromEnd"> Flips the start and end points </param>
-        public Range(double start, double end, bool fromEnd = false) {
+        public Range(double start, double end, bool fromEnd) {
             Start = start;
             End = end;
             FromEnd = fromEnd;
         }
+        public Range(double start, double end)
+                    : this(start, end, false) { }
     }
 }
