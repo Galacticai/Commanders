@@ -31,11 +31,13 @@ namespace Commanders.Assets.Scripts.Lib.Math.Numerics {
             => value.AtOrBetween(Min, Max);
 
         public double GetRatio(double value) {
-            //? No need to consider this.FromEnd
-            if (_Start == _End)
-                //? this.End with considering this.FromEnd
+            //? Try catch because double==double is never precise
+            //? (can't detect division by zero beforehand)
+            try {
+                return (value - Min) / (Max - Min);
+            } catch { //(System.DivideByZeroException divideByZeroExceptiion) {
                 return value > End ? 1 : 0;
-            return (value - Min) / (Max - Min);
+            }
         }
 
         public double GetPercent(double percent)
