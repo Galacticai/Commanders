@@ -35,7 +35,11 @@ namespace Commanders.Assets.Scripts.Lib.Unity {
                 return screenElement.style.opacity == 0;
             }
 
-            public static bool Hide(GameObject screen, StyleTranslate customStyleTranslate = default) {
+            public static bool Hide(GameObject screen)
+                => Hide(screen, default);
+            public static bool Show(GameObject screen)
+                => Show(screen, default);
+            public static bool Hide(GameObject screen, StyleTranslate customStyleTranslate) {
                 bool screen_isValid = IsValid(screen, out UIDocument uiDocument, out VisualElement screenElement);
                 if (!screen_isValid) return false;
                 screenElement.style.translate
@@ -45,7 +49,7 @@ namespace Commanders.Assets.Scripts.Lib.Unity {
                 screenElement.style.opacity = 0;
                 return true;
             }
-            public static bool Show(GameObject screen, StyleTranslate customStyleTranslate = default) {
+            public static bool Show(GameObject screen, StyleTranslate customStyleTranslate) {
                 bool screen_isValid = IsValid(screen, out UIDocument uiDocument, out VisualElement screenElement);
                 if (!screen_isValid) return false;
                 screenElement.style.opacity = 1;
