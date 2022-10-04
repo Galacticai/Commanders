@@ -23,7 +23,7 @@ namespace Commanders.Assets.Scripts.Game.Commanders {
         internal string CameraID { get; }
 
         /// <summary> <see cref="Commander"/> controls <see cref="Entities.Entity"/> and other related stuff </summary>
-        internal Commander(
+        private protected Commander(
                 string name,
                 Provenance provenance,
                 int alliance,

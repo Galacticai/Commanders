@@ -36,7 +36,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats.Effects {
         }
         internal bool IsUnique { get; }
 
-        internal Effect(EffectType type, bool isUnique, bool active) {
+        private protected Effect(EffectType type, bool isUnique, bool active) {
             Type = type;
             IsUnique = isUnique;
             if (active) Count++;
