@@ -15,7 +15,7 @@ using System.Linq;
 
 namespace Commanders.Assets.Scripts.Lib {
     /// <summary> Various tools for <see cref="object"/>s </summary>
-    public class Objects {
+    public static class Objects {
         public static IEnumerable<Type> FindSubClassesOf<T>() {
             var baseType = typeof(T);
             return baseType
