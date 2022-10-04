@@ -72,21 +72,24 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
             private static Bash Bash => _Bash ??= new();
 
 
-            private static readonly string KernelString = Bash.Command("uname -r").Output;
+            private static readonly string _KernelString
+                = Bash.Command("uname -r").Output;
 
             /// <summary> Indicates whether this linux is running in WSL (Windows Subsystem for Linux) </summary>
-            public static bool IsWSL => Regex.IsMatch(KernelString.ToLower(), @"(microsoft|wsl)");
+            public static bool IsWSL
+                => Regex.IsMatch(_KernelString.ToLower(), @"(microsoft|wsl)");
 
             /// <summary> <c> uname -r </c> >> (Trimmed down to version only) <br/>
             ///     Kernel version <br/><br/>
             ///     # Example: 5.13.0.0 (as <see cref="System.Version"/>)
             /// </summary>
-            public static Version KernelVersion => GetKernelVersion();
-            private static Version GetKernelVersion() {
+            public static Version KernelVersion
+                => _GetKernelVersion();
+            private static Version _GetKernelVersion() {
                 try {
                     //? Trim leading/trailing space
                     //"  ~~>12.34.56.78.etc.etc<~~ Abcd Abcd   "
-                    string kernelString = KernelString.Trim()[..' ']; //? Get once
+                    string kernelString = _KernelString.Trim()[..' ']; //? Get once
 
                     string versionString = string.Empty;
                     int dotCount = 0;
@@ -133,7 +136,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
                 }
             }
 
-            private static string ParseReleaseCommandString(string variable)
+            private static string _ParseReleaseCommandString(string variable)
                 => ". /etc/*-release && echo $" + variable;
 
 
@@ -142,14 +145,14 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
             ///     # Example: ubuntu
             /// </summary>
             public static LinuxDistroName ID
-                => FromID(Bash.Command(ParseReleaseCommandString("ID")).Output);
+                => FromID(Bash.Command(_ParseReleaseCommandString("ID")).Output);
 
             /// <summary> <c> >> /etc/*-release >> $ID_LIKE </c> <br/>
             ///     ID of the distro this is based on <br/><br/>
             ///     # Example: debian (<see cref="string"/>)
             /// </summary>
             public static LinuxDistroName BaseID
-                => FromID(Bash.Command(ParseReleaseCommandString("ID_LIKE")).Output);
+                => FromID(Bash.Command(_ParseReleaseCommandString("ID_LIKE")).Output);
 
             /// <summary> <c> >> /etc/*-release >> $VERSION_ID </c> <br/>
             ///     Version presented in a numerical way <br/><br/>
@@ -158,28 +161,28 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
             ///  !!!  Except Arch and CentOS 5~6 AND maybe others ¯\_(ツ)_/¯
             /// </summary>
             public static Version Version
-                => Version.Parse(Bash.Command(ParseReleaseCommandString("VERSION_ID")).Output);
+                => Version.Parse(Bash.Command(_ParseReleaseCommandString("VERSION_ID")).Output);
 
             /// <summary> <c> >> /etc/*-release >> $NAME </c> <br/>
             ///     Short Name of this distro <br/><br/>
             ///     # Example: Debian GNU/Linux 11 (bullseye)
             /// </summary>
             public static string Name
-                => Bash.Command(ParseReleaseCommandString("NAME")).Output;
+                => Bash.Command(_ParseReleaseCommandString("NAME")).Output;
 
             /// <summary> <c> >> /etc/*-release >> $PRETTY_NAME </c> <br/>
             ///     Long Name of this distro <br/><br/>
             ///     # Example: Debian GNU/Linux
             /// </summary>
             public static string PrettyName
-                => Bash.Command(ParseReleaseCommandString("PRETTY_NAME")).Output;
+                => Bash.Command(_ParseReleaseCommandString("PRETTY_NAME")).Output;
 
             /// <summary> <c> >> /etc/*-release >> $HOME_URL </c> <br/>
             ///     Home page URL (<see cref="string"/>) of this distro <br/><br/>
             ///     # Example: https://www.ubuntu.com/ (as <see cref="string"/>)
             /// </summary>
             public static string Homepage
-                => Bash.Command(ParseReleaseCommandString("HOME_URL")).Output;
+                => Bash.Command(_ParseReleaseCommandString("HOME_URL")).Output;
 
         }
     }
