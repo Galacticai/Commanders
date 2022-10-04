@@ -7,7 +7,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
         #region Shortcuts
 
         /// <summary> Maximum value for <see cref="Amount"/> </summary>
-        internal float Total
+        internal double Total
             => Convert.ToSingle(Amount.Range.Max);
         internal bool IsImmortal => Defence == 1;
         /// <returns> <see cref="Amount"/> &lt; <see cref="Total"/> </returns>
@@ -15,13 +15,13 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
         /// <returns> <see cref="Amount"/> == <see cref="Total"/> </returns>
         internal bool IsHealed => Amount.Value == Total;
         /// <returns> Ratio of <see cref="Amount"/> relative to <see cref="Total"/> (0~1) </returns>
-        internal float Health_Ratio => Convert.ToSingle(Amount.Value) / Total;
+        internal double Health_Ratio => Convert.ToSingle(Amount.Value) / Total;
         /// <returns> Precentage of <see cref="Amount"/> relative to <see cref="Total"/> (0~100) </returns>
-        internal float Health_Percent => Health_Ratio * 100;
+        internal double Health_Percent => Health_Ratio * 100;
 
         #endregion
         #region Methods
-        private Amount _Health_Delta(float delta) {
+        private Amount _Health_Delta(double delta) {
             if (IsImmortal || delta == 0) return Amount;
 
             double health_new = Amount + delta;
@@ -38,20 +38,20 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
 
         /// <summary> Increase <see cref="Amount"/> directly using the <paramref name="amount"/> specified </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
-        internal Amount Heal(float amount)
+        internal Amount Heal(double amount)
             => _Health_Delta(amount.Positive());
 
         /// <summary> Decrease <see cref="Amount"/> directly using the <paramref name="amount"/> specified </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
-        internal Amount Hurt(float amount, float piercing = 0) {
+        internal Amount Hurt(double amount, double piercing = 0) {
             //? piercing 0�1
-            float piercing01 = piercing.AtOrBetween(0, 1);
+            double piercing01 = piercing.AtOrBetween(0, 1);
             //? pierced defence
-            float piercedDefence = (Defence - piercing01).Positive();
+            double piercedDefence = (Defence - piercing01).Positive();
             //? Calculate how much of the hurting amount has been defended
-            float amountDefended = amount * piercedDefence;
+            double amountDefended = amount * piercedDefence;
             //? Reduce the original hurting amount using the amount that has been defended
-            float amountFinal = amount - amountDefended;
+            double amountFinal = amount - amountDefended;
             return _Health_Delta(amountFinal);
         }
 
@@ -81,14 +81,14 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
 
         /// <summary> Set <see cref="Amount"/> to 0 </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
-        internal float Kill() {
+        internal double Kill() {
             Amount.Value = 0;
             return Convert.ToSingle(Amount);
         }
         internal void MakeImmortal()
             => Defence = 1;
         internal void MakeImmortal_Period(int timeMS) {
-            float currentDefence = Defence;
+            double currentDefence = Defence;
             _ = new Timer(
                 (object originalDefence)
                     => Defence = Convert.ToSingle(originalDefence),
@@ -110,13 +110,13 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
             }
         }
 
-        private float _Defence;
-        internal float Defence {
+        private double _Defence;
+        internal double Defence {
             get => _Defence;
             set => _Defence = value.AtOrBetween(0, 1);
         }
 
-        internal Health(Amount amount, float defence = 0) {
+        internal Health(Amount amount, double defence = 0) {
             Amount = amount;
             Defence = defence;
         }
