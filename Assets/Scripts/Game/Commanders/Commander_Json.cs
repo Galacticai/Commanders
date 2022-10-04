@@ -16,7 +16,7 @@ namespace Commanders.Assets.Scripts.Game.Commanders {
         internal Commander_Json(params Commander[] commanders) {
             if (commanders.Length > 8) Array.Resize(ref commanders, 8);
             Json = JsonConvert.SerializeObject(commanders);
-            Filesystem.Prepare_ThisApplicationData();
+            Paths.Create_ThisApplicationData();
             File.WriteAllText(Path, Json);
         }
     }
