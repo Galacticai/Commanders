@@ -52,8 +52,8 @@ namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
 
         public Point Center { get; set; }
         public double Radius { get; set; }
-        public double Volume
-            => 4 * sMath.PI * sMath.Pow(Radius, 2);
+        public double Area
+            => sMath.PI * sMath.Pow(Radius, 2);
 
         public Circle(double x, double y, double radius) {
             Center = new Point(x, y);
