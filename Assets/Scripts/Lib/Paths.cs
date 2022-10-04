@@ -29,7 +29,7 @@ namespace Commanders.Assets.Scripts.Lib {
             public const string WINDOWS
                 = @"^(?<drive>[a-z]:)?(?<path>(?:[\\]?(?:[\w !#()-]+|[.]{1,2})+)*[\\])?(?<filename>(?:[.]?[\w !#()-]+)+)?[.]?$";
             public const string UNIX
-            = @"^(/[^/ ]*)+/?$";
+                = @"^(/[^/ ]*)+/?$";
         }
 
         #endregion
@@ -106,9 +106,15 @@ namespace Commanders.Assets.Scripts.Lib {
 
         /// <returns><list type="bullet">
         /// <item> "path/to/file (index).extension"</item>
-        /// <item> "path/to/file (GUID).extension" if <paramref name="maxTries"/> exceeded </item>
+        /// <item> "path/to/file (GUID).extension" if exceeding 20 tries </item>
         /// </list></returns>
-        public static string GetUnusedPath(this string path, int maxTries = 20) {
+        public static string GetUnusedPath(this string path)
+            => GetUnusedPath(path, 20);
+        /// <returns><list type="bullet">
+        /// <item> "path/to/file (index).extension"</item>
+        /// <item> "path/to/file (GUID).extension" if exceeding <paramref name="maxTries"/> </item>
+        /// </list></returns>
+        public static string GetUnusedPath(this string path, int maxTries) {
             if (!path.PathExists() || !path.PathIsValid())
                 return path;
             string directory = Path.GetDirectoryName(path);
@@ -119,6 +125,8 @@ namespace Commanders.Assets.Scripts.Lib {
                 if (!newPath.PathExists()) return newPath;
                 newPath = Path.Combine(directory, $"{name} ({i}){dot_extension}");
             }
+            //? not returned in the loop = failed to get a unique name
+            //?     > use GUID instead of numbers
             return Path.Combine(directory, $"{name} ({Guid.NewGuid()}){dot_extension}");
         }
 
