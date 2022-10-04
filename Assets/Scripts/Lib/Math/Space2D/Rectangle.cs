@@ -10,11 +10,35 @@
 /// —————————————————————————————————————————————
 
 
+using Commanders.Assets.Scripts.Lib.Math.Numerics;
 using sMath = System.Math;
 
 namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     //TODO: TEST Rectangle.{xyz}Length calculation 
     public class Rectangle {
+        #region Helper Methods
+        #region Helper Methods 
+        /// <summary> Map a <see cref="Point"/> from current <see cref="Rectangle"/> to another </summary>
+        /// <param name="rectangle"> Target <see cref="Rectangle"/> </param>
+        public Point MapPointIntoBox(Point point, Rectangle rectangle)
+            => MapPointIntoBox(point, rectangle, false);
+        /// <summary> Map a <see cref="Point"/> from current <see cref="Rectangle"/> to another </summary>
+        /// <param name="point"> Source <see cref="Point"/> </param>
+        /// <param name="rectangle"> Target <see cref="Rectangle"/> </param>
+        /// <param name="forceInRectangle"> Force the output to be inside the target <paramref name="rectangle"/> </param>
+        public Point MapPointIntoBox(Point point, Rectangle rectangle, bool forceInRectangle) {
+            Point newPoint = new(
+                rectangle.X + (rectangle.XLength * (point.X - X) / XLength),
+                rectangle.Y + (rectangle.YLength * (point.Y + Y) / YLength)
+            );
+            if (forceInRectangle) {
+                newPoint.X = newPoint.X.AtOrBetween(rectangle.X, rectangle.X + rectangle.XLength);
+                newPoint.Y = newPoint.Y.AtOrBetween(rectangle.Y, rectangle.Y + rectangle.YLength);
+            }
+            return newPoint;
+        }
+        #endregion
+
         public double X { get; set; }
         public double Y { get; set; }
         public double XLength { get; set; }
