@@ -6,21 +6,18 @@ using UnityEngine.UIElements;
 namespace Commanders.Assets.Scripts.Lib.Unity {
     public class BackgroundSlice_Animation : MonoBehaviour {
         [SerializeField] private Function.FunctionName function = Function.FunctionName.Smooth_FTF;
-        [SerializeField] private int _from = 0;
+        [SerializeField] private int _from;
         [SerializeField] private int _to = 200;
         [SerializeField] private int _step_Multiplier = 10;
-        private float _currentStep = 0;
-        private int _currentValue = 0;
+        private float _currentStep;
+        private int _currentValue;
 
-        private UIDocument _doc;
-        private VisualElement _root;
-        private IEnumerable _parents;
         private VisualElement _parent0;
         // Start is called before the first frame update
         private void Start() {
-            _doc = GetComponent<UIDocument>();
-            _root = _doc.rootVisualElement;
-            _parents = _root.Children();
+            UIDocument _doc = GetComponent<UIDocument>();
+            VisualElement _root = _doc.rootVisualElement;
+            IEnumerable _parents = _root.Children();
             foreach (var parent in _parents) {
                 _parent0 = (VisualElement)parent;
                 //Debug.Log("Will animate unitySlice{Left,Right,Top,Bottom} for: " + this._parent0.name);
