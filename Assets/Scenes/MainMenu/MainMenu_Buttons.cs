@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Assets.Scenes.MainMenu {
+namespace Commanders.Assets.Scenes.MainMenu {
     public class MainMenu_Buttons : MonoBehaviour {
 
         public void SampleScene_Button_Click() {
