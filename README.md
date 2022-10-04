@@ -33,10 +33,10 @@
 <br/>
 
 <p align="center">
-    <!-- <a href="https://www.codacy.com/gh/Galacticai/Commanders/dashboard" >
+    <a href="https://www.codacy.com/gh/Galacticai/Commanders/dashboard" >
         <img src="https://img.shields.io/codacy/grade/5c46c2f9d1aa42118fd39fca9a3ce381?logo=codacy&label=Codacity%20rating"> 
     </a>
-    <br/> -->
+    <br/>
     <a href="https://github.com/Galacticai/Commanders/contributors">
         <img src="https://img.shields.io/github/contributors/Galacticai/Commanders?label=Contributors&logo=github" /> 
     </a>
