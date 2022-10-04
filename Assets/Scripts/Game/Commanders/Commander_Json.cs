@@ -7,9 +7,9 @@ namespace Commanders.Assets.Scripts.Game.Commanders {
 
     internal class Commander_Json {
         internal record Default {
-            internal static string directory = System.IO.Path.Combine(Paths.ThisApplicationData, "Skirmish");
+            internal static readonly string directory = System.IO.Path.Combine(Paths.ThisApplicationData, "Skirmish");
             internal const string FILENAME = "Commanders.json";
-            internal static string path = System.IO.Path.Combine(directory, FILENAME);
+            internal static readonly string path = System.IO.Path.Combine(directory, FILENAME);
         }
         internal string Path { get; }
         internal string Json { get; }
