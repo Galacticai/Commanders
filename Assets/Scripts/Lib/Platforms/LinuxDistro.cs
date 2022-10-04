@@ -36,7 +36,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
         }
 
         public static LinuxDistroName FromID(string linuxDistro)
-            => linuxDistro.ToLower() switch {
+            => linuxDistro.ToLowerInvariant() switch {
 
                 "alpine" => LinuxDistroName.AlpineLinux,
                 "amzn" => LinuxDistroName.AmazonLinux,
@@ -77,7 +77,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
 
             /// <summary> Indicates whether this linux is running in WSL (Windows Subsystem for Linux) </summary>
             public static bool IsWSL
-                => Regex.IsMatch(_KernelString.ToLower(), @"(microsoft|wsl)");
+                => Regex.IsMatch(_KernelString.ToLowerInvariant(), @"(microsoft|wsl)");
 
             /// <summary> <c> uname -r </c> >> (Trimmed down to version only) <br/>
             ///     Kernel version <br/><br/>
