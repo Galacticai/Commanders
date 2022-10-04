@@ -9,7 +9,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
         /// <summary> Maximum value for <see cref="Amount"/> </summary>
         internal double Total
             => Convert.ToSingle(Amount.Range.Max);
-        internal bool IsImmortal => Defence == 1;
+        internal bool IsImmortal => Math.Abs(Defence - 1) < 0.000001f;
         /// <returns> <see cref="Amount"/> &lt; <see cref="Total"/> </returns>
         internal bool IsDamaged => Amount < Total;
         /// <returns> <see cref="Amount"/> == <see cref="Total"/> </returns>
