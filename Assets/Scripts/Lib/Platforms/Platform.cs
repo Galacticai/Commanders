@@ -17,7 +17,7 @@ namespace Commanders.Assets.Scripts.Lib.Platforms {
     public static class Platform {
 
         /// <summary> Indicates whether the current platform is supported by ScreenFIRE (Linux or Windows) </summary>
-        internal static bool IsSupported => RunningLinux | RunningWindows;
+        internal static bool IsSupported => RunningLinux || RunningWindows;
 
         /// <summary> Indicate if the current platform is Linux based </summary>
         public static bool RunningLinux
