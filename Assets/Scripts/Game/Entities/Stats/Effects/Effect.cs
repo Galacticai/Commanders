@@ -9,7 +9,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats.Effects {
             Buff, Debuff
         }
 
-        /// <summary> Safely update <see cref="Effect"/> without breaking the functionality of <see cref="Active"/> flag </summary>
+        // /// <summary> Safely update <see cref="Effect"/> without breaking the functionality of <see cref="Active"/> flag </summary>
         //internal protected Func<Entity, Entity> UpdateEffect(Func<Entity, Entity> newEffect)
         //   => this.Effect = new((Entity entity) => {
         //       //? Redo the effect according to EntityEffect.Count
