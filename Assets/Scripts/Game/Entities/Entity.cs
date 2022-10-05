@@ -23,6 +23,14 @@ namespace Commanders.Assets.Scripts.Game.Entities {
         internal Health Health => Stats.Get<Health>();
         #endregion
 
+        #region Methods
+        private protected GameObject Create<TEntity>(TEntity entity, Vector3 location, params Component[] components)
+                    where TEntity : Entity {
+            GameObject gameObject = new();
+            //TODO: move Human.TestHuman code to this 
+            throw new System.NotImplimentedException();
+        }
+        #endregion
 
         /// <summary> Properties of this <see cref="Entity"/> </summary>
         protected internal StatDictionary Stats { get; protected set; }
