@@ -1,6 +1,6 @@
-﻿﻿<h1><p align="center">Commanders</p></h1>
+﻿﻿<h1 align="center">Commanders</h1>
 
-<h4><p align="center"><b>Open-Source Real-Time Strategy Game</b></p></h4>
+<h4 align="center"><b>Open-Source Real-Time Strategy Game</b></h4>
 
 <hr/>
 <br/>
