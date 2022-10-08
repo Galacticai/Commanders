@@ -39,9 +39,7 @@ namespace Commanders.Assets.Scripts.Lib.Math.Numerics {
         public override bool Equals(object obj) {
             if (obj == null) return false;
             try {
-                var number = obj as Number<TNumber>;
-                if (number == null) return false;
-                return this == number;
+                return obj is Number<TNumber> number && this == number;
             } catch { return false; }
         }
         public override int GetHashCode() => HashCode.Combine(Value);
