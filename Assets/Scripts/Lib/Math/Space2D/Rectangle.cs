@@ -16,7 +16,6 @@ using sMath = System.Math;
 namespace Commanders.Assets.Scripts.Lib.Math.Space2D {
     //TODO: TEST Rectangle.{xyz}Length calculation 
     public class Rectangle {
-        #region Helper Methods
         #region Helper Methods 
         /// <summary> Map a <see cref="Point"/> from current <see cref="Rectangle"/> to another </summary>
         /// <param name="rectangle"> Target <see cref="Rectangle"/> </param>
