@@ -10,8 +10,8 @@ TypeDictionary~Attribute~ <|-- AttributeDictionary : inherits
 class TypeDictionary~Attribute~ {
     (From Lib)
 }
-AttributesDictionary ..o Attribute : aggregates
-class AttributesDictionary {
+AttributeDictionary ..o Attribute : aggregates
+class AttributeDictionary {
     internal record Default
             
     internal static bool AttributeIsRequired(Type statType)
@@ -25,11 +25,11 @@ class AttributesDictionary {
     internal static AttributeDictionary CreateDefault()
 }
 
-class Attributes {
+class Attribute {
     protected internal Entity Parent
     private protected Attribute(Entity parent)
 }
-    Attributes <-- Command : inherits
+    Attribute <-- Command : inherits
     Command ..o GameObject : aggregates
     class Command {
         internal GameObject GameObject
