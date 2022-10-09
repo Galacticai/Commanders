@@ -1,5 +1,7 @@
-﻿# Class Diagram: `Entity`
-###### `Commanders.Assets.Scripts.Game.Entities.Entity`
+﻿[<h1><img height=48 src="https://img.shields.io/badge/Namespace%20Overview-Entities-white?color=informational&style=flat-square" /></h1>](https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities)
+
+`Commanders`>`Assets`>`Scripts`>`Game`>(**`Entities`**)
+
 ---
 
 ```mermaid
