@@ -1,4 +1,4 @@
-﻿using Commanders.Assets.Scripts.Game.Entities.Stats;
+﻿using Commanders.Assets.Scripts.Game.Entities.Attributes;
 using Commanders.Assets.Scripts.Lib.Math.Space2D;
 using System;
 using System.Threading.Tasks;
@@ -17,7 +17,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Buildings {
         #endregion
 
         protected internal double ConstructionRadius { get; protected set; }
-        private protected Building(Command command, float constructionRadius, StatDictionary stats)
+        private protected Building(Command command, double constructionRadius, AttributeDictionary stats)
                     : base(command, stats) {
             foreach (var territoryType in Territory.Allowed)
                 if (territoryType == Territory.TerritoryType.Air)
