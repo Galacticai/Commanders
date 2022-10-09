@@ -171,7 +171,7 @@ class Stat {
         internal Weapon Nearby(Entity parent_Entity, Damage damage)
         internal Weapon Ranged(Entity parent_Entity, Damage damage, double radius)
     }
-        Weapon ..> Damage : uses
+        Weapon ..* Damage : composes
         class Damage {
             internal enum DamageType
             internal DamageType Type
@@ -267,5 +267,4 @@ class Stat {
         public static double Negative(this double input)
         public static bool IsBetween(this double input, double min, double max)
     }
-
 ```
