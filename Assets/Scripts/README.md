@@ -125,8 +125,8 @@ class Stat {
     private protected Stat(Entity parent)
 }
     Stat <-- Command : inherits
-    Command ..> Commander : uses
-    Command ..> GameObject : uses
+    Command ..o Commander : aggregates
+    Command ..o GameObject : aggregates
     class Command {
         internal GameObject GameObject
         internal bool GameObject_Exists
