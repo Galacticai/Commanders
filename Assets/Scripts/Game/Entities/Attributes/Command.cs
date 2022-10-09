@@ -1,8 +1,8 @@
 ﻿using Commanders.Assets.Scripts.Game.Commanders;
 using UnityEngine;
 
-namespace Commanders.Assets.Scripts.Game.Entities.Stats {
-    internal class Command : Stat {
+namespace Commanders.Assets.Scripts.Game.Entities.Attributes {
+    internal class Command : Attribute {
         #region Shortcuts
         internal GameObject GameObject => GameObject.Find(GameObjectName);
         internal bool GameObject_Exists => GameObject != null;
@@ -10,7 +10,8 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
 
         private string GameObjectName { get; }
         internal Commander Commander { get; set; }
-        internal Command(string gameObject_name, Commander commander = null) {
+        internal Command(Entity parent_Entity, string gameObject_name, Commander commander = null)
+                    : base(parent_Entity) {
             if (string.IsNullOrEmpty(gameObject_name))
                 throw new System.ArgumentNullException("GameObject name must have a value");
             GameObjectName = gameObject_name;

@@ -1,7 +1,7 @@
 ﻿
 using Commanders.Assets.Scripts.Lib.Math.Numerics;
 
-namespace Commanders.Assets.Scripts.Game.Entities.Stats.Effects {
+namespace Commanders.Assets.Scripts.Game.Entities.Attributes.Effects {
     internal abstract class Effect {
 
 
@@ -23,8 +23,8 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats.Effects {
 
         internal EffectType Type { get; }
 
-        /// <summary> The function that will modify the <see cref="Stat"/> </summary>
-        internal abstract dynamic Get<IStat>(IStat stat) where IStat : Stat;
+        /// <summary> The function that will modify the <see cref="Attribute"/> </summary>
+        internal abstract dynamic Get<IAttribute>(IAttribute stat) where IAttribute : Attribute;
 
         private int _Count = 0;
         /// <summary> Multiplier for <see cref="Effect"/> </summary>

@@ -2,21 +2,20 @@ using Commanders.Assets.Scripts.Lib.Math.Numerics;
 using System;
 using System.Threading;
 
-namespace Commanders.Assets.Scripts.Game.Entities.Stats {
-    internal class Health : Stat {
+namespace Commanders.Assets.Scripts.Game.Entities.Attributes {
+    internal class Health : Attribute {
         #region Shortcuts
 
         /// <summary> Maximum value for <see cref="Amount"/> </summary>
-        internal double Total
-            => Convert.ToSingle(Amount.Range.Max);
+        internal double Total => Amount.Range.Max;
         internal bool IsImmortal => Math.Abs(Defence - 1) < 0.000001f;
-        /// <returns> <see cref="Amount"/> &lt; <see cref="Total"/> </returns>
+        /// <summary> <see cref="Amount"/> &lt; <see cref="Total"/> </summary>
         internal bool IsDamaged => Amount < Total;
-        /// <returns> <see cref="Amount"/> == <see cref="Total"/> </returns>
-        internal bool IsHealed => Amount.Value == Total;
-        /// <returns> Ratio of <see cref="Amount"/> relative to <see cref="Total"/> (0~1) </returns>
-        internal double Health_Ratio => Convert.ToSingle(Amount.Value) / Total;
-        /// <returns> Precentage of <see cref="Amount"/> relative to <see cref="Total"/> (0~100) </returns>
+        /// <summary> <see cref="Amount"/> == <see cref="Total"/> </summary>
+        internal bool IsHealed => Amount == Total;
+        /// <summary> Ratio of <see cref="Amount"/> relative to <see cref="Total"/> (0~1) </summary>
+        internal double Health_Ratio => Amount / Total;
+        /// <summary> Precentage of <see cref="Amount"/> relative to <see cref="Total"/> (0~100) </summary>
         internal double Health_Percent => Health_Ratio * 100;
 
         #endregion
@@ -74,16 +73,16 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
 
         /// <summary> Set <see cref="Amount"/> to the the maximum <see cref="Total"/> </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
-        internal float Restore() {
+        internal Amount Restore() {
             Amount.Value = Total;
-            return Convert.ToSingle(Amount);
+            return Amount;
         }
 
         /// <summary> Set <see cref="Amount"/> to 0 </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
-        internal double Kill() {
+        internal Amount Kill() {
             Amount.Value = 0;
-            return Convert.ToSingle(Amount);
+            return Amount;
         }
         internal void MakeImmortal()
             => Defence = 1;
@@ -116,12 +115,13 @@ namespace Commanders.Assets.Scripts.Game.Entities.Stats {
             set => _Defence = value.AtOrBetween(0, 1);
         }
 
-        internal Health(Amount amount, double defence = 0) {
+        internal Health(Entity parent_Entity, Amount amount, double defence = 0)
+                    : base(parent_Entity) {
             Amount = amount;
             Defence = defence;
         }
 
-        internal Health Immortal()
-            => new(new Amount(1), defence: 1);
+        internal Health Immortal(Entity parent_Entity)
+            => new(parent_Entity, new Amount(1), defence: 1);
     }
 }

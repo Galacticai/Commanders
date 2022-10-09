@@ -1,35 +1,35 @@
-﻿[<h1><img height=48 src="https://img.shields.io/badge/Class%20Diagram-Stat-informational?&style=flat-square" /></h1>](https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities/Stats/Stat.cs)
+﻿[<h1><img height=48 src="https://img.shields.io/badge/Class%20Diagram-Attribute-informational?&style=flat-square" /></h1>](https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities/Attributes/Attribute.cs)
 
-`Commanders`>`Assets`>`Scripts`>`Game`>`Entities`>`Stats`>**`Stat`**
+`Commanders`>`Assets`>`Scripts`>`Game`>`Entities`>`Attributes`>**`Attribute`**
 
 ---
 
 ```mermaid
 classDiagram-v2
-TypeDictionary~Stat~ <|-- StatDictionary : inherits
-class TypeDictionary~Stat~ {
+TypeDictionary~Attribute~ <|-- AttributeDictionary : inherits
+class TypeDictionary~Attribute~ {
     (From Lib)
 }
-StatDictionary ..o Stat : aggregates
-class StatDictionary {
+AttributesDictionary ..o Attribute : aggregates
+class AttributesDictionary {
     internal record Default
             
-    internal static bool StatIsRequired(Type statType)
+    internal static bool AttributeIsRequired(Type statType)
     public override void Clear()
-    public override bool Remove<IStat>()
+    public override bool Remove<IAttribute>()
     private void _SetDefaults(bool force = false)
 
-    public StatDictionary(params Stat[] values)
-    public StatDictionary()
+    public AttributeDictionary(params Attribute[] values)
+    public AttributeDictionary()
 
-    internal static StatDictionary CreateDefault()
+    internal static AttributeDictionary CreateDefault()
 }
 
-class Stat {
+class Attributes {
     protected internal Entity Parent
-    private protected Stat(Entity parent)
+    private protected Attribute(Entity parent)
 }
-    Stat <-- Command : inherits
+    Attributes <-- Command : inherits
     Command ..o GameObject : aggregates
     class Command {
         internal GameObject GameObject
@@ -48,7 +48,7 @@ class Stat {
     class GameObject{
         (From UnityEngine.GameObject)
     }
-    Stat <-- Territory : inherits
+    Attribute <-- Territory : inherits
     class Territory {
         internal enum TerritoryType
         internal TerritoryType Current
@@ -66,7 +66,7 @@ class Stat {
         
         public static implicit operator TerritoryType(Territory territory)
     }
-    Stat <-- Weapon : inherits
+    Attribute <-- Weapon : inherits
     class Weapon {
         internal enum WeaponType
 
@@ -95,13 +95,13 @@ class Stat {
             internal static Damage Direct(double amount, double piercing = 0)
             internal static Damage Area(double amount, double radius, double piercing = 0)
         }
-    Stat <-- Vision : inherits
+    Attribute <-- Vision : inherits
     class Vision {
         internal double Radius
         internal bool CamoVisible
         internal Vision(Entity parent_Entity, double radius, bool camoVisible = false)
     }
-    Stat <-- Health : inherits
+    Attribute <-- Health : inherits
     class Health {
         internal double Total
         internal bool IsImmortal

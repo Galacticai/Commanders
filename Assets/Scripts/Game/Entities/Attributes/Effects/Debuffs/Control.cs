@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Commanders.Assets.Scripts.Game.Entities.Stats.Effects.Debuffs {
+namespace Commanders.Assets.Scripts.Game.Entities.Attributes.Effects.Debuffs {
     /// <summary> Let another <see cref="Commander"/> take over the <see cref="Entity"/> </summary>
     internal class Control : Debuff {
 
