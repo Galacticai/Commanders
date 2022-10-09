@@ -1,4 +1,8 @@
-﻿```mermaid
+﻿# Class Diagram: `Entity`
+###### `Commanders.Assets.Scripts.Game.Entities.Entity`
+---
+
+```mermaid
 classDiagram-v2
     class Entity {
         internal static readonly Dictionary~string,Entity~ ActiveEntities
