@@ -17,36 +17,36 @@ classDiagram-v2
         internal GameObject CreateGameObject()
         internal abstract GameObject CreateGameObject(string ID)
 
-        internal StatDictionary Stats
+        internal AttributeDictionary Attributes
 
-        private protected Entity(Command command, params Stat[] stats)
-        private protected Entity(Command command, StatDictionary statDictionary)
+        private protected Entity(Command command, params Attribute[] attributes)
+        private protected Entity(Command command, AttributeDictionary attributeDictionary)
 
         public static implicit operator GameObject(Entity entity)
     }
-    Entity --* StatDictionary : composes
-        class StatDictionary {
+    Entity --* AttributeDictionary : composes
+        class AttributeDictionary {
             ! Check README.md in the
             corresponding namespace.
         }
     Entity <|-- Unit : inherits
         class Unit {
-            private protected Human(Command command, StatDictionary stats = null)
+            private protected Human(Command command, AttributeDictionary stats = null)
         }
         Unit <|-- Human : inherits
             class Human {
-                private protected Human(Command command, StatDictionary stats = null)
+                private protected Human(Command command, AttributeDictionary stats = null)
             }
         Unit <|-- Vehicle : inherits
             class Vehicle {
-                private protected Vehicle(Command command, StatDictionary stats = null)
+                private protected Vehicle(Command command, AttributeDictionary stats = null)
             }
     Entity <|-- Building : inherits
         class Building {
             internal bool BuildMode
             internal Task<bool> hoverBuild(Point center)
             internal double ConstructionRadius
-            private protected Building(Command command, double constructionRadius, StatDictionary stats)
+            private protected Building(Command command, double constructionRadius, AttributeDictionary stats)
         }
 
 ```
