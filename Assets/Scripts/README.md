@@ -70,7 +70,7 @@ classDiagram-v2
             private Computer()
             internal Computer(int computerIndex, ComputerStrategy strategy, Provenance provenance, int alliance)
         }
-    Entity ..> StatDictionary : uses
+    Entity --* StatDictionary : composes
     class TypeDictionary~TValue~ {
         public int Count
         public Dictionary~Type, TValue~.KeyCollection Keys
@@ -101,6 +101,7 @@ classDiagram-v2
         public static implicit operator TypeDictionary<TValue>(List<TValue> list)
     }
         TypeDictionary <|-- StatDictionary : inherits
+        StatDictionary ..o Stat : aggregates
         class StatDictionary {
             internal record Default
             
@@ -114,7 +115,6 @@ classDiagram-v2
 
             internal static StatDictionary CreateDefault()
         }
-        StatDictionary ..* Stat : aggregates
 
 class Stat {
     protected internal Entity Parent
