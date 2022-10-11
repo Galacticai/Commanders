@@ -1,6 +1,9 @@
-﻿[<h1><img height=32 src="https://img.shields.io/badge/Overview-Entities-white?color=informational&style=flat-square" /></h1>](https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities)
+﻿<a href="https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game">
+    <img height=24 src="https://img.shields.io/badge/Namespace%20Overview-Game-white?color=informational&style=flat-square" />
+</a>
+<br/>
 
-`Commanders`>`Assets`>`Scripts`>`Game`>(**`Entities`**)
+`Commanders`>`Assets`>`Scripts`>(**`Game`**)
 
 ---
 
