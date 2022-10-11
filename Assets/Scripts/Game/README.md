@@ -19,10 +19,10 @@ GameObject ..o Entity : references
 
 Commander o.. Entity : references
 Entity
-    Entity --|> Building : inherits
-    Entity --|> Unit : inherits
-        Unit --|> Human : inherits
-        Unit --|> Vehicle : inherits
+    Entity <|-- Building : inherits
+    Entity <|-- Unit : inherits
+        Unit <|-- Human : inherits
+        Unit <|-- Vehicle : inherits
 
 class AttributeDictionary {
     (From Attributes)
