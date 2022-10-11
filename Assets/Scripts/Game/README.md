@@ -9,33 +9,47 @@
 
 ```mermaid
 classDiagram-v2
-class GameObject{
+class Commander {
+    (From Commanders)
+}
+Commander <-- Computer : inherits
+Commander <-- Player : inherits
+GameObject *-- Entity : composes
+GameObject ..o Entity : references
+
+Commander o.. Entity : references
+Entity
+    Entity --|> Building : inherits
+    Entity --|> Unit : inherits
+        Unit --|> Human : inherits
+        Unit --|> Vehicle : inherits
+
+class AttributeDictionary {
+    (From Attributes)
+}
+    class Attribute {
+        (From Attributes)
+    }
+Entity --* AttributeDictionary : composes
+    AttributeDictionary ..o Attribute : aggregates
+        Attribute <|-- Vision : inherits
+        Attribute <|-- Territory : inherits
+            Territory -- TerritoryType : with
+        Attribute <|-- Weapon : inherits
+            Weapon -- WeaponType : with
+            Weapon --* Damage : composes
+        Attribute <|-- Health : inherits
+            class Amount {
+                (From Lib)
+            }
+            Amount <.. Health : uses
+
+class GameObject {
     (From UnityEngine)
 }
-class TypeDictionary~Attribute~{
+TypeDictionary~Attribute~ <-- AttributeDictionary : inherits
+class TypeDictionary~Attribute~ {
     <<TypeDictionary< TValue >>>
     (From Lib)
 }
-    TypeDictionary~Attribute~ <|-- AttributeDictionary : inherits
-Entity --* AttributeDictionary : composes
-    AttributeDictionary ..o Attribute : aggregates
-        Amount <.. Health : uses
-    Attribute <|-- Health : inherits
-    Attribute <|-- Territory : inherits
-        Territory -- TerritoryType : with
-    Attribute <-- Weapon : inherits
-        Weapon -- WeaponType : with
-        Weapon ..* Damage : composes
-            Damage -- DamageType : with
-    Attribute <|-- Vision : inherits
-    Attribute <|-- Command : inherits
-        GameObject o.. Command : references
-        Commander o.. Command : references
-            Commander <|-- Player : inherits
-            Commander <|-- Computer : inherits
-Entity -- GameObject : ??composes??
-Entity <|-- Unit : inherits
-    Unit <|-- Human : inherits
-    Unit <|-- Vehicle : inherits
-Entity <|-- Building : inherits
 ```
