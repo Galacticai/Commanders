@@ -37,7 +37,7 @@ namespace Commanders.Assets.Scripts.Lib {
         public virtual bool Set<ITValue>(ITValue value) where ITValue : TValue
             => Set(value, false);
         public virtual bool Set<ITValue>(ITValue value, bool force) where ITValue : TValue {
-            if (value == default) return false;
+            if (value is null) return false;
             if (Contains<ITValue>() && !force) return false;
             Dictionary[value.GetType()] = value;
             return true;
