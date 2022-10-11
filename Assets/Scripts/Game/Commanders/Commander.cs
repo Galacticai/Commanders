@@ -10,7 +10,7 @@ namespace Commanders.Assets.Scripts.Game.Commanders {
         Provenance1, Provenance2, Provenance3
     }
     internal abstract partial class Commander {
-        internal static readonly Dictionary<string, Commander> Current = new();
+        internal static readonly Dictionary<string, Commander> ActiveCommanders = new();
 
         internal string Name { get; }
         internal Provenance Provenance { get; }
@@ -30,7 +30,7 @@ namespace Commanders.Assets.Scripts.Game.Commanders {
                 string cameraID = default,
                 bool replace = false) {
 
-            if (Current.ContainsKey(name) && !replace)
+            if (ActiveCommanders.ContainsKey(name) && !replace)
                 throw new System.NotSupportedException(
                     $"Commander \"{name}\" already exists."
                     + " Replacing commander is not permitted."
@@ -45,7 +45,7 @@ namespace Commanders.Assets.Scripts.Game.Commanders {
                 if (camera != null) CameraID = cameraID;
             }
 
-            Current[Name] = this;
+            ActiveCommanders[Name] = this;
         }
     }
 }
