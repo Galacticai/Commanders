@@ -15,7 +15,7 @@ using System.Text.RegularExpressions;
 
 namespace Commanders.Assets.Scripts.Lib.Platforms {
     /// <summary> Determine linux distro information </summary>
-    public class LinuxDistro {
+    public static class LinuxDistro {
         public enum LinuxDistroName {
             AlpineLinux,
             AmazonLinux,
