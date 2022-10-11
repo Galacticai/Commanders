@@ -3,7 +3,7 @@
 </a>
 <br/>
 
-`Commanders`>`Assets`>`Scripts`>(**`Game`**)
+`Commanders`>`Assets`>`Scripts`>**(`Game`)**
 
 ---
 

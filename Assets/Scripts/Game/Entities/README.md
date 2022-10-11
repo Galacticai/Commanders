@@ -1,6 +1,9 @@
-﻿[<h1><img height=48 src="https://img.shields.io/badge/Class%20Diagram-Entity-white?color=informational&style=flat-square" /></h1>](https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities/Entity.cs)
+﻿<a href="https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities/Entity.cs">
+    <img height=24 src="https://img.shields.io/badge/Class%20Diagram-Entity-white?color=informational&style=flat-square" />
+</a>
+<br/>
 
-`Commanders`>`Assets`>`Scripts`>`Game`>`Entities`>**`Entity`**
+`Commanders`>`Assets`>`Scripts`>`Game`>`Entities`>**{`Entity`}**
 
 ---
 
