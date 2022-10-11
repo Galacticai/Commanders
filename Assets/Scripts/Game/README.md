@@ -17,7 +17,7 @@ Commander <-- Player : inherits
 GameObject *-- Entity : composes
 GameObject ..o Entity : references
 
-Commander o.. Entity : references
+Commander o..o Entity : references
 Entity
     Entity <|-- Building : inherits
     Entity <|-- Unit : inherits
@@ -31,7 +31,7 @@ class AttributeDictionary {
         (From Attributes)
     }
 Entity --* AttributeDictionary : composes
-    AttributeDictionary ..o Attribute : aggregates
+    AttributeDictionary --o Attribute : aggregates
         Attribute <|-- Vision : inherits
         Attribute <|-- Territory : inherits
             Territory -- TerritoryType : with
