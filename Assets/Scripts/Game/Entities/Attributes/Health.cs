@@ -12,7 +12,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Attributes {
         /// <summary> <see cref="Amount"/> &lt; <see cref="Total"/> </summary>
         internal bool IsDamaged => Amount < Total;
         /// <summary> <see cref="Amount"/> == <see cref="Total"/> </summary>
-        internal bool IsHealed => Amount == Total;
+        internal bool IsHealed => Math.Abs(Amount.Value - Total) < 0.000001f;
         /// <summary> Ratio of <see cref="Amount"/> relative to <see cref="Total"/> (0~1) </summary>
         internal double Health_Ratio => Total > 0 ? Amount / Total : 0;
         /// <summary> Precentage of <see cref="Amount"/> relative to <see cref="Total"/> (0~100) </summary>
