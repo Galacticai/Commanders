@@ -10,6 +10,7 @@
 
 using Commanders.Assets.Scripts.Lib.Platforms.Shell.NET;
 using System;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Commanders.Assets.Scripts.Lib.Platforms {
