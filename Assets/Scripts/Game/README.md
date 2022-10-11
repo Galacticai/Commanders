@@ -12,8 +12,8 @@ classDiagram-v2
 class Commander {
     <<namespace: Commanders>>
 }
-Commander <-- Computer : inherits
-Commander <-- Player : inherits
+Commander <|-- Computer : inherits
+Commander <|-- Player : inherits
 GameObject *-- Entity : composes
 GameObject ..o Entity : references
 
@@ -33,7 +33,7 @@ class AttributeDictionary {
     class Attribute {
         <<namespace: Attributes>>
     }
-TypeDictionary~Attribute~ <-- AttributeDictionary : inherits
+TypeDictionary~Attribute~ <|-- AttributeDictionary : inherits
 class TypeDictionary~Attribute~ {
     <<namespace: Lib>>
     (TValue = Attribute)
