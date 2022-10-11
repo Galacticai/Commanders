@@ -1,4 +1,4 @@
-﻿[<h1><img height=48 src="https://img.shields.io/badge/Namespace%20Overview-Entities-white?color=informational&style=flat-square" /></h1>](https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities)
+﻿[<h1><img height=32 src="https://img.shields.io/badge/Overview-Entities-white?color=informational&style=flat-square" /></h1>](https://github.com/Galacticai/Commanders/blob/dev/Assets/Scripts/Game/Entities)
 
 `Commanders`>`Assets`>`Scripts`>`Game`>(**`Entities`**)
 
@@ -6,29 +6,33 @@
 
 ```mermaid
 classDiagram-v2
-    Entity <|-- Unit : inherits
-        Unit <|-- Human : inherits
-        Unit <|-- Vehicle : inherits
-    Entity <|-- Building : inherits
-
-        Commander <|-- Player : inherits
-        Commander <|-- Computer : inherits
-    Entity --* StatDictionary : composes
-        TypeDictionary <|-- StatDictionary : inherits
-        StatDictionary ..o Stat : aggregates
-
-    Stat <-- Command : inherits
-    Command ..o Commander : aggregates
-    Command ..o GameObject : aggregates
-    class GameObject{
-        (From UnityEngine.GameObject)
-    }
-    Stat <-- Territory : inherits
-    Stat <-- Weapon : inherits
+class GameObject{
+    (From UnityEngine)
+}
+class TypeDictionary~Attribute~{
+    <<TypeDictionary< TValue >>>
+    (From Lib)
+}
+    TypeDictionary~Attribute~ <|-- AttributeDictionary : inherits
+Entity --* AttributeDictionary : composes
+    AttributeDictionary ..o Attribute : aggregates
+        Amount <.. Health : uses
+    Attribute <|-- Health : inherits
+    Attribute <|-- Territory : inherits
+        Territory -- TerritoryType : with
+    Attribute <-- Weapon : inherits
+        Weapon -- WeaponType : with
         Weapon ..* Damage : composes
-    Stat <-- Vision : inherits
-    Stat <-- Health : inherits
-    Amount <.. Health : uses
-        Range <.. Amount : uses
-
+            Damage -- DamageType : with
+    Attribute <|-- Vision : inherits
+    Attribute <|-- Command : inherits
+        GameObject o.. Command : references
+        Commander o.. Command : references
+            Commander <|-- Player : inherits
+            Commander <|-- Computer : inherits
+Entity -- GameObject : ??composes??
+Entity <|-- Unit : inherits
+    Unit <|-- Human : inherits
+    Unit <|-- Vehicle : inherits
+Entity <|-- Building : inherits
 ```
