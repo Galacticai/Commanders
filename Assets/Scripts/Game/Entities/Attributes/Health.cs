@@ -66,7 +66,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Attributes {
         /// <summary> Decrease <see cref="Amount"/> using <see cref="Entity"/>.damage (if present) </summary>
         /// <returns> Final <see cref="Amount"/> </returns>
         internal Amount HurtBy(Entity entity) {
-            var weapon = entity.Stats.Get<Weapon>();
+            var weapon = entity.Attributes.Get<Weapon>();
             if (weapon != null) HurtBy(weapon);
             return Amount;
         }
