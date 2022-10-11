@@ -10,7 +10,7 @@
 ```mermaid
 classDiagram-v2
 class Commander {
-    (From Commanders)
+    <<namespace: Commanders>>
 }
 Commander <-- Computer : inherits
 Commander <-- Player : inherits
@@ -18,19 +18,26 @@ GameObject *-- Entity : composes
 GameObject ..o Entity : references
 
 Commander o..o Entity : references
-Entity
+class Entity {
+    <<namespace: Entities>>
+}
     Entity <|-- Building : inherits
     Entity <|-- Unit : inherits
         Unit <|-- Human : inherits
         Unit <|-- Vehicle : inherits
 
 class AttributeDictionary {
-    (From Attributes)
+    <<namespace: Attributes>>
 }
     Entity o.. Attribute : references
     class Attribute {
-        (From Attributes)
+        <<namespace: Attributes>>
     }
+TypeDictionary~Attribute~ <-- AttributeDictionary : inherits
+class TypeDictionary~Attribute~ {
+    <<namespace: Lib>>
+    (TValue = Attribute)
+}
 Entity --* AttributeDictionary : composes
     AttributeDictionary --o Attribute : aggregates
         Attribute <|-- Vision : inherits
@@ -41,16 +48,11 @@ Entity --* AttributeDictionary : composes
             Weapon --* Damage : composes
         Attribute <|-- Health : inherits
             class Amount {
-                (From Lib)
+                <<namespace: Lib>>
             }
             Amount <.. Health : uses
 
 class GameObject {
-    (From UnityEngine)
-}
-TypeDictionary~Attribute~ <-- AttributeDictionary : inherits
-class TypeDictionary~Attribute~ {
-    <<TypeDictionary< TValue >>>
-    (From Lib)
+    <<namespace: UnityEngine>>
 }
 ```
