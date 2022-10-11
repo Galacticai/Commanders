@@ -27,6 +27,7 @@ Entity
 class AttributeDictionary {
     (From Attributes)
 }
+    Entity o.. Attribute : references
     class Attribute {
         (From Attributes)
     }
