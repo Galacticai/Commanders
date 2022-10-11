@@ -121,7 +121,7 @@ namespace Commanders.Assets.Scripts.Game.Entities.Attributes {
             Defence = defence;
         }
 
-        internal Health Immortal(Entity parent_Entity)
+        internal static Health Immortal(Entity parent_Entity)
             => new(parent_Entity, new Amount(1), defence: 1);
     }
 }
