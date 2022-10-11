@@ -33,7 +33,7 @@ namespace Commanders.Assets.Scripts.Game.Entities {
         #endregion
 
         /// <summary> Properties of this <see cref="Entity"/> </summary>
-        protected internal StatDictionary Stats { get; protected set; }
+        protected internal AttributeDictionary Attributes { get; protected set; }
 
         private protected Entity(Command command, StatDictionary stats = null) {
             Stats = stats ?? new(command);
