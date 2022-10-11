@@ -1,10 +1,10 @@
-﻿/// —————————————————————————————————————————————
+﻿using System;
+/// —————————————————————————————————————————————
 //? 
 //!? 📜 Range.cs
 //!? 🖋️ Galacticai 📅 2022
 //!  ⚖️ GPL-3.0-or-later
-//?  🔗 Dependencies:
-//      + (Galacticai) Math.Common.cs
+//?  🔗 Dependencies: No special dependencies
 //? 
 /// —————————————————————————————————————————————
 
@@ -26,7 +26,7 @@ namespace Commanders.Assets.Scripts.Lib.Math.Numerics {
         #endregion
         #region Methods
 
-        /// <returns> <paramref name="value"/> but forced inside this <see cref="Range"/> </returns>
+        /// <summary> <paramref name="value"/> but forced inside this <see cref="Range"/> </summary>
         public double AtOrBetween(double value)
             => value.AtOrBetween(Min, Max);
 
@@ -69,5 +69,23 @@ namespace Commanders.Assets.Scripts.Lib.Math.Numerics {
         }
         public Range(double start, double end)
                     : this(start, end, false) { }
+
+
+        public override string ToString()
+            => $"{Min}_{Max}";
+        public override int GetHashCode()
+            => HashCode.Combine(Min, Max);
+        public override bool Equals(object obj) {
+            if (obj is not Range other) return false;
+            return Min == other.Min && Max == other.Max;
+        }
+        public static bool operator ==(Range range1, Range range2)
+            => range1.Equals(range2);
+        public static bool operator !=(Range range1, Range range2)
+            => !range1.Equals(range2);
+        public static bool operator >(Range range1, Range range2)
+            => range1.Max > range2.Max;
+        public static bool operator <(Range range1, Range range2)
+            => range1.Min < range2.Min;
     }
 }
