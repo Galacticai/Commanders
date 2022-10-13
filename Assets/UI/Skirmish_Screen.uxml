@@ -1,14 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/Styles/Base%20Elements/Button.uss?fileID=7433441132597879392&amp;guid=2c3c0b848083ce640a899c9bdd9fc2b6&amp;type=3#Button" />
     <Style src="project://database/Assets/UI/Styles/Misc.uss?fileID=7433441132597879392&amp;guid=de072a2e6d881a64da9e5216646063cf&amp;type=3#Misc" />
     <Style src="project://database/Assets/UI/Styles/Texts.uss?fileID=7433441132597879392&amp;guid=0a91bc6dcaccd554da97a1ddc91000aa&amp;type=3#Texts" />
     <Style src="project://database/Assets/UI/Styles/Skirmish.uss?fileID=7433441132597879392&amp;guid=f7d5789674a0f0c4eb255a278e3bf8dc&amp;type=3#Skirmish" />
     <Style src="project://database/Assets/UI/Styles/Commander_Box.uss?fileID=7433441132597879392&amp;guid=ac4b988401f3f3d40983b5226f2280d5&amp;type=3#Commander_Box" />
     <Style src="project://database/Assets/UI/Styles/Screens.uss?fileID=7433441132597879392&amp;guid=7277d8d99b5e25d45b765a77d76ae597&amp;type=3#Screens" />
     <Style src="project://database/Assets/UI/Styles/Menu.uss?fileID=7433441132597879392&amp;guid=7d659baa5fc3eb7408b954c77ebe25bf&amp;type=3#Menu" />
-    <Style src="project://database/Assets/UI/Styles/Base%20Elements/DropdownField.uss?fileID=7433441132597879392&amp;guid=5f512c9bf52fb574c93903b0264a74eb&amp;type=3#DropdownField" />
     <Style src="project://database/Assets/UI/Styles/Base%20Elements/TextField.uss?fileID=7433441132597879392&amp;guid=80443136ef830d848988da6d38a3dbe5&amp;type=3#TextField" />
     <Style src="project://database/Assets/UI/Styles/Base%20Elements/Toggle.uss?fileID=7433441132597879392&amp;guid=66ac80b0a9bdb2b4cb4b2638dfd4c944&amp;type=3#Toggle" />
+    <Style src="project://database/Assets/UI/Styles/Base%20Elements/Button.uss?fileID=7433441132597879392&amp;guid=2c3c0b848083ce640a899c9bdd9fc2b6&amp;type=3#Button" />
     <ui:GroupBox name="Skirmish_Screen" class="ScreenContent Screen">
         <ui:GroupBox name="Skirmish_Header" class="header ScreenHeader">
             <ui:Label text="SKIRMISH" display-tooltip-when-elided="true" name="Title" class="Title ScreenTitle" />
